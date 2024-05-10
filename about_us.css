@@ -72,7 +72,7 @@ header nav ul li a:hover {
 /* background1 section styles */
 .background1 {
     text-align: center;
-    padding: 50px 0;
+    padding: 50px 30px;
     color: #333;
 }
 
@@ -91,7 +91,7 @@ header nav ul li a:hover {
 
 /* background2 section styles */
 .background2 {
-    padding: 50px 0;
+    padding: 50px 30px;
     background: #fff;
     text-align: center;
 }
