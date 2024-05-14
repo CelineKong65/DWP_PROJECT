@@ -54,7 +54,10 @@ header nav ul li a:hover {
     height: 20px;
     border-radius: 50%;
     background-color: gray;
+    position: relative;
     margin:0px 10px 10px 10px;
+    left:1150px;
+    bottom: 10px;
 }
 
 #account::after{
@@ -63,6 +66,8 @@ header nav ul li a:hover {
     height: 20px;
     width: 40px;
     background-color: gray;
+    top: 18px;
+    left: -10px;
     border-radius: 50% 50% 0% 0%;
 }
 
