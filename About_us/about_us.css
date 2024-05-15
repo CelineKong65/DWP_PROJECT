@@ -86,7 +86,7 @@ header nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-#account{
+.account{
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -98,7 +98,7 @@ header nav ul li a:hover {
     margin:0px 10px 10px 10px;
 }
 
-#account::after{
+.account::after{
     content: "";
     position: absolute;
     height: 20px;
