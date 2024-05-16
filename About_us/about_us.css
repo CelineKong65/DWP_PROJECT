@@ -87,30 +87,6 @@ header nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-.account{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: gray;
-    position: relative;
-    margin:0px 10px 10px 10px;
-    left:1050px;
-    bottom: 10px;
-    margin:0px 10px 10px 10px;
-}
-
-.account::after{
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 40px;
-    background-color: gray;
-    top: 18px;
-    left: -10px;
-    border-radius: 50% 50% 0% 0%;
-}
-
-
 
 /* background2 section styles */
 .background2 {
