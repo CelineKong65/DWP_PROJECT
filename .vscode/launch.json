@@ -7,8 +7,7 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open adhesive_tape.html",
-            "file": "c:\\xampp\\htdocs\\DWP_PROJECT-2\\Product_list\\adhesive_tape.html"
+
         }
     ]
 }
