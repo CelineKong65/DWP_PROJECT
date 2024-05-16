@@ -48,13 +48,13 @@ h1{
 }
 
 header nav ul {
-    margin-left: 100px;
+    margin-left: 25px;
     list-style: none;
 }
 
 header nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 header nav ul li a {
