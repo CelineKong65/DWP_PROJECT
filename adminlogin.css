@@ -1,0 +1,116 @@
+body 
+{
+    background-image: url(adminlogin_background.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#container 
+{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.login-box 
+{
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    width: 400px;
+    padding: 0;
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-title 
+{
+    height: 50px;
+    background-color: #80BCBD;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#login-title h3 
+{
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#login-form 
+{
+    padding: 20px;
+    text-align: center;
+}
+
+#login-form input[type=email],#login-form input[type=password] 
+{
+    width: 80%;
+    border-radius: 5px;
+    border: 2px solid #80BCBD;
+    height: 35px;
+    padding-left: 44px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+#login-form input[type=email] 
+{
+    background-image: url(email.png);
+}
+
+#login-form input[type=password] 
+{
+    background-image: url(lock.png);
+}
+
+#login-form input[type=submit] 
+{
+    background-color: #80BCBD;
+    width: 336px;
+    padding: 10px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+#login-form input[type=submit]:hover 
+{
+    background-color: #BED7DC;
+    width: 336px;
+    padding: 10px;
+    border: 0px;
+    color: white;
+    font-weight: bold;
+}
+
+
+#login-form p 
+{
+    margin: 10px 0;
+}
+
+#login-form p a 
+{
+    text-decoration: none;
+    font-family: Arial Narrow, sans-serif;
+    font-size: 0.9em;
+    color: #80BCBD;
+}
+
+#login-form p a:hover 
+{
+    font-style: italic;
+    color: red;
+}
