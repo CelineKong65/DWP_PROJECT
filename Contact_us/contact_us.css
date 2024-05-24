@@ -10,6 +10,7 @@ body {
 }
 
 
+
 /* Header styles */
 header {
     background: #BFB29E;
@@ -91,7 +92,7 @@ header nav ul li a:hover {
 h1 {
     margin-left: 1px;
     font-size: 24px;
-    color: #333;
+    color: #fff;
 }
 
 p {
