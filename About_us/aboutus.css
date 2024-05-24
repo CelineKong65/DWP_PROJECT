@@ -6,6 +6,16 @@
     box-sizing: border-box;
 }
 
+.input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 20px; /* Adjust this value as needed */
+    right: 20px; /* Adjust this value as needed */
+}
+
+
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
@@ -41,81 +51,82 @@ header {
 
 h1{
     margin-left: 100px;
-}
-
-header nav ul {
-    margin-left: 25px;
-    list-style: none;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 5px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 60px;
-}
-
-header nav ul li a:hover {
-    color: #333;
-}
-
-header nav ul li img{
-    width: 50px;
-    height: 50px;
-    margin-left: px;
+    text-align: center;
 }
 
 /* background1 section styles */
-.background1 {
+.background1 
+{
     text-align: center;
     padding: 50px 0;
     color: #333;
 }
 
-.background1 h2 {
+.background1 h2 
+{
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.background1 p {
+.background1 p 
+{
     font-size: 1.2em;
     margin-bottom: 30px;
 }
 
 /* background2 section styles */
-.background2 {
+.background2 
+{
     padding: 50px 0;
     background: #fff;
     text-align: center;
 }
 
-.background2 h2 {
+.background2 h2 
+{
     margin-bottom: 10px;
 }
 
-.background2 {
+.background2 
+{
     margin-bottom: 30px;
 }
 
-.background2 h2 {
+.background2 h2 
+{
     margin-bottom: 25px;
 }
 
-.background2 p {
+.background2 p 
+{
     text-align: center;
 }
 
 /* Footer styles */
-footer {
+footer 
+{
     background: #333;
     color: #fff;
     text-align: center;
     padding: 1rem;
-    position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+nav ul 
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li 
+{
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a 
+{
+    color: #fff;
+    text-decoration: none;
 }
