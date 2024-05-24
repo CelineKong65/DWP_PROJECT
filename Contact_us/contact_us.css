@@ -3,7 +3,7 @@ body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
-    background-image: url();
+    background-image: url(contact_back.jpg);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -30,27 +30,11 @@ header {
 }
 
 h1{
-    margin-left: 100px;
+
+    text-align: center;
 }
 
-header nav ul {
-    margin-left: 25px;
-    list-style: none;
-}
 
-header nav ul li {
-    display: inline;
-    margin-right: 5px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-header nav ul li a:hover {
-    color: #333;
-}
 
 
 
@@ -140,9 +124,35 @@ button:hover {
 
 
 
-footer {
-    background-color: #333;
+/* Footer styles */
+footer 
+{
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 1rem;
+    bottom: 0;
+    width: 98%;
+}
+
+p{
+    color: #fff;
+}
+
+nav ul 
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li 
+{
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a 
+{
+    color: #fff;
+    text-decoration: none;
 }

@@ -7,6 +7,19 @@ body
     padding: 0;
 }
 
+#back{
+
+    color: #BFB29E;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    border: #fff solid;
+    text-decoration: none;
+    margin-right: 500px;
+    width: 45px;
+}
+
 .container 
 {
     max-width: 1200px;
@@ -56,9 +69,12 @@ main {
 
 .item-image img 
 {
-    width: 100%;
-    height: auto;
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .item-details 
