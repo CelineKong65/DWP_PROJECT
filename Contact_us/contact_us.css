@@ -1,21 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
-    background-image: url(contact_back.jpg);
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
 }
 
-
-
-/* Header styles */
 header {
-    background: #BFB29E;
-    color: #fff;
-    padding: 1rem;
+    background-color: #BFB29E;
+    padding: 20px;
+    text-align: center;
 }
 
 #back{
@@ -27,99 +19,111 @@ header {
     border-radius: 50%;
     border: #fff solid;
     text-decoration: none;
+    margin-right: 100%;
 }
 
-h1{
-
-    text-align: center;
-}
-
-
-
-
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.info {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.info h2 {
-    margin-top: 0;
-}
-
-.info p {
-    margin-bottom: 10px;
-}
-
-
-
-
-
-
-.contact{
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #BFB29E;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    margin-left: 1px;
-    font-size: 24px;
+header h1 {
+    margin: 0;
     color: #fff;
 }
 
-p {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 20px;
+.contact-info {
+    flex: 0 1 40%;
 }
 
-form {
-    margin-top: 20px;
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info ul 
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li 
+{
+    display: inline;
+    text-align: center;
+    margin-right: 150px;
+    margin-left: 50px;
+    overflow: hidden;
+    display: inline-block;
+
+}
+
+
+
+
+
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message{
+    flex: 0 1 40%;
+}
+
+.message h2 {
+    margin-top: 16%;
+    text-align: center;
+}
+
+.message p {
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #DADDB1;
+    width: 600px;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    margin-left: 10px;
+    
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 870px;
+    width: 90%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 textarea {
-    height: 150px;
+    resize: vertical;
 }
 
 button {
-    background-color: #333;
-    color: #BFB29E;
+    background-color: #4CAF50;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 button:hover {
-    background-color: gray;
+    background-color: #45a049;
 }
 
 
