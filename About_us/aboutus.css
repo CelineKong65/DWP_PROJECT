@@ -20,7 +20,6 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
     color: #333;
     margin: 0;
     padding: 0;
@@ -60,6 +59,7 @@ h1{
 /* background1 section styles */
 .background1 
 {
+    background-color: #f4f4f4;
     text-align: center;
     padding: 50px 0;
     color: #333;
@@ -91,7 +91,8 @@ h1{
 .background2 h2 
 {
     text-align: center;
-    margin-bottom: 5%;
+    margin-top: 25px;
+    margin-bottom: 40px;
 }
 
 .background2 div{
@@ -117,27 +118,41 @@ h1{
 .background2 p 
 {
    position: relative;
-   top: 15%;
-
+   top: 20%;
+   margin-left: 5%;
+    margin-right:5%;
 }
 
 
 
 /* background3 section styles */
-.background3 
-{
-    text-align: center;
-}
-
 .background3 h2 
 {
+    text-align: center;
     margin-top: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+}
+
+.background3 div
+{
+
+    background-color: #DADDB1;
+    color: #333;
+    text-align: center;
+    border-radius: 100px;
+    height: 150px;
+    margin-bottom: 3%;
+
+
 }
 
 .background3 p 
 {
-    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    top: 30%;
+    margin-left: 10%;
+    margin-right:10%;
 }
 
 
