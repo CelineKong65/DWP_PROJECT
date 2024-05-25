@@ -26,10 +26,9 @@ body {
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-}
+
+
+
 
 /* Header styles */
 header {
@@ -54,6 +53,10 @@ h1{
     text-align: center;
 }
 
+
+
+
+
 /* background1 section styles */
 .background1 
 {
@@ -64,15 +67,18 @@ h1{
 
 .background1 h2 
 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
 .background1 p 
 {
     font-size: 1.2em;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
+
+
+
 
 /* background2 section styles */
 .background2 
@@ -84,23 +90,59 @@ h1{
 
 .background2 h2 
 {
-    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
-.background2 
-{
-    margin-bottom: 30px;
+.background2 div{
+    background-color: #DADDB1;
+    border-radius: 100px;
+    height: 150px;
+    margin-bottom: 3%;
+
 }
 
-.background2 h2 
-{
-    margin-bottom: 25px;
+.background2 section{
+    background: #D6C7AE;
+    color: #fff; 
+    width: 150px; 
+    height: 150px; 
+    border-radius: 100px;
+    text-align: center;
+    padding-top: 3.5%;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .background2 p 
 {
+   position: relative;
+   top: 15%;
+
+}
+
+
+
+/* background3 section styles */
+.background3 
+{
     text-align: center;
 }
+
+.background3 h2 
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.background3 p 
+{
+    margin-left: 20px;
+}
+
+
+
+
 
 /* Footer styles */
 footer 
