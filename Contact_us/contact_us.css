@@ -31,37 +31,66 @@ header h1 {
 
 
 
-.contact-info {
+.contact-icon {
+    flex: 0 1 40%;
+    background-color: #FFD495;
+    text-align: center;
+    height: 1100px;
+}
+
+.contact-info1 {
     flex: 0 1 40%;
     background-color: #FFD495;
     text-align: center;
 }
 
-.contact-info h3{
-    color: white;
-}
-
-.contact-info h4{
-    color: white;
-}
-
-.contact-info p {
-    margin-bottom: 10px;
-}
-
-.contact-info ul 
-{
-    list-style-type: none;
-    padding: 0;
-}
-
-.contact-info ul li 
-{
+.contact-info1 h3{
+    margin: 11% 11%;
+    color: #fff;
     display: inline;
+}
+
+.section1
+{
+    background: #D6C7AE;
+    color: #fff; 
+    width: 300px; 
+    height: 650px;
+    border-radius: 100px;
     text-align: center;
-    margin: 0px 80px 0px 80px;
-    overflow: hidden;
-    display: inline-block;
+    padding-top: 3.5%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 14%;
+    float: left;
+}
+
+.section2
+{
+    background: #D6C7AE;
+    color: #fff; 
+    width: 300px; 
+    height: 300px;
+    border-radius: 100px;
+    text-align: center;
+    padding-top: 3.5%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 41%;
+
+}
+
+.section3{
+    background: #D6C7AE;
+    color: #fff; 
+    width: 300px; 
+    height: 200px;
+    border-radius: 100px;
+    text-align: center;
+    padding-top: 3.5%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 67%;
 
 }
 
