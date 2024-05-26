@@ -1,0 +1,98 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#back 
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #FF9B50;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border:#FF9B50 solid ;
+    border-radius: 10%;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+.logo 
+{
+    width: 100px;
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.container 
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header 
+{
+    background-color: #FFD495;
+    background-color: ;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 
+{
+    margin: 0;
+}
+
+main 
+{
+    padding: 20px 0;
+}
+
+.history 
+{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.order-item
+{ 
+    width: 300px;
+    margin: 0 20px 20px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.item-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.item-image img {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-details {
+    padding: 20px;
+}
+
+.item-details h2 {
+    margin-top: 0;
+}
+
+.price {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
