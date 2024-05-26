@@ -9,7 +9,7 @@ body
 
 #back
 {
-    position: absolute;
+    position:fixed;
     top: 10px; 
     left: 10px; 
     color: #FF9B50;
@@ -42,7 +42,8 @@ header h1
     margin: 0;
 }
 
-main {
+main 
+{
     padding: 20px 0;
 }
 
