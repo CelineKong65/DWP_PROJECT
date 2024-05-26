@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 
-.input {
+.input 
+{
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -17,7 +18,8 @@
 
 
 /* Global styles */
-body {
+body 
+{
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -26,17 +28,16 @@ body {
 }
 
 
-
-
-
 /* Header styles */
-header {
+header 
+{
     background: #BFB29E;
     color: #fff;
     padding: 1rem;
 }
 
-#back{
+#back
+{
 
     color: #BFB29E;
     background-color: #fff;
@@ -47,14 +48,11 @@ header {
     text-decoration: none;
 }
 
-h1{
+h1
+{
     margin-left: 100px;
     text-align: center;
 }
-
-
-
-
 
 /* background1 section styles */
 .background1 
@@ -77,9 +75,6 @@ h1{
     margin-bottom: 15px;
 }
 
-
-
-
 /* background2 section styles */
 .background2 
 {
@@ -95,7 +90,8 @@ h1{
     margin-bottom: 40px;
 }
 
-.background2 div{
+.background2 div
+{
     background-color: #DADDB1;
     border-radius: 100px;
     height: 150px;
@@ -103,7 +99,8 @@ h1{
 
 }
 
-.background2 section{
+.background2 section
+{
     background: #D6C7AE;
     color: #fff; 
     width: 150px; 
@@ -123,8 +120,6 @@ h1{
     margin-right:5%;
 }
 
-
-
 /* background3 section styles */
 .background3 h2 
 {
@@ -142,8 +137,6 @@ h1{
     border-radius: 100px;
     height: 150px;
     margin-bottom: 3%;
-
-
 }
 
 .background3 p 
@@ -154,10 +147,6 @@ h1{
     margin-left: 10%;
     margin-right:10%;
 }
-
-
-
-
 
 /* Footer styles */
 footer 
