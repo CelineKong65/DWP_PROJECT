@@ -5,21 +5,22 @@ body {
 }
 
 header {
-    background-color: #BFB29E;
+    background-color:#FFD495 ;
     padding: 20px;
     text-align: center;
 }
 
 #back{
 
-    color: #BFB29E;
+    color: #FFD495;
     background-color: #fff;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 50%;
-    border: #fff solid;
+    border:#BFB29E solid ;
+    border-radius: 10%;
     text-decoration: none;
     margin-right: 100%;
+    padding: 5px 5px;
 }
 
 header h1 {
@@ -27,8 +28,21 @@ header h1 {
     color: #fff;
 }
 
+
+
+
 .contact-info {
     flex: 0 1 40%;
+    background-color: #FFD495;
+    text-align: center;
+}
+
+.contact-info h3{
+    color: white;
+}
+
+.contact-info h4{
+    color: white;
 }
 
 .contact-info p {
@@ -45,8 +59,7 @@ header h1 {
 {
     display: inline;
     text-align: center;
-    margin-right: 150px;
-    margin-left: 50px;
+    margin: 0px 80px 0px 80px;
     overflow: hidden;
     display: inline-block;
 
