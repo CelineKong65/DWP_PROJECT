@@ -24,9 +24,21 @@ header {
     text-decoration: none;
     padding: 5px 5px;
 }
+
+.logo 
+{
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    top: 5px; 
+    left: 470px;
+}
+
+
 header h1 {
     margin: 0;
     color: #fff;
+    margin-top: 6px;
 }
 
 
@@ -91,8 +103,9 @@ header h1 {
     padding-top: 3.5%;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 67%;
-
+    position: absolute;
+    top: 53%;
+    right: 13%; /* Adjust as needed */
 }
 
 
@@ -115,10 +128,15 @@ main {
     text-align: center;
 }
 
-.message p {
-    margin-bottom: 10px;
+.message p{
     color: #333;
     text-align: center;
+}
+
+.message img{
+    width: 350px;
+    height: 350px;
+    margin-left: 22%;
 }
 
 .contact-form {
