@@ -56,7 +56,7 @@ header
     background-color: #fff;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    border: #ffefe3; solid ;
+    border: #ffefe3 solid ;
     border-radius: 10%;
     text-decoration: none;
     padding: 5px 5px;
@@ -71,22 +71,35 @@ h1
 /* background1 section styles */
 .background1 
 {
-    background-color: #f4f4f4;
+    background-image: url(team.png);
+    background-repeat: no-repeat;
+    background-size: 1400px 500px;
     text-align: center;
     padding: 50px 0;
     color: #333;
+}
+
+.background1 img{
+
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    border: #FFD4B2 solid;
+    border-width: 10px;
 }
 
 .background1 h2 
 {
     font-size: 2em;
     margin-bottom: 20px;
+    color: #FFD4B2;
 }
 
-.background1 p 
+.background1 span
 {
     font-size: 1.2em;
     margin-bottom: 15px;
+    color: #FFD4B2;
 }
 
 /* background2 section styles */
