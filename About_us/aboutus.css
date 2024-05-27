@@ -31,9 +31,10 @@ body
 /* Header styles */
 header 
 {
-    background: #BFB29E;
+    background: #FFD4B2;
     color: #fff;
     padding: 1rem;
+    height: 120px;
 }
 
 .logo 
@@ -41,7 +42,9 @@ header
     width: 100px;
     height: 80px;
     vertical-align: middle;
-    margin-right: 10px;
+    position: absolute;
+    left: 280px;
+    top: 10px;
 }
 
 #back
@@ -61,7 +64,7 @@ header
 
 h1
 {
-    margin-left: 100px;
+    margin-top: 15px;
     text-align: center;
 }
 
@@ -112,7 +115,7 @@ h1
 
 .background2 section
 {
-    background: #D6C7AE;
+    background: #FFD4B2;
     color: #fff; 
     width: 150px; 
     height: 150px; 
