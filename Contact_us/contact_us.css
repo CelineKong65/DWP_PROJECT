@@ -20,7 +20,7 @@ header {
     background-color: #fff;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    border:#BFB29E solid ;
+    border:#ffefe3 solid ;
     border-radius: 10%;
     text-decoration: none;
     padding: 5px 5px;
@@ -47,18 +47,19 @@ header h1 {
 
 .contact-icon {
     flex: 0 1 40%;
-    background-color: #ffe0c8;
+    background-color: #ffefe3;
     text-align: center;
     height: 900px;
 }
 
 .contact-info1 {
     flex: 0 1 40%;
-    background-color: #ffe0c8;
+    background-color: #ffefe3;
     text-align: center;
+
 }
 
-.contact-info1 h3{
+.contact-info1 h2{
     margin: 11% 11%;
     color: #fff;
     display: inline;

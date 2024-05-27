@@ -52,11 +52,11 @@ header
     position: absolute;
     top: 10px; 
     left: 10px; 
-    color: #BFB29E;
+    color: #FFD4B2;
     background-color: #fff;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    border:#BFB29E solid ;
+    border: #ffefe3; solid ;
     border-radius: 10%;
     text-decoration: none;
     padding: 5px 5px;
@@ -106,7 +106,7 @@ h1
 
 .background2 div
 {
-    background-color: #DADDB1;
+    background-color: #f0f1be;
     border-radius: 100px;
     height: 150px;
     margin-bottom: 3%;
@@ -145,7 +145,7 @@ h1
 .background3 div
 {
 
-    background-color: #DADDB1;
+    background-color: #f0f1be;
     color: #333;
     text-align: center;
     border-radius: 100px;
