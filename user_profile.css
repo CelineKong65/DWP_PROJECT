@@ -1,92 +1,93 @@
-  
-body 
-{
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
-header{
-    width: 1600px;
-    height: 200px;
-}
-
-        
-.container
+.logo 
 {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 100px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100px;
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
-h1 
-{      
+a#back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #FF9B50;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: #FF9B50 solid;
+    border-radius: 10%;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+a#back:hover {
+    background-color: #FFD495;
+    color: #fff;
+}
+
+h1 {
     text-align: center;
     background-color: #FFD495;
     color: #fff;
     padding: 20px;
-    width: 90px;
+    margin: 0;
 }
 
-.profile 
-{
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container h1 {
+    background-color: #FFD495;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: auto; /* Adjust to fit content */
+}
+
+.profile {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.profile img 
-{
+.profile img {
     width: 175px;
-    height: 165px;
+    height: 175px; /* Adjusted to be a perfect circle */
     border-radius: 50%;
     margin-bottom: 20px;
 }
-        
-.profile h2 
-{
+
+.profile h2 {
     margin-bottom: 10px;
 }
-        
-.profile p 
-{
+
+.profile p {
     margin-bottom: 5px;
 }
-    
-.button 
-{
+
+.button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ff8b50;
     color: #fff;
     text-decoration: none;
-    transition: background-color 0.3s;
-    position: relative;
-    top: 20px; 
+    margin-top: 20px;
 }
 
-.button:hover 
-{
+.button:hover {
     background-color: rgb(242, 181, 119);
 }
-
-#back
-{
-    position: absolute;
-    top: 10px; 
-    left: 10px; 
-    color: #FF9B50;
-    background-color: #fff;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    border:#FF9B50 solid ;
-    border-radius: 10%;
-    text-decoration: none;
-    padding: 5px 5px;
-}
-
