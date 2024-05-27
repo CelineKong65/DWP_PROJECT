@@ -1,10 +1,10 @@
    
 body 
 {
-    background-image: url(background.jpg);
+    background-image: url(p.login.png);
     background-size: cover; 
     background-repeat: no-repeat; 
-    background-position: center; 
+    background-size: 1530px 750px;
 }
 
 #container 
