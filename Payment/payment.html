@@ -9,7 +9,13 @@
 </head>
 <body>
 
-<div class="container">
+<header>
+    <a id="back" href="file:///C:/xampp/htdocs/DWP_PROJECT-2/index.html"><b>BACK TO CART</b></a>
+    <h1 style="margin-top: 40px;">OKAY STATIONERY SHOP</h1>
+</header>
+
+<section>
+<div class="payment">
     <h1>Payment Form</h1>
     <form action="#" method="post">
         <label for="name">Full Name</label>
@@ -37,7 +43,6 @@
             <option value="Perak">Perak</option>
             <option value="Sarawak">Sarawak</option>
             <option value="Sabah">Sabah</option>
-            <!-- Add more countries as needed -->
         </select>
 
         <label for="city">City</label>
@@ -49,9 +54,9 @@
             <option value="Debit_Card">Debit Card</option>
             <option value="Credit_Card">Credit Card</option>
             <option value="Touch_N_Go">Touch N Go</option>
-            <!-- Add more countries as needed -->
         </select>
 
+        <h3>If using Credit Card, please key in:</h3>
         <label for="card">Credit Card Number</label>
         <input type="text" id="card" name="card" required>
 
@@ -64,6 +69,7 @@
         <input type="submit" value="Place Order">
     </form>
 </div>
+</section>
 
 </body>
 </html>

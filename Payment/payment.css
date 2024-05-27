@@ -5,7 +5,35 @@ body {
     padding: 0;
 }
 
-.container {
+
+/* Header styles */
+header 
+{
+    background: #FFD495;
+    color: #fff;
+    padding: 1rem;
+    height: 120px;
+}
+
+
+
+#back
+{
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    color: #FFD4B2;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: #ffefe3; solid ;
+    border-radius: 10%;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+
+.payment {
     max-width: 600px;
     margin: 50px auto;
     padding: 30px 50px;
