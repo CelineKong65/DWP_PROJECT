@@ -22,6 +22,16 @@ body
     padding: 5px 5px;
 }
 
+.logo 
+{
+    width: 90px;
+    height: 70px;
+    position: absolute;
+    top: 5px; 
+    left: 530px;
+}
+
+
 .container 
 {
     max-width: 1200px;
@@ -33,7 +43,7 @@ header
     background-color: #FFD495;
     background-color: ;
     color: #fff;
-    padding: 20px 0;
+    padding: 25px 0;
     text-align: center;
 }
 
