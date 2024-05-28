@@ -6,6 +6,18 @@
     <title>Stationery Products</title>
     <link rel="stylesheet" href="product_list.css">
 </head>
+
+<script>
+
+    // Function to toggle wishlist status
+function toggleWishlist() {
+    var heartButton = document.querySelector('.wishlist-heart');
+    heartButton.classList.toggle('active');
+}
+
+
+</script>
+
 <body>
     <header>
         <h1>
@@ -31,6 +43,7 @@
             <h2>Stapler and Staples</h2>
             <p class="price">RM2.99</p>
             <a href="#" class="detailButton">View Details</a>
+            <button class="wishlist-heart" onclick="toggleWishlist()"></button>
             <button id="buttonOK">Add to Cart</button>
         </div>
 

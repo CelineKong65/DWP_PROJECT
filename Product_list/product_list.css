@@ -79,9 +79,37 @@ main
     font-size: 16px;
 }
 
+/* Basic styling for the heart button */
+.wishlist-heart {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    bottom: 250px;
+    right: 130px;
+}
+
+/* Styling for the heart icon */
+.wishlist-heart::before {
+    content: "\2661"; /* Unicode for heart outline */
+    font-size: 24px;
+    color: #ccc;
+}
+
+/* Styling when heart is active (filled) */
+.wishlist-heart.active::before {
+    content: "\2665"; /* Unicode for filled heart */
+    color: red;
+}
 
 
-button 
+
+
+
+#buttonOK
 {
     background-color: #FFDBAA;
     border: none;
@@ -94,7 +122,7 @@ button
     transition: background-color 0.3s;
 }
 
-button:hover 
+#buttonOK:hover 
 {
     background-color: #FAAB78;
 }
