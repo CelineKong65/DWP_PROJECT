@@ -1,0 +1,137 @@
+
+body 
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header 
+{
+    background-color: #FFD495;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.logo 
+{
+    width: 100px;
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#back 
+{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    color: #FFD4B2;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: #ffefe3 solid;
+    border-radius: 0%;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+.container 
+{
+    max-width: 600px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pencil
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pencil_details 
+{
+    text-align: center;
+}
+
+.pencil_details img 
+{
+    max-width: 40%;
+    height: auto;  
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.price 
+{
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.description 
+{
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button 
+{
+    background-color: #FFDBAA;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover 
+{
+    background-color: #FAAB78;
+}
+
+#buttonOK 
+{
+    margin: 20px 30px 10px 30px;
+}
+
+nav ul 
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li 
+{
+    display: inline;
+}
+
+nav ul li a 
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover 
+{
+    text-decoration: underline;
+}
