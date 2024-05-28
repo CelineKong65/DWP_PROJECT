@@ -108,6 +108,26 @@ button:hover {
 
 .staff-table td{
     background-color: #BED7DC;
+    color: #333;
+    width: 10%;
+}
+
+#address{
+    width: 40%;
+}
+
+.staff-table td button{
+    padding: 5px;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+    position: relative;
+
+}
+
+.staff-tabletd td button:hover{
+    background-color: #adadad;
+ 
 }
 
 .staff-table tbody tr:nth-child(even) {
