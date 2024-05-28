@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #B3C8CF;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+a#back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #B3C8CF;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: #BED7DC solid;
+    border-radius: 10%;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.add-staff {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px 60px;
+    background-color:#E5DDC5 ;
+    color: #fff;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #adadad;
+}
+
+.staff-list {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.staff-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.staff-list ul li {
+    margin-bottom: 20px;
+}

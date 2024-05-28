@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Staff</title>
+    <link rel="stylesheet" href="Manage_staff.css">
+</head>
+<body>
+    <header>
+        <a id="back" href="file:///C:/xampp/htdocs/DWP_PROJECT-2/index.html"><b>BACK TO HOME</b></a>
+        <h1>Manage Staff</h1>
+    </header>
+    <div class="add-staff">
+        <form action="#" method="post">
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="position"><b>Position:</b></label>
+            <input type="text" id="position" name="position" required>
+
+            <label for="department"><b>Department:</b></label>
+            <select id="department" name="department" required>
+                <option value="" disabled selected>Select position</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+                <option value="IT">IT</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Marketing">Production</option>
+            </select>
+    
+            <button type="submit">Add Staff</button>
+        </form>
+    </div>
+    
+        <div class="staff-list">
+            <h2>Staff List</h2>
+            <ul>
+                <!-- Staff items will be dynamically added here -->
+                <li>celine</li>
+                <li>danny</li>
+            </ul>
+        </div>
+    
+</body>
+</html>
