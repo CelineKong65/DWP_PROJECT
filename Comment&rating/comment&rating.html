@@ -8,31 +8,56 @@
     <link rel="stylesheet" href="comment&rating.css">
 </head>
 <body>
-    <div class = "container">
-        <h1>Comment and Rating Page</h1>
-        <div class="coment-section">
-            <div class="Rating">
-
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-
-            </div>
+    
+    <header>
+        <div id="back">
+            <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
         </div>
-    </div>
-
-    <div class="Comment.form">
-        <h2>Add Your Comment</h2>
-        <form>
-            <textarea placeholder="Enter Your Comment"></textarea>
+        <div class="container">
+            <h1>
+                <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
+                Comment and Rating
+        </div>
+    </header>
         
-            <div>
-              <button type="Submit">Submit</button>  
-            </div>
-            
-        </form>
+        
+    <h2 style="text-align: center; margin-top: 60px"><b>Rating</b></h2>
+    <p style="text-align: center;margin-top: 20px;margin-bottom: 30px;">Rating for our product and service!</p>
+    <div class="rating">
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5"></label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4"></label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3"></label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2"></label>
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1"></label>
     </div>
+    
+    <br>
+    <br>
+    <hr class="line">
+    <br>
+    <br>
+
+
+        <h2 style="text-align: center;"><b>Add Comment</b></h2>
+        <div class="add-comment">
+                <form action="#" method="post">
+                    <label for="name"><b>Add any comment for our product and service:</b></label>
+                    <form>
+                        <textarea placeholder="Enter Your Comment"></textarea>
+                    
+                        <div>
+                          <button type="Submit">Submit</button>  
+                        </div>
+                        
+                    </form>
+
+                </form>
+        </div>
+
 </body>
 </html>

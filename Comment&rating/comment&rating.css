@@ -2,57 +2,131 @@
 body 
 {
     font-family: Arial, sans-serif;
-    background-color:  #FFD495;
+    background-color:  #fff;
     margin: 0;
     padding: 0;
   }
+
+
+  #back 
+  {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      color: #FFD4B2;
+      background-color: #fff;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      border:#ffefe3 solid ;
+      border-radius: 10%;
+      text-decoration: none;
+      padding: 5px 5px;
+  }
   
-.container
-{
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
+  .logo 
+  {
+      width: 100px;
+      height: 80px;
+      vertical-align: middle;
+      margin-right: 10px;
+  }
+
+
+  .rating {
+    display: inline-block;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    margin-left: 38%;
+  }
   
-h1, h2 
-{
-    color: #333;
-}
+  .rating input {
+    display: none;
+  }
   
-.comments, .comment-form 
-{
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-}
+  .rating label {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    color: #ddd;
+    margin-left: 5px;
+  }
   
-.comment 
-{
-    margin-bottom: 10px;
-}
+  .rating label:before {
+    content: '★';
+    font-size: 80px;
+  }
   
-.rating 
-{
-    color: orange;
-}
+  .rating input:checked ~ label {
+    color: gold;
+  }
   
-textarea 
-{
-    width: 100%;
-    height: 100px;
-    margin-bottom: 20px;
-}
   
-button 
-{
-    background-color: #FF8D21;
-    color: #fff;
-    padding: 10px 20px;
+  .container 
+  {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  header 
+  {
+      background-color: #FFD495;
+      background-color: ;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+  }
+  
+
+.line{
+
     border: none;
+    border-top: 2px solid #ccc; /* Change color and thickness as needed */
+    width: 1200px; /* Set the width of the line */
+    margin: 20px auto; /* Adjust margin to center the line horizontally */
+}
+
+  
+.add-comment {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 50px 100px;
+    background-color:#fff ;
+    color: #333;
+    border-radius: 10px;
+    border: #333 solid;
+}
+
+form {
+    margin-bottom: 20px;
+    border-radius: 20%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #FFD495;
+    color: #333;
+    padding: 10px 20px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
-  
-button:hover 
-{
-    background-color: #FFB76B;
+
+button:hover {
+    background-color: #FAAB78;
 }
