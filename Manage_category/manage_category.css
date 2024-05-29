@@ -2,8 +2,41 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-
 }
+
+header 
+{
+    background-color: #BED7DC;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+
+#back 
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #BED7DC;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid #ffefe3;
+    border-radius: 10%;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.logo 
+{
+    width: 100px;
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
 
 header {
     background-color: #B3C8CF;
@@ -26,13 +59,13 @@ a#back {
     padding: 5px 10px;
 }
 
-.add-staff {
+.add-category {
     max-width: 600px;
     margin: 20px auto;
     padding: 50px 100px;
     background-color:#E5DDC5 ;
     color: #333;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 form {
@@ -69,68 +102,58 @@ button:hover {
     background-color: #adadad;
 }
 
-.staff-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #333;
+
+
+
+main {
+    padding: 20px;
 }
 
-/* Basic styling for staff list */
-.staff-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.category-list, .add-category {
+    margin-bottom: 30px;
 }
 
-/* Styling for each row */
-.staff-row {
-    display: flex;
-    justify-content: center;
+h2 {
+    margin-top: 0;
 }
 
 /* Basic styling for the staff table */
-.staff-table {
+.category-list {
     width: 100%;
     border-collapse: collapse;
     color: #333;
 }
 
-.staff-table th, .staff-table td {
+.category-list th, .category-list td {
     border: 1px solid #fff;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 
-.staff-table th {
+.category-list th {
     background-color: #B3C8CF;
 }
 
-.staff-table td{
+.category-list td{
     background-color: #BED7DC;
     color: #333;
     width: 10%;
 }
 
-#address{
-    width: 40%;
-}
 
-.staff-table td button{
-    padding: 5px;
-    margin: 0;
+.category-list td button{
     background-color: #fff;
     color: #333;
     position: relative;
+    bottom: 16px;
 
 }
 
-.staff-tabletd td button:hover{
+.category-list td button:hover {
     background-color: #adadad;
- 
 }
 
-.staff-table tbody tr:nth-child(even) {
+.category-list tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
@@ -157,3 +180,21 @@ button:hover {
 }
 
 
+
+
+
+button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #adadad;
+}
+
+button:focus {
+    outline: none;
+}
