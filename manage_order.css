@@ -1,0 +1,117 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p 
+{
+    margin: 0;
+    padding: 0;
+}
+
+header 
+{
+    background-color: #BED7DC;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+
+#back 
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #BED7DC;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid #ffefe3;
+    border-radius: 10%;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.container 
+{
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: center;
+}
+
+h2 
+{
+    margin-top: 20px; 
+    text-align: center;
+}
+
+.input 
+{
+    margin-left: 75%;
+    height: 20px;
+}
+
+main 
+{
+    padding: 20px;
+}
+
+table 
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th,tbody td 
+{
+    border: 1px solid #CCC;
+    padding: 20px;
+    text-align: left;
+}
+
+thead th 
+{
+    background-color: #BED7DC;
+    color: #fff;
+}
+
+.actions button 
+{
+    background-color: #BED7DC;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 10px 15px;
+}
+
+.actions button:hover
+{
+    background-color: #9FBEC3;
+}
+
+.delete-button 
+{
+    background-color: #fff;
+}
+
+.delete-button:hover 
+{
+    background-color: red;
+}
+
+.view-button 
+{
+    background-color: #fff;
+}
+
+.view-button:hover 
+{
+    background-color: #56AEE0;
+}
