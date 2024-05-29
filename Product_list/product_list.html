@@ -10,12 +10,9 @@
 <script>
 
     // Function to toggle wishlist status
-function toggleWishlist() 
-{
-    var heartButton = document.querySelector('.wishlist-heart');
-    heartButton.classList.toggle('active');
+    function toggleWishlist(button) {
+    button.classList.toggle('active');
 }
-
 
 
 </script>
@@ -43,8 +40,8 @@ function toggleWishlist()
             <img src="stapler_staples.png" alt="Stapler and Staples">
             <h2>Stapler and Staples</h2>
             <p class="price">RM2.99</p>
-            <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/stapler_staples_details.html" class="detailButton">View Details</a>
-            <button class="wishlist-heart" onclick="toggleWishlist()"></button>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
+            <div></div><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/stapler_staples_details.html" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
 
@@ -52,6 +49,7 @@ function toggleWishlist()
             <img src="binder_lever_arch_file.png" alt="Binder Lever Arch File">
             <h2>Binder Lever Arch File</h2>
             <p class="price">RM5.60</p>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
             <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/binder_lever_arch_file_details.html" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
@@ -60,6 +58,7 @@ function toggleWishlist()
             <img src="pen.png" alt="Pen">
             <h2>MAG Pen</h2>
             <p class="price">RM6.00</p>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
             <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/pen_details.html" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
@@ -68,6 +67,7 @@ function toggleWishlist()
             <img src="pencil.png" alt="Pencil">
             <h2>Pencil 2B-12 Pcs</h2>
             <p class="price">RM6.00</p>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
             <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/pencil_details.html" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
@@ -76,7 +76,9 @@ function toggleWishlist()
             <img src="painting_marker.png" alt="Painting Marker">
             <h2>Painting Marker</h2>
             <p class="price">RM15.00</p>
-            <a href="#" class="detailButton">View Details</a>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
+            <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/painting_marker_details.html" class="detailButton">View Details</a>
+
             <button id="buttonOK">Add to Cart</button>
         </div>
 
@@ -84,7 +86,8 @@ function toggleWishlist()
             <img src="crayon.png" alt="Crayon">
             <h2>Crayon</h2>
             <p class="price">RM30.00</p>
-            <a href="#" class="detailButton">View Details</a>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
+            <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/crayon_details.html" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
 
@@ -92,7 +95,8 @@ function toggleWishlist()
             <img src="adhesive_tape.png" alt="Adhesive Tape">
             <h2>Adhesive Tape</h2>
             <p class="price">RM3.00</p>
-            <a href="#" class="detailButton">View Details</a>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
+            <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/adhesive_tape_details.html" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
 
@@ -100,7 +104,8 @@ function toggleWishlist()
             <img src="watercolor_paint.png" alt="Watercolor Paint">
             <h2>Watercolor Paint</h2>
             <p class="price">RM14.00</p>
-            <a href="#" class="detailButton">View Details</a>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
+             <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/watercolor_paint_details.html" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
 
@@ -108,7 +113,8 @@ function toggleWishlist()
             <img src="eraser.png" alt="Eraser">
             <h2>Eraser</h2>
             <p class="price">RM5.00</p>
-            <a href="#" class="detailButton">View Details</a>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
+            <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/eraser_details.html" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
 
@@ -116,13 +122,22 @@ function toggleWishlist()
             <img src="scissors.png" alt="Scissors">
             <h2>Scissors</h2>
             <p class="price">RM5.70</p>
-            <a href="#" class="detailButton">View Details</a>
+            <div id="move"><button class="wishlist-heart" onclick="toggleWishlist(this)"></button></div>
+            <a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/scissors_details.html" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
 
     </main>
     <footer>
-        <p>&copy; OKAY Stationery Store</p>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/About_us/aboutus.html">About</a></li>
+                <li><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/product_list.html">Services</a></li>
+                <li><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Contact_us/contact_us.html">Contact</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Comapany</p>
     </footer>
 </body>
 </html>
