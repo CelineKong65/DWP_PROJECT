@@ -10,7 +10,8 @@
 <script>
 
     // Function to toggle wishlist status
-function toggleWishlist() {
+function toggleWishlist() 
+{
     var heartButton = document.querySelector('.wishlist-heart');
     heartButton.classList.toggle('active');
 }
@@ -29,7 +30,6 @@ function toggleWishlist() {
             <ul>
                 <li><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/index.html">Home</a></li>
                 <li><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/product_list.html">All</a></li>
-                <li><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/office_binding.html">Office Binding</a></li>
                 <li><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/office_stationery.html">Office Stationery</a></li>
                 <li><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/drawing_painting.html">Drawing and Painting</a></li>
                 <li><a href="file:///C:/xampp/htdocs/DWP_PROJECT-3/Product_list/pen.html">Pen</a></li>
@@ -44,22 +44,6 @@ function toggleWishlist() {
             <p class="price">RM2.99</p>
             <a href="#" class="detailButton">View Details</a>
             <button class="wishlist-heart" onclick="toggleWishlist()"></button>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="handpress_stapler.png" alt="Hand Press Stapler">
-            <h2>Hand Press Stapler</h2>
-            <p class="price">RM42.50</p>
-            <a href="" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="double_hole_punch.png" alt="Double Hole Punch">
-            <h2>Double Hole Punch</h2>
-            <p class="price">RM5.00</p>
-            <a href="" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
 
@@ -96,33 +80,9 @@ function toggleWishlist() {
         </div>
 
         <div class="Product">
-            <img src="painter_brush.png" alt="Painter with Brush">
-            <h2>Painter with Brush</h2>
-            <p class="price">RM10.00</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="mechanical_pen&lead.png">
-            <h2>Mechanical Pen and Lead</h2>
-            <p class="price">RM9.50</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
             <img src="painting_marker.png" alt="Painting Marker">
             <h2>Painting Marker</h2>
             <p class="price">RM15.00</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="writing_brush.png" alt="Writing Brush">
-            <h2>Writing Brush</h2>
-            <p class="price">RM13.50</p>
             <a href="#" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
@@ -136,73 +96,9 @@ function toggleWishlist() {
         </div>
 
         <div class="Product">
-            <img src="whiteboard_marker_pen.png" alt="Whiteboard Marker Pen">
-            <h2>Whiteboard Marker Pen</h2>
-            <p class="price">RM3.80</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
             <img src="adhesive_tape.png" alt="Adhesive Tape">
             <h2>Adhesive Tape</h2>
             <p class="price">RM3.00</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="glue.png" alt="Glue">
-            <h2>Glue</h2>
-            <p class="price">RM2.00</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="uhu.png" alt="Uhu Glue">
-            <h2>Uhu Glue 125ML</h2>
-            <p class="price">RM18.00</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="square_ruler.png" alt="Square ruler">
-            <h2>Square ruler</h2>
-            <p class="price">RM4.80</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="drawing_compass.png" alt="Drawing Compass">
-            <h2>Drawing Compass</h2>
-            <p class="price">RM5.70</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="painting_board.png" alt="Painting Board">
-            <h2>Painting Board</h2>
-            <p class="price">RM9.90</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="painting_stand.png" alt="Painting Stand">
-            <h2>Painting Stand</h2>
-            <p class="price">RM21.00</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="canvas.png" alt="Canvas">
-            <h2>Canvas</h2> 
-            <p class="price">RM8.50</p>
             <a href="#" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
@@ -224,14 +120,6 @@ function toggleWishlist() {
         </div>
 
         <div class="Product">
-            <img src="correction_tape.png" alt="Correction Tape">
-            <h2>Correction Tape</h2>
-            <p class="price">RM7.50</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
             <img src="eraser.png" alt="Eraser">
             <h2>Eraser</h2>
             <p class="price">RM5.00</p>
@@ -243,38 +131,6 @@ function toggleWishlist() {
             <img src="scissors.png" alt="Scissors">
             <h2>Scissors</h2>
             <p class="price">RM5.70</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="cutter_knife.png" alt="Cutter Knife ">
-            <h2>Cutter Knife</h2>
-            <p class="price">RM2.00</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="ruler.png" alt="Ruler">
-            <h2>Ruler</h2>
-            <p class="price">RM1.00</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="highlighter_pen.png" alt="Highlight Pen Set">
-            <h2>Highlight Pen Set</h2>
-            <p class="price">RM13.00</p>
-            <a href="#" class="detailButton">View Details</a>
-            <button id="buttonOK">Add to Cart</button>
-        </div>
-
-        <div class="Product">
-            <img src="calculator.png" alt="Scientific Calculator">
-            <h2>Scientific Calculator</h2>
-            <p class="price">RM98.00</p>
             <a href="#" class="detailButton">View Details</a>
             <button id="buttonOK">Add to Cart</button>
         </div>
