@@ -133,6 +133,41 @@ main
 
 
 
+/* Styles for the shopping cart button */
+.shopping-cart-button {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    background-color: #FAAB78;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+  /* Styles for the wishlist button */
+  .wishlist-button {
+    position: fixed;
+    bottom: 100px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: #ff6347; /* Change button color */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  }
+
+
+
 footer 
 {
     background: #333;
