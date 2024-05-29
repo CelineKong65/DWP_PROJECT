@@ -5,6 +5,22 @@ body
     padding: 0;
 }
 
+#back
+{
+    position:fixed;
+    top: 10px; 
+    left: 10px; 
+    color: #FFD4B2;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border:#ffefe3 solid ;
+    border-radius: 10%;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+
 header 
 {
     background-color: #FFD495;
@@ -138,7 +154,7 @@ main
     position: fixed;
     bottom: 20px; /* Adjust the distance from the bottom */
     right: 20px; /* Adjust the distance from the right */
-    background-color: #FAAB78;
+    background-color: #FFD495;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -147,6 +163,23 @@ main
     font-size: 24px;
     cursor: pointer;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.shopping-cart-button:hover
+{
+    background-color: #d0af7c;
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
 }
 
   /* Styles for the wishlist button */
@@ -165,6 +198,24 @@ main
     font-size: 24px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
   }
+
+  .wishlist-button:hover
+{
+    background-color: #d1523c;
+    position: fixed;
+    bottom: 100px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    transition: background 0.3s;
+}
 
 
 
