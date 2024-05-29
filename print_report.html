@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="print_report.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OKAY Stationery Shop</h1>
+        <h2>View/Print Report</h2> 
+        <div class="report">
+            <div class="user-info">
+                <h2>User: John Doe</h2>
+                <p>Email: johndoe@.com</p>
+            </div>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price (RM)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Stapler and Staples</td>
+                        <td>2</td>
+                        <td>5.98</td>
+                    </tr>
+                    <tr>
+                        <td>001</td>
+                        <td>Pen</td>
+                        <td>1</td>
+                        <td>6.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="total">
+                <strong>Total Price (RM): </strong> 14.98
+            </div>
+            <button class="print-button" onclick="window.print()">Print Report</button>
+        </div>
+    </div>
+</body>
+</html>
