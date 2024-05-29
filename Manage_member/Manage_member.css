@@ -31,7 +31,7 @@ a#back {
 .member-table {
     width: 100%;
     border-collapse: collapse;
-    color: #fff;
+    color: #333;
 }
 
 .member-table th, .member-table td {
