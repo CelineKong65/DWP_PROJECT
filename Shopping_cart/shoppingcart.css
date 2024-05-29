@@ -12,11 +12,11 @@ body
     position:fixed;
     top: 10px; 
     left: 10px; 
-    color: #B3A492;
+    color: #FFD4B2;
     background-color: #fff;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    border:#B3A492 solid ;
+    border:#ffefe3 solid ;
     border-radius: 10%;
     text-decoration: none;
     padding: 5px 5px;
@@ -119,23 +119,6 @@ main
 .remove-btn:hover 
 {
     background-color: #a93226;
-}
-
-
-/* Styles for the shopping cart button */
-.shopping-cart-button {
-        position: fixed;
-        bottom: 20px; /* Adjust the distance from the bottom */
-        right: 20px; /* Adjust the distance from the right */
-        background-color: #FAAB78;
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-        cursor: pointer;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 
