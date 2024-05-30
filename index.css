@@ -45,6 +45,141 @@ nav ul li a
 
 
 
+
+
+
+/* Resetting default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero section styles */
+#hero {
+    background-color: #007bff;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Main section styles */
+.main {
+    padding: 20px;
+}
+
+.products-section, .advertisement-section {
+    margin-bottom: 50px;
+}
+
+.products-grid, .ad-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-card, .ad-card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-card img, .ad-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card h3, .ad-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-card p, .ad-card p {
+    font-size: 16px;
+}
+
+/* About and Contact sections */
+#about, #contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    margin-bottom: 50px;
+}
+
+#about h2, #contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#about p, #contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Styles for the shopping cart button */
 .shopping-cart-button {
     position: fixed;
