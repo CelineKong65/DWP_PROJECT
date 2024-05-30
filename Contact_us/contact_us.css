@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #FFD4B2;
+    background-color: #ffcca5;
     padding: 50px;
     text-align: center;
 }
@@ -16,12 +16,12 @@ header {
     position: absolute;
     top: 10px; 
     left: 10px; 
-    color: #FFD495;
+    color: #FFD4B2;
     background-color: #fff;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     border:#ffefe3 solid ;
-    border-radius: 10%;
+    border-radius: 10px;
     text-decoration: none;
     padding: 5px 5px;
 }
@@ -54,7 +54,6 @@ header h1 {
 
 .contact-info1 {
     flex: 0 1 40%;
-
     text-align: center;
 
 }
@@ -136,6 +135,8 @@ main {
     justify-content: space-between;
 }
 
+
+
 .message{
     flex: 0 1 40%;
 }
@@ -151,9 +152,9 @@ main {
 }
 
 .message img{
-    width: 350px;
-    height: 350px;
-    margin-left: 22%;
+    width: 500px;
+    height: 500px;
+    margin-left: 14%;
 }
 
 .contact-form {
@@ -163,7 +164,7 @@ main {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #DADDB1;
+    background-color: #ffcca5;
     width: 600px;
 }
 
@@ -191,8 +192,8 @@ textarea {
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ffe0c8;
+    color: #333;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -201,9 +202,17 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #bf9f86;
+    color: #fff;
+    transition: 0.3s;
 }
 
+/*map*/
+
+.map {
+    text-align:center; 
+
+}
 
 
 /* Footer styles */
