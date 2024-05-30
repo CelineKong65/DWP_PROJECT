@@ -145,7 +145,7 @@ footer {
 }
 
 .checkout-btn {
-    background-color: #B3A492;
+    background-color: #FAAB78;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -155,5 +155,5 @@ footer {
 }
 
 .checkout-btn:hover {
-    background-color: #FAAB78;
+    background-color: #B3A492;
 }
