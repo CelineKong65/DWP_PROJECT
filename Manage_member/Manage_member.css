@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +18,7 @@ a#back {
     color: #B3C8CF;
     background-color: #fff;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: #BED7DC solid;
     border-radius: 10%;
     text-decoration: none;
@@ -38,6 +38,7 @@ a#back {
     border: 1px solid #fff;
     padding: 8px;
     text-align: left;
+    
 }
 
 .member-table th {
@@ -74,6 +75,7 @@ a#back {
     border: #333 solid;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .PNbutton button:hover {
