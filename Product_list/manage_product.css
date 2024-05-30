@@ -1,6 +1,6 @@
 body 
 {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -28,9 +28,9 @@ header
     color: #BED7DC;
     background-color: #fff;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: solid #ffefe3;
-    border-radius: 10%;
+    border-radius: 10px;
     text-decoration: none;
     padding: 5px;
 }
@@ -124,6 +124,7 @@ main
     width: 30px;
     height: 30px;
     margin: 0 5px; /* Add horizontal margin */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .quantity span 
@@ -150,6 +151,7 @@ main
     padding: 10px 20px;
     transition: background-color 0.3s;
     text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .actions button:hover 
@@ -160,6 +162,7 @@ main
 .delete-button 
 {
     background-color: #FF6B6B;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .delete-button:hover 
@@ -170,6 +173,7 @@ main
 .view-button 
 {
     background-color: #6BCBFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .view-button:hover 
@@ -188,6 +192,7 @@ button
     margin-top: 20px;
     padding: 10px 20px;
     transition: background-color 0.3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 button:hover 
@@ -198,4 +203,5 @@ button:hover
 #buttonOK 
 {
     margin: 20px 30px 10px 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
