@@ -29,11 +29,6 @@ a#back {
     padding: 5px 10px;
 }
 
-a#back:hover {
-    background-color: #FFD495;
-    color: #fff;
-}
-
 h1 {
     text-align: center;
     background-color: #FFD495;

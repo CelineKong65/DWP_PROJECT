@@ -95,26 +95,6 @@ body
     font-weight: bold;
 }
 
-
-#login-form p 
-{
-    margin: 10px 0;
-}
-
-#login-form p a 
-{
-    text-decoration: none;
-    font-family: Arial Narrow, sans-serif;
-    font-size: 0.9em;
-    color: #80BCBD;
-}
-
-#login-form p a:hover 
-{
-    font-style: italic;
-    color: red;
-}
-
 #back
 {
     position: absolute;
