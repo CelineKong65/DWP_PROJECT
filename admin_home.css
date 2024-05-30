@@ -1,0 +1,70 @@
+
+.logo 
+{
+    width: 100px;
+    height: 80px;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #B3C8CF;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    padding: 20px 0;
+}
+
+.overview-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1;
+    text-align: center;
+    border: #333 solid;
+    box-shadow: rgba(0, 0.5, 0.5, 0.5);
+    margin-right: 10px;
+
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+
+
+tfoot {
+    font-weight: bold;
+}
