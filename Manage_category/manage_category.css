@@ -89,6 +89,19 @@ select {
     box-sizing: border-box;
 }
 
+.update-button{
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 25px;
+    margin-left: 87%;
+    width: 80px;
+    height: 40px;
+    border: #333 solid;
+}
+
+
 button {
     background-color: #fff;
     color: #333;
