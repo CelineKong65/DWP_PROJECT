@@ -151,3 +151,27 @@ main
 {
     background-color: #889da5;
 }
+
+.add-product {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 50px 100px;
+    background-color:#E5DDC5 ;
+    color: #333;
+    border-radius: 5px;
+}
+
+form {
+    margin-bottom: 20px;
+    border-radius: 20%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-product
+{
+    margin-bottom: 30px;
+}
