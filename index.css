@@ -1,4 +1,5 @@
 
+
 header 
 {
     background-color: white;
@@ -56,7 +57,7 @@ body, h1, h2, p, ul, li {
 
 /* General styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     background-color: #f4f4f4;
     color: #333;
 }
@@ -98,19 +99,27 @@ nav ul li a {
 
 
 /* Ad section styles */
-#ad {
-    background-color: #007bff;
+
+.ad-content {
+    overflow: hidden;
+    width: 100%;
+    background-color: #FFDBAA;
     color: #fff;
     padding: 100px 0;
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 }
 
-#ad h2 {
+.ad-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-#ad p {
+.ad-item {
+    flex: 0 0 auto;
+    width: 100%;
     font-size: 18px;
     margin-bottom: 30px;
 }
@@ -120,11 +129,12 @@ nav ul li a {
 /* Main section styles */
 .main {
     padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 }
 
-.products-section, .offer-section h2{
+.products-section h2, .offer-section h2{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
 }
 
@@ -142,15 +152,20 @@ nav ul li a {
 .product-card, .offer-card {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    padding: 120px;
+    padding: 70px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .product-card img, .offer-card img {
-    max-width: 100%;
+    width: 200px;
     height: auto;
     margin-bottom: 10px;
+}
+
+.product-card h3, .offer-card h3 {
+    font-size: 24px;
+    margin-bottom: 50px;
 }
 
 .product-card h3, .offer-card h3 {
@@ -167,12 +182,33 @@ nav ul li a {
     font-size: 16px;
 }
 
+.detailButton{
+    background-color: #FFDBAA;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 50px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    margin: 20px 30px 10px 30px;
+    position: relative;
+    top: 15px;
+}
+
+.detailButton:hover{
+    background-color: #FAAB78;
+}
 
 
+/*customer testimonial*/
 .testimonial-section {
     background-color: #f9f9f9;
     padding: 50px 0;
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 }
 
 .testimonial-section h2 {
@@ -213,15 +249,6 @@ nav ul li a {
         margin: 0 10px 20px;
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 
