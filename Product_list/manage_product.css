@@ -35,23 +35,16 @@ header
     padding: 5px;
 }
 
-.logo 
-{
-    width: 100px;
-    height: 80px;
-    vertical-align: middle;
-    margin-right: 10px;
-    font-size: 30px;
-}
-
-.container 
-{
+.container {
     font-size: 12px;
     align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 0 auto; /* Center the container horizontally */
+    height: 20vh; /* Set the height to 100% of the viewport height */
 }
+
 
 .input 
 {
@@ -132,76 +125,29 @@ main
     margin: 0 10px; /* Add horizontal margin */
 }
 
-.actions 
+.buttons 
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
-.actions button 
+.buttons button 
 {
-    background-color: #BED7DC;
+    padding: 5px 10px;
+    background-color: #B3C8CF;
+    color: white;
     border: none;
-    border-radius: 5px;
-    color: #fff;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    margin: 0 10px;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.actions button:hover 
+.buttons button.view 
 {
-    background-color: #9FBEC3;
+    background-color: #B3C8CF;
 }
 
-.delete-button 
+.buttons button:hover 
 {
-    background-color: #FF6B6B;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.delete-button:hover 
-{
-    background-color: #E05656;
-}
-
-.view-button 
-{
-    background-color: #6BCBFF;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.view-button:hover 
-{
-    background-color: #56AEE0;
-}
-
-button 
-{
-    background-color: #FFDBAA;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-button:hover 
-{
-    background-color: #F1EEDC;
-}
-
-#buttonOK 
-{
-    margin: 20px 30px 10px 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #889da5;
 }
