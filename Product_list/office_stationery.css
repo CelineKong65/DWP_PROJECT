@@ -78,6 +78,7 @@ main
     text-align: center;
     font-size: 12px;
     width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .Product img 
@@ -87,11 +88,25 @@ main
     height: 150px; 
 }
 
+.Product h2 
+{
+    font-size: 16px; 
+    margin: 10px 0; 
+    color: #333; 
+}
+
+
 .price 
 {
     color: #333;
     font-weight: bold;
     font-size: 16px;
+}
+
+.Product:hover 
+{
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
 }
 
 /* Basic styling for the heart button */
