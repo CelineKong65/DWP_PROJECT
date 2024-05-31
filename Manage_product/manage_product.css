@@ -130,6 +130,7 @@ main
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .buttons button 
@@ -142,17 +143,13 @@ main
     cursor: pointer;
 }
 
-.buttons button.view 
-{
-    background-color: #B3C8CF;
-}
-
 .buttons button:hover 
 {
     background-color: #889da5;
 }
 
-.add-product {
+.add-product 
+{
     max-width: 600px;
     margin: 20px auto;
     padding: 50px 100px;
@@ -161,17 +158,34 @@ main
     border-radius: 5px;
 }
 
-form {
+form 
+{
     margin-bottom: 20px;
     border-radius: 20%;
 }
 
-label {
+label 
+{
     display: block;
     margin-bottom: 5px;
 }
 
-.add-product
-{
-    margin-bottom: 30px;
+input[type="text"],select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
