@@ -2,7 +2,7 @@
 
 header 
 {
-    background-color: white;
+    background-image: url(p.index.png);
     padding: 20px;
 }
 
@@ -58,7 +58,7 @@ body, h1, h2, p, ul, li {
 /* General styling */
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    background-color: #f4f4f4;
+    background-image: url(p.index.png);
     color: #333;
 }
 
