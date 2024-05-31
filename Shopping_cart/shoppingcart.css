@@ -69,19 +69,22 @@ main {
 }
 
 .item-image {
-    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 200px;
     background-color: #f9f9f9;
 }
 
 .item-image img {
     max-height: 100%;
     max-width: 100%;
+    width: 150px;
+    object-fit: contain;
 }
 
-.item-details {
+.item-details 
+{
     padding: 20px;
 }
 
