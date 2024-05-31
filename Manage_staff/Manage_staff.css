@@ -114,7 +114,12 @@ button:hover {
 }
 
 #address{
-    width: 40%;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .staff-table td button{
