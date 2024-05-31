@@ -53,8 +53,27 @@
             <option value="">Select Method</option>
             <option value="Debit_Card">Debit Card</option>
             <option value="Credit_Card">Credit Card</option>
-            <option value="Touch_N_Go">Touch N Go</option>
+            <option value="Touch_N_Go" id="openTNG">Touch N Go</option>
         </select>
+
+
+
+        <div class="method3" id="method3">
+            <div class="method3-inner">
+                <h2>Please pay to this number : 010-777 8989</h2>
+                <h2>Or scan the below QR code:</h2>
+                <img src="TNG_QR.jpeg">
+                <button id="closeTNG">Pay</button>
+            </div>
+        </div>
+
+        <script src="tng.js"></script>
+
+
+
+
+
+
 
         <h3>If using Credit Card, please key in:</h3>
         <label for="card">Credit Card Number</label>
@@ -66,7 +85,7 @@
         <label for="cvv">CVV</label>
         <input type="text" id="cvv" name="cvv" required>
 
-        <input type="submit" value="Place Order" style="background-color: #FAAB78; 
+        <input type="submit" value="Place Order" id="place_order"; style="background-color: #FAAB78; 
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         ">
     </form>
