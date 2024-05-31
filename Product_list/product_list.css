@@ -7,7 +7,7 @@ body
 
 #back
 {
-    position:fixed;
+    position:absolute;
     top: 10px; 
     left: 10px; 
     color: #FFD4B2;
@@ -72,21 +72,33 @@ main
 {
     background-color: #f9f9f9;
     border: 7px solid #D6C7AE;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
     padding: 20px;
     text-align: center;
-    font-size: 12px;
-    width: 200px;
+    font-size: 14px;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
 }
+
 
 .Product img 
 {
     height: 150px;
     width: 150px;
     object-fit: contain;
+    margin-bottom: 10px;
 }
+
+.Product h2 
+{
+    font-size: 16px; 
+    margin: 10px 0; 
+    color: #333; 
+}
+
 
 .price 
 {
@@ -95,7 +107,11 @@ main
     font-size: 16px;
 }
 
-
+.Product:hover 
+{
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
 
 /* Basic styling for the heart button */
 .wishlist-heart {
