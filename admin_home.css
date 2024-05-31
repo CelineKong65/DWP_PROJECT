@@ -74,3 +74,36 @@ section {
 tfoot {
     font-weight: bold;
 }
+
+table.comment-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: ;
+}
+
+/* Table header styling */
+.comment-list th, .comment-list td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Header row styling */
+.comment-list thead {
+    background-color: #B3C8CF;
+}
+
+.comment-list thead th 
+{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hover effect for rows */
+.comment-list tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
