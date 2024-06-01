@@ -52,9 +52,11 @@ input[type=submit]
     width: 100px ;
     padding: 10px;
     border: none;
+    border-radius: 5px;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    margin-left: 125px;
 }
 
 input[type="text"], input[type="password"], input[type="email"],input[type="tel"], input[type="date"] 
@@ -68,7 +70,7 @@ input[type="text"], input[type="password"], input[type="email"],input[type="tel"
 
 input[type=submit]:hover 
 {
-    background-color: #BED7DC;
+    background-color: #FFCF81;
     cursor: pointer;
 }
 
