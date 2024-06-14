@@ -1,26 +1,15 @@
 <?php
-   if ($_SERVER["REQUEST_METHOD"] == "POST") 
-   {
-       // 处理表单提交
-       $name = $_POST['name'];
-       $email = $_POST['email'];
-   }
-?>
+$servername = "localhost";
+$username = "root";  // XAMPP默认的MySQL用户名
+$password = "";  // 默认没有密码
+$dbname = "your_database_name";  // 你创建的数据库名称
 
-<html>
-   <head>
-       <title>处理表单提交</title>
-   </head>
-   <body>
-       <h1>处理表单提交</h1>
-       <!-- 在此处添加HTML表单 -->
-       <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-           <label for="name">姓名：</label>
-           <input type="text" name="name" id="name"><br>
-           <label for="email">邮箱：</label>
-           <input type="email" name="email" id="email"><br>
-           <!-- 其他表单字段... -->
-           <input type="submit" value="提交">
-       </form>
-   </body>
-   </html>
+// 创建连接
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// 检查连接
+if ($conn->connect_error) {
+    die("连接失败: " . $conn->connect_error);
+}
+echo "连接成功";
+?>
