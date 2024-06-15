@@ -62,7 +62,7 @@ $conn->close();
 ?>
 
 <header>
-    <a id="back" href="../login/login.html"><b>BACK TO LOGIN</b></a>
+    <a id="back" href="../login/login.php"><b>BACK TO LOGIN</b></a>
 </header>
 <div id="container">
     <div id="register-title">
