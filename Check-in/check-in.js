@@ -1,3 +1,4 @@
+
 const calendar = document.getElementById('calendar');
 const checkInButton = document.getElementById('checkInButton');
 const checkInMessage = document.getElementById('checkInMessage');
