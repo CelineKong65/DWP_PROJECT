@@ -8,6 +8,8 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="index1.css">
 </head>
+
+
 <body>
     <header>
         <h1>
@@ -62,22 +64,31 @@
                     <h2>Watercolor Paint</h2>
                     <img src="watercolor_paint.png" alt="Watercolor Paint">
                     <h3>Top Product 1</h3>
-                    <a href="../DWP_PROJECT/Product_list/drawing_painting.html" class="detailButton">Buy It Now</a>
+                    <a class="detailButton" onclick="alertLogin()">Buy It Now</a>
                 </div>
                 <div class="product-card">
                     <h2>Crayon</h2>
                     <img src="crayon.png" alt="Crayon">
                     <h3>Top Product 2</h3>
-                    <a href="../DWP_PROJECT/Product_list/pen.html" class="detailButton">Buy It Now</a>
+                    <a class="detailButton" onclick="alertLogin()">Buy It Now</a>
                 </div>
                 <div class="product-card">
                     <h2>Pencil</h2>
                     <img src="pencil.png" alt="Pencil">
                     <h3>Top Product 3</h3>
-                    <a href="../DWP_PROJECT/Product_list/pen.html" class="detailButton">Buy It Now</a>
+                    <a class="detailButton" onclick="alertLogin()">Buy It Now</a>
                 </div>
             </div>
         </section>
+
+    <!-- Popup structure -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup" id="popup">
+        <p>Please log in to purchase this product.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+
         <section id="offer" class="offer-section">
             <h2>Special Offers</h2>
             <div class="offer-grid">

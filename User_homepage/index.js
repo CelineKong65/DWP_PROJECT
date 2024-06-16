@@ -39,3 +39,15 @@ function autoShowSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(autoShowSlides, 2000); // Change image every 2 seconds
 }
+
+
+//pruss the button to login to buy
+function alertLogin() {
+    document.getElementById('popup-overlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup-overlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+}
