@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        header("Location: ../index.html");
+        header("Location: ../User_homepage/index2.html");
         exit(); // Ensure no further code is executed after redirection
     } else {
         $error_message = "Invalid email or password.";
@@ -44,7 +44,7 @@ $conn->close();
 ?>
 
 <header>
-    <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
+    <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
 </header>
 <div id="container">
     <div style="border: 1px solid #DDD; border-radius: 10px; width: 400px; padding: 0px">

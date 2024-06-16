@@ -368,6 +368,108 @@ nav ul li a {
 
 
 
+/* Styles for the shopping cart button */
+.shopping-cart-button {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    background-color: #FFD495;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.shopping-cart-button:hover
+{
+    background-color: #d0af7c;
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+/* Styles for the wishlist button */
+  .wishlist-button {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #ff6347; 
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+
+  .wishlist-button:hover
+{
+    background-color: #d1523c;
+    position: fixed;
+    bottom: 100px; 
+    right: 20px; 
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background 0.3s;
+}
+
+  /* Styles for the check-in button */
+  .check-in-button {
+    position: fixed;
+    bottom: 180px; 
+    right: 20px; 
+    background-color: #9c9cff; 
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+
+  .check-in-button:hover
+{
+    background-color: #7575c8;
+    position: fixed;
+    bottom: 180px; 
+    right: 20px; 
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background 0.3s;
+}
 
 footer 
 {
