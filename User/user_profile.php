@@ -24,7 +24,7 @@
             <p>Email: johndoe@gmail.com</p>
             <p>Phone: +1234567890</p>
             <p>Address: Ixora Apartment, Melaka</p>
-            <a href="edit_profile.html" class="button">Edit Profile</a>
+            <a href="edit_profile.php" class="button">Edit Profile</a>
         </div>
     </div>
 </body>
