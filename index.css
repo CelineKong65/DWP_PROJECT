@@ -481,3 +481,10 @@ footer
     bottom: 0;
     left: 0;
 }
+
+.testimonial-card {
+    display: none;
+}
+.testimonial-card.active {
+    display: block;
+}
