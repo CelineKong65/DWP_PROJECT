@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index1.css">
 </head>
+
+
 <body>
     <header>
         <h1>
@@ -16,13 +18,12 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="../DWP_PROJECT/About_us/aboutus.html">About</a></li>
-                <li><a href="../DWP_PROJECT/Product_list/product_list.html">Product</a></li>
-                <li><a href="../DWP_PROJECT/Contact_us/contact_us.html">Contact</a></li>
-                <li><a href="../DWP_PROJECT/Order_history/orderhistory.html">Order History</a></li>
-                <li><a href="../DWP_PROJECT/Comment&rating/comment&rating.html">Comment and Rating</a></li>
-                <li><a href="../DWP_PROJECT/Admin_login/adminlogin.html">Admin</a></li>
-                <li><a href="../DWP_PROJECT/login/login.html">Account</a></li>
+                <li><a href="../About_us/aboutus.html">About</a></li>
+                <li><a href="../Contact_us/contact_us.html">Contact</a></li>
+                <li><a href="../Product_list/product_list.html">Product</a></li>
+                <li><a href="../Comment&rating/comment&rating.html">Comment and Rating</a></li>
+                <li><a href="../Admin_login/adminlogin.html">Admin</a></li>
+                <li><a href="../login/login.php">Account</a></li>
             </ul>
         </nav>
         </header>
@@ -63,22 +64,31 @@
                     <h2>Watercolor Paint</h2>
                     <img src="watercolor_paint.png" alt="Watercolor Paint">
                     <h3>Top Product 1</h3>
-                    <a href="../DWP_PROJECT/Product_list/drawing_painting.html" class="detailButton">Buy It Now</a>
+                    <a class="detailButton" onclick="alertLogin()">Buy It Now</a>
                 </div>
                 <div class="product-card">
                     <h2>Crayon</h2>
                     <img src="crayon.png" alt="Crayon">
                     <h3>Top Product 2</h3>
-                    <a href="../DWP_PROJECT/Product_list/pen.html" class="detailButton">Buy It Now</a>
+                    <a class="detailButton" onclick="alertLogin()">Buy It Now</a>
                 </div>
                 <div class="product-card">
                     <h2>Pencil</h2>
                     <img src="pencil.png" alt="Pencil">
                     <h3>Top Product 3</h3>
-                    <a href="../DWP_PROJECT/Product_list/pen.html" class="detailButton">Buy It Now</a>
+                    <a class="detailButton" onclick="alertLogin()">Buy It Now</a>
                 </div>
             </div>
         </section>
+
+    <!-- Popup structure -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup" id="popup">
+        <p>Please log in to purchase this product.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+
         <section id="offer" class="offer-section">
             <h2>Special Offers</h2>
             <div class="offer-grid">
@@ -97,7 +107,7 @@
     <section id="testimonials" class="testimonial-section">
         <h2>Customer Testimonials and Comments</h2>
         <div class="testimonial-grid">
-            <div class="testimonial-card active">
+            <div class="testimonial-card">
                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</p>
                 <cite>John Doe</cite>
             </div>
@@ -131,14 +141,6 @@
 
 
 
-    <!-- shopping cart button -->
-    <a href="../DWP_PROJECT/Shopping_cart/shopping_cart.html"><button class="shopping-cart-button">🛒</button></a>  
-
-    <!-- Wishlist button -->
-    <a href="../DWP_PROJECT/Wishlist/Wishlist.html"><button class="wishlist-button">&#10084;</button></a>
-
-    <!-- Check-in button -->
-    <a href="../DWP_PROJECT/Check-in/check-in.html"><button class="check-in-button">🌟</button></a>
 
 
 

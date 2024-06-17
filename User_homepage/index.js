@@ -40,6 +40,7 @@ function autoShowSlides() {
     setTimeout(autoShowSlides, 2000); // Change image every 2 seconds
 }
 
+<<<<<<< HEAD:index.js
 // Variable to track the index of testimonials
 var testimonialIndex = 0;
 autoShowTestimonials();
@@ -64,3 +65,16 @@ function autoShowTestimonials() {
     setTimeout(autoShowTestimonials, 4000);
 }
 
+=======
+
+//pruss the button to login to buy
+function alertLogin() {
+    document.getElementById('popup-overlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup-overlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+}
+>>>>>>> d43dfb999493faac11675955bf5717cf4bc98c95:User_homepage/index.js

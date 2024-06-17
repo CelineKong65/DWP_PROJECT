@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,18 +22,19 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user_email = $_POST["user_email"];
-    $user_password = $_POST["user_password"];
+    $email = $_POST["email"];
+    $userpass = $_POST["userpass"];
 
     $stmt = $conn->prepare("SELECT * FROM user_register WHERE email = ? AND userpass = ?");
-    $stmt->bind_param("ss", $user_email, $user_password);
+    $stmt->bind_param("ss", $email, $userpass);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        echo "Login successful!";
+        header("Location: ../User_homepage/index2.html");
+        exit(); // Ensure no further code is executed after redirection
     } else {
-        echo "Invalid email or password.";
+        $error_message = "Invalid email or password.";
     }
 
     $stmt->close();
@@ -43,9 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 
-<head>
-    <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
-</head>
+<header>
+    <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
+</header>
 <div id="container">
     <div style="border: 1px solid #DDD; border-radius: 10px; width: 400px; padding: 0px">
 
@@ -53,10 +53,15 @@ $conn->close();
             <h3 style="margin: 0px; padding: 12px 170px; color:white; font-family: Arial;">Login</h3>
         </div>
 
-        <div id="login-form" method="post" action="">
-            <form name="loginfrm">
-                <p><input type="email" name="user_email" required/></p>
-                <p><input type="password" name="user_password" required/></p>
+        <div id="login-form">
+            <?php
+            if (isset($error_message)) {
+                echo "<p style='color: red; text-align: center;'>$error_message</p>";
+            }
+            ?>
+            <form name="loginfrm" method="post" action="">
+                <p><input type="email" name="email" required/></p>
+                <p><input type="password" name="userpass" required/></p>
                 <p><input type="submit" name="loginbtn" value="LOGIN" /></p>
             </form>
 

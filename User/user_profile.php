@@ -13,7 +13,7 @@
         OKAY STATIONERY SHOP
     </h1>
     </header>
-    <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
+    <a id="back" href="../User_homepage/index2.html"><b>BACK TO HOME</b></a> 
     
     <div class="container">
         <h1>User Profile</h1>
@@ -24,7 +24,7 @@
             <p>Email: johndoe@gmail.com</p>
             <p>Phone: +1234567890</p>
             <p>Address: Ixora Apartment, Melaka</p>
-            <a href="edit_profile.html" class="button">Edit Profile</a>
+            <a href="edit_profile.php" class="button">Edit Profile</a>
         </div>
     </div>
 </body>

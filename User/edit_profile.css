@@ -115,15 +115,17 @@ input[type="text"],input[type="email"],input[type="tel"],input[type="text"],inpu
 
 button 
 {
-    width: 100%;
+    width: 500px; 
     padding: 10px;
     background-color: #FFD495;
-    border: none;
+    border: 1px solid #CCC;
     border-radius: 5px;
     color: white;
     font-size: 16px;
     cursor: pointer;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    margin-bottom: 30px;
 }
 
 button:hover 

@@ -1,0 +1,231 @@
+body 
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#back
+{
+    position:fixed;
+    top: 10px; 
+    left: 10px; 
+    color: #FFD4B2;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border:#ffefe3 solid ;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+header 
+{
+    background-color: #FFD495;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo 
+{
+    width: 100px;
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+nav ul 
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li 
+{
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a 
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover 
+{
+    text-decoration: underline;
+}
+
+main 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.Product 
+{
+    border: 7px solid #D6C7AE;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Product img 
+{
+    object-fit: contain; 
+    width: 150px; 
+    height: 150px; 
+}
+
+.Product h2 
+{
+    font-size: 16px; 
+    margin: 10px 0; 
+    color: #333; 
+}
+
+.price 
+{
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.Product:hover 
+{
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+/* Basic styling for the heart button */
+.wishlist-heart {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Styling for the heart icon */
+.wishlist-heart::before {
+    content: "\2661"; /* Unicode for heart outline */
+    font-size: 24px;
+    color: #ccc;
+}
+
+/* Styling when heart is active (filled) */
+.wishlist-heart.active::before {
+    content: "\2665"; /* Unicode for filled heart */
+    color: #FF5151 ;
+}
+
+.buttonOK
+{
+    background-color: #FFDBAA;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    margin: 20px 30px 10px 30px;
+}
+
+.buttonOK:hover 
+{
+    background-color: #FAAB78;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Styles for the shopping cart button */
+.shopping-cart-button {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    background-color: #FFD495;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.shopping-cart-button:hover
+{
+    background-color: #d0af7c;
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+  /* Styles for the wishlist button */
+  .wishlist-button {
+    position: fixed;
+    bottom: 100px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: #ff6347; /* Change button color */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  }
+
+  .wishlist-button:hover
+{
+    background-color: #d1523c;
+    position: fixed;
+    bottom: 100px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    transition: background 0.3s;
+}
+
+footer 
+{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+}
