@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>
-            <a id="back" href="../User/user_profile.html"><b>BACK TO USER PROFILE</b></a>
+            <a id="back" href="../User/user_profile.php"><b>BACK TO USER PROFILE</b></a>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OKAY STATIONERY SHOP
         </h1>
