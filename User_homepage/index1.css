@@ -1,5 +1,3 @@
-
-
 header 
 {
     background-image: url(p.index.png);
@@ -316,8 +314,7 @@ nav ul li a {
     background-color: #FAAB78;
 }
 
-
-/*customer testimonial*/
+/* Customer testimonial slider */
 .testimonial-section {
     background-color: #f9f9f9;
     padding: 50px 0;
@@ -331,18 +328,28 @@ nav ul li a {
     color: #333;
 }
 
-.testimonial-grid {
+.testimonial-slider {
+    overflow: hidden;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    justify-content: flex-start;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%; /* Double the width since we are showing two testimonials at a time */
 }
 
 .testimonial-card {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 0 15px 30px;
+    padding: 25px 25px;
+    flex: 0 0 50%; /* Each card takes half width */
+    margin-right: 20px;
     max-width: 300px;
     text-align: left;
 }
@@ -357,13 +364,6 @@ nav ul li a {
     font-size: 14px;
     color: #666;
 }
-
-@media (max-width: 768px) {
-    .testimonial-card {
-        margin: 0 10px 20px;
-    }
-}
-
 
 
  /* CSS for popup */
@@ -406,10 +406,6 @@ nav ul li a {
 .popup button:hover {
     background-color: #FAAB78;
 }
-
-
-
-
 
 
 footer 
