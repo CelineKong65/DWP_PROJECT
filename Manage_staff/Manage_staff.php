@@ -24,7 +24,7 @@
             margin: 15% auto; /* 15% from the top and centered */
             padding: 20px;
             border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
+            width: 40%; /* Could be more or less, depending on screen size */
         }
 
         .close {
@@ -39,6 +39,48 @@
             color: black;
             text-decoration: none;
             cursor: pointer;
+        }
+
+        .modal button {
+            background-color: #B3C8CF;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .modal button:hover {
+            background-color: #98B0B9;
+        }
+
+        #addStaffBtn {
+            background-color: #98B0B9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        #addStaffBtn:hover {
+            background-color: #0056b3;
+        }
+
+         /* General styles for input and button */
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"] 
+        {
+            width: 565px; 
+            height: 40px; /* Fixed height */
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
         }
     </style>
 </head>

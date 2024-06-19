@@ -45,16 +45,6 @@ a#back {
 }
 
 
- /* General styles for input and button */
- input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
 button {
     background-color: #fff;
     color: #333;
@@ -64,3 +54,4 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
