@@ -12,7 +12,7 @@
         <h1>OKAY STATIONERY SHOP</h1>
     </header>
 
-    <h2 style="text-align: center;">Manage Member</h2>
+    <h2 style="text-align: center;">Manage Members</h2>
 
     <table class="member-table">
         <thead>
@@ -30,47 +30,41 @@
         </thead>
         <tbody>
             <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "okaydb";
+            $conn = new mysqli("localhost", "root", "", "okaydb");
 
-                $conn = new mysqli($servername, $username, $password, $dbname);
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
+            $sql = "SELECT id, username, userpass, email, phone_number, birthday, user_address FROM user_register";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . htmlspecialchars($row["id"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["username"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["birthday"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["email"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["phone_number"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["user_address"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["userpass"]) . "</td>";
+                    echo "<td><a href='delete_user.php?id=" . $row["id"] . "'>Delete</a></td>";
+                    echo "<td><a href='update_user.php?id=" . $row["id"] . "'>Update</a></td>";
+                    echo "</tr>";
                 }
+            } else {
+                echo "<tr><td colspan='9'>No members found</td></tr>";
+            }
 
-                $sql = "SELECT id, username, userpass, email, phone_number, birthday, user_address FROM user_register";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $row["id"] . "</td>";
-                        echo "<td>" . $row["username"] . "</td>";
-                        echo "<td>" . $row["birthday"] . "</td>";
-                        echo "<td>" . $row["email"] . "</td>";
-                        echo "<td>" . $row["phone_number"] . "</td>";
-                        echo "<td>" . $row["user_address"] . "</td>";
-                        echo "<td>" . $row["userpass"] . "</td>";
-                        echo "<td><a href='delete_user.php?id=" . $row["id"] . "'>Delete</a></td>";
-                        echo "<td><a href='update_user.php?id=" . $row["id"] . "'>Update</a></td>";
-                        echo "</tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='9'>No members found</td></tr>";
-                }
-
-                $conn->close();
+            $conn->close();
             ?>
         </tbody>
     </table>
 
-    <!-- Previous and Next Buttons -->
     <div class="PNbutton">
-        <button id="prevBtn">&#9664;</button> <!-- Previous symbol -->
-        <button id="nextBtn">&#9654;</button> <!-- Next symbol -->
+        <button id="prevBtn">&#9664; Previous</button>
+        <button id="nextBtn">Next &#9654;</button>
     </div>
 </body>
 </html>
