@@ -7,6 +7,58 @@
     <link rel="stylesheet" href="edit_profile.css">
 </head>
 <body>
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "okaydb";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Assume user_id is obtained from session or a similar mechanism
+    session_start();
+    $user_id = $_SESSION['user_id'];
+
+    // Fetch user data
+    $sql = "SELECT * FROM user_register WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST["username"];
+        $email = $_POST["email"];
+        $phone = $_POST["phone"];
+        $address = $_POST["address"];
+        $password = $_POST["password"];
+        $birthday = $_POST["birthday"];
+
+        // Update user data
+        $update_sql = "UPDATE user_register SET username = ?, email = ?, phone_number = ?, user_address = ?, userpass = ?, birthday = ? WHERE id = ?";
+        $update_stmt = $conn->prepare($update_sql);
+        $update_stmt->bind_param("ssssssi", $username, $email, $phone, $address, $password, $birthday, $user_id);
+
+        if ($update_stmt->execute()) {
+            echo "Profile updated successfully";
+        } else {
+            echo "Error updating profile: " . $update_stmt->error;
+        }
+
+        $update_stmt->close();
+    }
+
+    $stmt->close();
+    $conn->close();
+    ?>
+    
     <header>
         <h1>
             <a id="back" href="../User/user_profile.php"><b>BACK TO USER PROFILE</b></a>
