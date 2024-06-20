@@ -4,10 +4,8 @@ $username = "root";
 $password = "";
 $dbname = "okaydb";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -32,6 +30,6 @@ if (isset($_GET['id'])) {
 $conn->close();
 
 // Redirect back to the Manage Members page
-header("Location: manage_members.php");
+header("Location: Manage_member.php");
 exit();
 ?>
