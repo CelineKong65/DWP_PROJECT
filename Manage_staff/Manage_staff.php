@@ -72,7 +72,7 @@
         }
 
         input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
-            width: 570px;
+            width: 590px;
             height: 40px;
             padding: 8px;
             margin-bottom: 10px;
