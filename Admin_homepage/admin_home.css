@@ -77,19 +77,23 @@ tfoot {
     font-weight: bold;
 }
 
-table.comment-list {
+.comment-list {
     width: 100%;
     border-collapse: collapse;
-    margin: 100px 50px 100px 50px;
+    margin: 20px auto;
     font-size: 18px;
     text-align: left;
+}
+
+.comment-list h2 {
+    margin-top: 20px; /* Adjust the margin as needed */
+    margin-bottom: 10px; /* Add a small margin below the h2 for spacing */
 }
 
 /* Table header styling */
 .comment-list th, .comment-list td {
     padding: 12px 15px;
     border: 1px solid #ddd;
-    
 }
 
 /* Header row styling */
