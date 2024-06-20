@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        header("Location: ../Admin_home.html");
+        header("Location: ../Admin_homepage/Admin_home.html");
         exit(); // Ensure no further code is executed after redirection
     } else {
         $error_message = "Invalid email or password.";
