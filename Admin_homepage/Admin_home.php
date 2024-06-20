@@ -69,14 +69,17 @@
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
-                if ($conn->connect_error) {
+                if ($conn->connect_error) 
+                {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
                 $result = $conn->query("SELECT * FROM rating_comments");
-                if ($result->num_rows > 0) {
+                if ($result->num_rows > 0) 
+                {
                     $no = 1;
-                    while($row = $result->fetch_assoc()) {
+                    while($row = $result->fetch_assoc()) 
+                    {
                         echo "<tr>
                                 <td>{$no}</td>
                                 <td>{$row['user_name']}</td>
