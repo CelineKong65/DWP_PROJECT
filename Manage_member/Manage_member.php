@@ -17,7 +17,7 @@
     <table class="member-table">
         <thead>
             <tr>
-                <th>No.</th>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Birthday</th>
                 <th>Email</th>
@@ -49,8 +49,8 @@
                     echo "<td>" . htmlspecialchars($row["phone_number"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["user_address"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["userpass"]) . "</td>";
-                    echo "<td><a href='delete_user.php?id=" . $row["id"] . "'>Delete</a></td>";
-                    echo "<td><a href='update_user.php?id=" . $row["id"] . "'>Update</a></td>";
+                    echo "<td><a href='delete_member.php?id=" . $row["id"] . "'>Delete</a></td>";
+                    echo "<td><a href='update_member.php?id=" . $row["id"] . "'>Update</a></td>";
                     echo "</tr>";
                 }
             } else {
