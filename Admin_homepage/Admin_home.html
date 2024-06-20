@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="admin_home.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="charts.js" defer></script> <!-- Link to your JavaScript file -->
 </head>
-
-
 <body>
     <header>
         <h1>
@@ -25,7 +24,6 @@
             </ul>
         </nav>
     </header>
-
 
     <section id="overview">
         <div class="container">
@@ -54,7 +52,6 @@
                 <th>Name</th>
                 <th>Rating (star)</th>
                 <th>Comment</th>
-
             </tr>
         </thead>
         <tbody>
@@ -64,16 +61,12 @@
                 <td>5</td>
                 <td>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</td>
             </tr>
-        </tbody>
-        <tbody>
             <tr>
                 <td>2.</td>
                 <td>Celine</td>
                 <td>5</td>
                 <td>"Absolutely love the variety and quality of stationery at OKAY Stationery Shop. Always find something unique for my journaling needs!"</td>
             </tr>
-        </tbody>
-        <tbody>
             <tr>
                 <td>3.</td>
                 <td>Dennis</td>
@@ -81,10 +74,21 @@
                 <td>"As a pen enthusiast, I can't get enough of the exquisite collection at OKAY Stationery Shop. Each piece feels like a work of art!"</td>
             </tr>
         </tbody>
+    </table>
 
+    <!-- Bar Chart for Total Orders -->
+    <div class="container">
+        <h2>Total Orders Per Month</h2>
+        <canvas id="ordersChart"></canvas>
+    </div>
 
+    <!-- Bar Chart for Total Customers -->
+    <div class="container">
+        <h2>Total Customers Per Month</h2>
+        <canvas id="customersChart"></canvas>
+    </div>
 
-
+    <script src="Admin_homepage.js"></script>
 
 </body>
 </html>
