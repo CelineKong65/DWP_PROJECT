@@ -50,70 +50,88 @@
         </div>
     </section>
 
+    <h2>Rating and Comment list</h2>
     <table class="comment-list">
         <thead>
             <tr>
-                <th id="no">No.</th>
+                <th id="no">ID</th>
                 <th>Name</th>
                 <th>Rating (star)</th>
                 <th>Comment</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1.</td>
-                <td>John Doe</td>
-                <td>5</td>
-                <td>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td>Celine</td>
-                <td>5</td>
-                <td>"Absolutely love the variety and quality of stationery at OKAY Stationery Shop. Always find something unique for my journaling needs!"</td>
-            </tr>
-            <tr>
-                <td>3.</td>
-                <td>Dennis</td>
-                <td>4</td>
-                <td>"As a pen enthusiast, I can't get enough of the exquisite collection at OKAY Stationery Shop. Each piece feels like a work of art!"</td>
-            </tr>
+            <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "okaydb";
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $result = $conn->query("SELECT * FROM rating_comments");
+                if ($result->num_rows > 0) {
+                    $no = 1;
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                                <td>{$no}</td>
+                                <td>{$row['user_name']}</td>
+                                <td>{$row['rating']}</td>
+                                <td>{$row['comment']}</td>
+                            </tr>";
+                        $no++;
+                    }
+                } 
+                $conn->close();
+            ?>
         </tbody>
     </table>
 
-    
+    <h2>Contact Us list</h2>
     <table class="comment-list">
         <thead>
             <tr>
-                <th id="no">No.</th>
+                <th id="no">ID</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Message</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1.</td>
-                <td>John Doe</td>
-                <td>5</td>
-                <td>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td>Celine</td>
-                <td>5</td>
-                <td>"Absolutely love the variety and quality of stationery at OKAY Stationery Shop. Always find something unique for my journaling needs!"</td>
-            </tr>
-            <tr>
-                <td>3.</td>
-                <td>Dennis</td>
-                <td>4</td>
-                <td>"As a pen enthusiast, I can't get enough of the exquisite collection at OKAY Stationery Shop. Each piece feels like a work of art!"</td>
-            </tr>
+            <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "okaydb";
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $result = $conn->query("SELECT * FROM messages");
+                if ($result->num_rows > 0) {
+                    $no = 1;
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                                <td>{$no}</td>
+                                <td>{$row['user_name']}</td>
+                                <td>{$row['user_email']}</td>
+                                <td>{$row['user_message']}</td>
+                            </tr>";
+                        $no++;
+                    }
+                } 
+                $conn->close();
+            ?>
         </tbody>
     </table>
 
     <script src="Admin_homepage.js"></script>
-
 </body>
 </html>
