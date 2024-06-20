@@ -28,18 +28,23 @@
     <section id="overview">
         <div class="container">
             <h2>Overview</h2>
-            <div class="overview-cards">
-                <div class="card">
-                    <h3>Total Products</h3>
-                    <p>10</p>
+            <div class="chart-container">
+                <!-- Bar Chart for Total Customers -->
+                <div class="chart-box">
+                    <h2>Total Customers Per Month</h2>
+                    <canvas id="customersChart"></canvas>
                 </div>
-                <div class="card">
-                    <h3>Total Orders</h3>
-                    <p>4</p>
+
+                <!-- Bar Chart for Total Orders -->
+                <div class="chart-box">
+                    <h2>Total Orders Per Month</h2>
+                    <canvas id="ordersChart"></canvas>
                 </div>
-                <div class="card">
-                    <h3>Total Customers</h3>
-                    <p>4</p>
+
+                <!-- Bar Chart for Total Products -->
+                <div class="chart-box">
+                    <h2>Total Products Per Year</h2>
+                    <canvas id="productsChart"></canvas>
                 </div>
             </div>
         </div>
@@ -75,24 +80,6 @@
             </tr>
         </tbody>
     </table>
-
-    <!-- Bar Chart for Total Customers -->
-    <div class="container">
-        <h2>Total Customers Per Month</h2>
-        <canvas id="customersChart"></canvas>
-    </div>
-
-    <!-- Bar Chart for Total Orders -->
-    <div class="container">
-        <h2>Total Orders Per Month</h2>
-        <canvas id="ordersChart"></canvas>
-    </div>
-
-    <!-- Bar Chart for Total Products -->
-    <div class="container">
-        <h2>Total Products Per Year</h2>
-        <canvas id="productsChart"></canvas>
-    </div>
 
     <script src="Admin_homepage.js"></script>
 
