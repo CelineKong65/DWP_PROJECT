@@ -71,7 +71,7 @@
         background-color: #0056b3;
     }
 
-    input[type="product_id"], input[type="product_name"], input[type="product_price"], input[type="product_quantity"] {
+    input[type="text"],input[type="file"] {
         width: 590px;
         height: 40px;
         padding: 8px;
@@ -108,6 +108,9 @@
 
                     <label for="product_quantity"><b>Product Quantity:</b></label>
                     <input type="text" id="product_quantity" name="product_quantity" required>
+
+                    <label for="product_image"><b>Product Image:</b></label>
+                    <input type="file" id="product_image" name="product_image" accept="image/*" required>
 
                     <button type="submit" name="add_product">Add Product</button>
                 </form>
