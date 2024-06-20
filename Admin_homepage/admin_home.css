@@ -80,7 +80,7 @@ tfoot {
 table.comment-list {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 100px 50px 100px 50px;
     font-size: 18px;
     text-align: left;
 }
@@ -89,6 +89,7 @@ table.comment-list {
 .comment-list th, .comment-list td {
     padding: 12px 15px;
     border: 1px solid #ddd;
+    
 }
 
 /* Header row styling */
