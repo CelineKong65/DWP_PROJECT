@@ -86,7 +86,7 @@ main
     object-fit: contain;
 }
 
-.price 
+.product_price 
 {
     color: #333;
     font-weight: bold;
@@ -99,7 +99,7 @@ main
     margin-bottom: 10px;
 }
 
-.quantity 
+.product_quantity
 {
     display: flex;
     flex-direction: row;
@@ -108,7 +108,7 @@ main
     margin-top: 10px;
 }
 
-.quantity button 
+.product_quantity button 
 {
     display: flex;
     justify-content: center;
@@ -125,7 +125,7 @@ main
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.quantity span 
+.product_quantity span 
 {
     margin: 0 10px; /* Add horizontal margin */
 }
@@ -153,15 +153,6 @@ main
     background-color: #889da5;
 }
 
-.add-product 
-{
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 50px 100px;
-    background-color:#E5DDC5 ;
-    color: #333;
-    border-radius: 5px;
-}
 
 form 
 {
