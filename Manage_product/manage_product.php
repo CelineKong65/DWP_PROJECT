@@ -84,32 +84,6 @@ if (isset($_POST["add_product"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Products</title>
     <link rel="stylesheet" href="manage_product.css">
-    <style>
-        .product-table {
-            width: 100%;
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-
-        .product-table th, .product-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .product-table th {
-            background-color: #f2f2f2;
-        }
-
-        .product-table img {
-            width: 100px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Other styles... */
-    </style>
 </head>
 <body>
     <header>
