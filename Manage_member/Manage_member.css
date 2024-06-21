@@ -38,15 +38,12 @@ a#back {
     border: 1px solid #fff;
     padding: 8px;
     text-align: left;
-    
-}
-
-.member-table th {
     background-color: #B3C8CF;
 }
 
+
 .member-table td{
-    background-color: #BED7DC;
+    background-color: #fff;
     color: #333;
     width: 10%;
 }
