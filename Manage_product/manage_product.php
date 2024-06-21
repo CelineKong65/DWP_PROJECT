@@ -271,11 +271,6 @@
     
     </main>
 
-    <!-- Previous and Next Buttons -->
-    <div class="PNbutton">
-        <button id="prevBtn">&#9664;</button> <!-- Previous symbol -->
-        <button id="nextBtn">&#9654;</button> <!-- Next symbol -->
-    </div>
 
     <script>
     var productModal = document.getElementById("productModal");
