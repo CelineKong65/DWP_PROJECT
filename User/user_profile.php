@@ -69,7 +69,7 @@ $conn->close();
     <div class="container">
         <h1>User Profile</h1>
         <div class="profile">
-            <img src="uploads/<?php echo htmlspecialchars($user['profile_picture']); ?>" alt="Profile Picture">
+            <img src="user_pic/<?php echo htmlspecialchars($user['profile_picture']); ?>" alt="Profile Picture">
             <h2><?php echo htmlspecialchars($user['username']); ?></h2>
             <p>Day of Birth: <?php echo htmlspecialchars(date('d-m-Y', strtotime($user['birthday']))); ?></p>
             <p>Email: <?php echo htmlspecialchars($user['email']); ?></p>
