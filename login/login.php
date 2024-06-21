@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["loginbtn"])) {
     if ($result->num_rows > 0) {
         // Login successful
         $_SESSION["email"] = $email; // Store email in session for use in other pages if needed
-        header("Location: ../User_homepage/index2.html");
+        header("Location: ../User_homepage/user_homepage.html");
         exit(); // Ensure no further code is executed after redirection
     } else {
         $error_message = "Invalid email or password.";
