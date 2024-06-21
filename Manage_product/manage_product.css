@@ -178,23 +178,3 @@ button {
 }
 
 
-/* Previous and Next Buttons */
-.PNbutton {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.PNbutton button {
-    padding: 10px 20px;
-    margin: 10px 5px;
-    background-color: #fff;
-    color: #333;
-    border: #333 solid;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.PNbutton button:hover {
-    background-color: #adadad;
-}
