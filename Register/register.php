@@ -31,9 +31,7 @@ $sql = "CREATE TABLE IF NOT EXISTS user_register (
     email VARCHAR(50) NOT NULL,
     phone_number VARCHAR(15) NOT NULL,
     birthday DATE NOT NULL,
-    user_address VARCHAR(100) NOT NULL,
-    otp INT(6), ADD COLUMN otp_expiry DATETIME;
-
+    user_address VARCHAR(100) NOT NULL
 )";
 
 $conn->query($sql);
