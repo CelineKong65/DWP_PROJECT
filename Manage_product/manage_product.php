@@ -144,8 +144,8 @@ if (isset($_POST["add_product"])) {
                     echo "<td>" . htmlspecialchars($row["product_price"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["product_quantity"]) . "</td>";
                     echo "<td><img src='uploads/" . htmlspecialchars($row["product_image"]) . "' alt='" . htmlspecialchars($row["product_name"]) . "'></td>";
-                    echo "<td><a href='product_delete.php?id=" . $row["product_id"] . "'>Delete</a></td>";
-                    echo "<td><a href='update_product.php?id=" . $row["product_id"] . "'>Update</a></td>";
+                    echo "<td><a href='product_delete.php?id=" . htmlspecialchars($row["product_id"]) . "'>Delete</a></td>";
+                    echo "<td><a href='update_product.php?id=" . htmlspecialchars($row["product_id"]) . "'>Update</a></td>";
                     echo "</tr>";
                 }
             } else {
