@@ -20,7 +20,7 @@ if (isset($_POST["add_product"])) {
 
     // Handle file upload
     $target_dir = "uploads/";
-    $target_file = $_FILES["product_image"]["name"];
+    $target_file = $target_dir . basename($_FILES["product_image"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -39,6 +39,19 @@ if (isset($_POST["add_product"])) {
         $uploadOk = 0;
     }
 
+    // Allow certain file formats
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    && $imageFileType != "gif" ) {
+        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $uploadOk = 0;
+    }
+
+    // Check file size (5MB limit)
+    if ($_FILES["product_image"]["size"] > 5000000) {
+        echo "Sorry, your file is too large.";
+        $uploadOk = 0;
+    }
+
     // Upload file
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
@@ -52,7 +65,7 @@ if (isset($_POST["add_product"])) {
 
     // Insert into database
     $sql = "INSERT INTO products (product_id, product_name, product_price, product_quantity, product_image)
-            VALUES ('$product_id', '$product_name', '$product_price', '$product_quantity', '$target_file')";
+            VALUES ('$product_id', '$product_name', '$product_price', '$product_quantity', '" . basename($target_file) . "')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<script type='text/javascript'>alert('New product added successfully');</script>";
