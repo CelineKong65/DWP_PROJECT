@@ -18,7 +18,7 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
     if ($error === 0) {
         if ($img_size > 125000) {
             $em = "Sorry, your file is too large.";
-            header("Location: index.php?error=$em");
+            header("Location: category_view.php?error=$em");
         } else {
             $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
             $img_ex_lc = strtolower($img_ex);
@@ -38,20 +38,20 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
                     // Insert into Database
                     $sql = "INSERT INTO images(image_url) VALUES('$new_img_name')";
                     mysqli_query($conn, $sql);
-                    header("Location: view.php");
+                    header("Location: manage_product.php");
                 } else {
                     echo "Failed to upload file.";
                 }
             } else {
                 $em = "You can't upload files of this type";
-                header("Location: index.php?error=$em");
+                header("Location: category_view?error=$em");
             }
         }
     } else {
         $em = "unknown error occurred!";
-        header("Location: index.php?error=$em");
+        header("Location: category_view.php?error=$em");
     }
 } else {
-    header("Location: index.php");
+    header("Location: category_view.php");
 }
 ?>
