@@ -1,6 +1,15 @@
-<?php
-session_start(); // Start session for error messages or other session-related data
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
 
+<body>
+
+<?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -12,10 +21,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$error_message = "";
-
-// Handle login form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["loginbtn"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $userpass = $_POST["userpass"];
 
@@ -25,8 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["loginbtn"])) {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Login successful
-        $_SESSION["email"] = $email; // Store email in session for use in other pages if needed
         header("Location: ../User_homepage/user_homepage.html");
         exit(); // Ensure no further code is executed after redirection
     } else {
@@ -39,21 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["loginbtn"])) {
 $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
-</head>
-
-<body>
-
 <header>
     <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
 </header>
-
 <div id="container">
     <div style="border: 1px solid #DDD; border-radius: 10px; width: 400px; padding: 0px">
 
@@ -63,7 +55,7 @@ $conn->close();
 
         <div id="login-form">
             <?php
-            if (!empty($error_message)) {
+            if (isset($error_message)) {
                 echo "<p style='color: red; text-align: center;'>$error_message</p>";
             }
             ?>
