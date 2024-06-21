@@ -65,19 +65,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["verifybtn"])) {
 
 </body>
 </html>
-
-<?php  
-
-$sname = "localhost";
-$uname = "root";
-$password = "";
-
-$db_name = "okaydb";
-
-$conn = mysqli_connect($sname, $uname, $password, $db_name);
-
-if (!$conn) {
-    echo "Connection failed!";
-    exit();
-}
-?>

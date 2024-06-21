@@ -18,13 +18,13 @@ $reset_message = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["resetbtn"])) {
     $email = $_POST["email"];
 
-    // Generate a random token (OTP)
-    $otp = mt_rand(100000, 999999); // Generate a 6-digit OTP
+    // Generate a random 6-digit OTP
+    $otp = mt_rand(100000, 999999);
 
-    // Update the database with the OTP and current time for expiry
+    // Update the database with the OTP and current time for expiry (30 minutes from now)
     $sql = "UPDATE user_register
             SET otp = ?,
-                otp_expiry = NOW() + INTERVAL 30 MINUTE
+                otp_expiry = DATE_ADD(NOW(), INTERVAL 30 MINUTE)
             WHERE email = ?";
 
     $stmt = $conn->prepare($sql);
@@ -91,7 +91,7 @@ $conn->close();
                 echo "<p style='text-align: center;'>$reset_message</p>";
             }
             ?>
-            <form name="resetfrm" method="post" action="verify_otp.php">
+            <form name="resetfrm" method="post" action="">
                 <p><input type="email" name="email" placeholder="Enter your email" required/></p>
                 <p><input type="submit" name="resetbtn" value="RESET PASSWORD" /></p>
             </form>
