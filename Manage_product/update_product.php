@@ -107,7 +107,7 @@ if (isset($_POST["update_product"])) {
 </head>
 <body>
     <header>
-        <a id="back" href="manage_product.php"><b>BACK TO PRODUCT MANAGEMENT</b></a>
+        <a id="back" href="manage_product.php"><b>BACK TO MANAGE PRODUCT</b></a>
         <h1>OKAY STATIONERY SHOP</h1>
     </header>
 

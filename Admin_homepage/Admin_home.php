@@ -16,11 +16,11 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="../DWP_PROJECT/Manage_staff/Manage_staff.php">Manage staff</a></li>
-                <li><a href="../DWP_PROJECT/Manage_member/Manage_member.php">Manage member</a></li>
-                <li><a href="../DWP_PROJECT/Manage_product/manage_product.php">Manage product</a></li>
-                <li><a href="../DWP_PROJECT/Manage_category/manage_category.html">Manage category</a></li>
-                <li><a href="../DWP_PROJECT/Manage_order/manage_order.html">Manage order</a></li>
+                <li><a href="../Manage_staff/manage_staff.php">Manage staff</a></li>
+                <li><a href="../Manage_member/manage_member.php">Manage member</a></li>
+                <li><a href="../Manage_product/manage_product.php">Manage product</a></li>
+                <li><a href="../Manage_category/manage_category.php">Manage category</a></li>
+                <li><a href="../Manage_order/manage_order.html">Manage order</a></li>
             </ul>
         </nav>
     </header>
