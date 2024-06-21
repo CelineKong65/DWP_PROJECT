@@ -1,2 +1,15 @@
-<?php
-$conn = mysqli_connect("localhost", "root", "", "okaydb");
+
+<?php  
+
+$sname = "localhost";
+$uname = "root";
+$password = "";
+
+$db_name = "okaydb";
+
+$conn = mysqli_connect($sname, $uname, $password, $db_name);
+
+if (!$conn) {
+	echo "Connection failed!";
+	exit();
+}
