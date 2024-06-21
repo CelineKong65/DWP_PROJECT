@@ -85,6 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         }
     } else {
+        echo "upload your picture.";
         $profile_picture = $user['profile_picture'];
     }
 
