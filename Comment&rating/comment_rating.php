@@ -1,3 +1,28 @@
+
+<?php
+require 'connection.php'; // Include database connection file
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $rating = isset($_POST['rating']) ? (float)$_POST['rating'] : 0; // Ensure rating is correctly cast to float
+    $comment = $_POST['comment'];
+
+    // Prepare and bind parameters
+    $stmt = $conn->prepare("INSERT INTO comment_rating (username, rating, comment) VALUES (?, ?, ?)");
+    $stmt->bind_param("sds", $name, $rating, $comment); // 's' for string, 'd' for double (decimal)
+
+    if ($stmt->execute()) {
+        echo "<p>Comment and rating submitted successfully.</p>";
+    } else {
+        echo "<p>Error: " . $stmt->error . "</p>";
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +30,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment and Rating Page</title>
     <link rel="stylesheet" href="comment_rating.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 </head>
 <body>
     
     <header>
         <div id="back">
-            <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
+            <a id="back" href="../User_homepage/user_homepage.html"><b>BACK TO HOME</b></a>
         </div>
         <div class="container">
             <h1>
@@ -23,16 +50,11 @@
     <h2 style="text-align: center; margin-top: 60px"><b>Rating</b></h2>
     <p style="text-align: center;margin-top: 20px;margin-bottom: 30px;">Rating for our product and service!</p>
     <div class="rating">
-        <input type="radio" id="star5" name="rating" value="5">
-        <label for="star5"></label>
-        <input type="radio" id="star4" name="rating" value="4">
-        <label for="star4"></label>
-        <input type="radio" id="star3" name="rating" value="3">
-        <label for="star3"></label>
-        <input type="radio" id="star2" name="rating" value="2">
-        <label for="star2"></label>
-        <input type="radio" id="star1" name="rating" value="1">
-        <label for="star1"></label>
+        <div class="rateyo" id="rating"
+             data-rateyo-rating="0"
+             data-rateyo-num-stars="5"
+             data-rateyo-score="0">
+        </div>
     </div>
     
     <br>
@@ -52,43 +74,23 @@
             <textarea id="comment" name="comment" placeholder="Enter Your Comment" required></textarea>
             
             <div>
+                <input type="hidden" name="rating" id="rating_input">
                 <button type="submit" name="submit">Submit</button>  
             </div>
         </form>
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "okaydb";
-
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            $name = $_POST['name'];
-            $rating = isset($_POST['rating']) ? (int)$_POST['rating'] : 0;
-            $comment = $_POST['comment'];
-
-            // Prepare and bind
-            $stmt = $conn->prepare("INSERT INTO rating_comments (user_name, rating, comment) VALUES (?, ?, ?)");
-            $stmt->bind_param("sis", $name, $rating, $comment);
-
-            if ($stmt->execute()) {
-                echo "<p>Comment and rating submitted successfully.</p>";
-            } else {
-                echo "<p>Error: " . $stmt->error . "</p>";
-            }
-
-            $stmt->close();
-            $conn->close();
-        }
-        ?>
     </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+<script>
+    $(function () {
+        $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+            var rating = data.rating;
+            $('#rating_input').val(rating); // Set the rating value to the hidden input field
+        });
+    });
+</script>
 
 </body>
 </html>
