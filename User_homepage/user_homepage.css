@@ -249,10 +249,10 @@ nav ul li a {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Hide all slides by default */
 .mySlides {
-    display: none;
+    display: none; /* Make sure this is not hiding your slides */
 }
+
 
 /* Add additional styling for the testimonial section */
 .testimonial-section {
@@ -300,6 +300,7 @@ nav ul li a {
         margin: 0 10px 20px;
     }
 }
+
 
 
 
