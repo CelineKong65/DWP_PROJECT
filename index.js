@@ -24,3 +24,14 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+
+function alertLogin() {
+    document.getElementById('popup-overlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup-overlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+}
