@@ -13,12 +13,11 @@ if ($conn->connect_error) {
 }
 
 if (isset($_POST["add_product"])) {
-    $product_id = $_POST["product_id"];
     $product_name = $_POST["product_name"];
     $product_price = $_POST["product_price"];
     $product_quantity = $_POST["product_quantity"];
     $product_details = $_POST["product_details"];
-    $category_name = $_POST["category_name"];
+    $category_id = $_POST["category_id"];  // Changed from category_name to category_id
 
     // Handle file upload
     $target_dir = "uploads/";
@@ -42,8 +41,7 @@ if (isset($_POST["add_product"])) {
     }
 
     // Allow certain file formats
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    && $imageFileType != "gif" ) {
+    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         $uploadOk = 0;
     }
@@ -66,8 +64,8 @@ if (isset($_POST["add_product"])) {
     }
 
     // Insert into database
-    $sql = "INSERT INTO products (product_id, product_name, product_price, product_quantity, product_image, product_details, category_name)
-            VALUES ('$product_id', '$product_name', '$product_price', '$product_quantity', '" . basename($target_file) . "', '$product_details', '$category_name')";
+    $sql = "INSERT INTO products (product_name, product_price, product_quantity, product_image, product_details, category_id)
+            VALUES ('$product_name', '$product_price', '$product_quantity', '" . basename($target_file) . "', '$product_details', '$category_id')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<script type='text/javascript'>alert('New product added successfully');</script>";
@@ -111,19 +109,19 @@ if (isset($_POST["add_product"])) {
         </thead>
         <tbody>
             <?php
-            $sql = "SELECT product_id, product_name, product_price, product_quantity, product_image, product_details, category_name FROM products";
+            $sql = "SELECT product_id, product_name, product_price, product_quantity, product_image, product_details, category_id FROM products";
             $result = $conn->query($sql);
 
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
+            if ($result) {
+                while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($row["product_id"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["product_name"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["product_price"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["product_quantity"]) . "</td>";
-                    echo "<td><img src='uploads/" . htmlspecialchars($row["product_image"]) . "' alt='" . htmlspecialchars($row["product_name"]) . "'></td>";
+                    echo "<td><img src='uploads/" . htmlspecialchars($row["product_image"]) . "' alt='" . htmlspecialchars($row["product_name"]) . "' width='50'></td>";
                     echo "<td>" . htmlspecialchars($row["product_details"]) . "</td>";
-                    echo "<td>" . htmlspecialchars($row["category_name"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["category_id"]) . "</td>";
                     echo "<td><a href='product_delete.php?id=" . htmlspecialchars($row["product_id"]) . "'>Delete</a></td>";
                     echo "<td><a href='update_product.php?id=" . htmlspecialchars($row["product_id"]) . "'>Update</a></td>";
                     echo "</tr>";
@@ -144,9 +142,6 @@ if (isset($_POST["add_product"])) {
             <span class="close">&times;</span>
             <h2>Add Product</h2>
             <form action="" method="post" enctype="multipart/form-data">
-                <label for="product_id"><b>ID:</b></label>
-                <input type="text" id="product_id" name="product_id" required>
-
                 <label for="product_name"><b>Name:</b></label>
                 <input type="text" id="product_name" name="product_name" required>
 
@@ -159,8 +154,8 @@ if (isset($_POST["add_product"])) {
                 <label for="product_details"><b>Details:</b></label>
                 <textarea id="product_details" name="product_details" required></textarea>
 
-                <label for="category_name"><b>Category:</b></label>
-                <input type="text" id="category_name" name="category_name" required>
+                <label for="category_id"><b>Category:</b></label>  <!-- Changed from category_name to category_id -->
+                <input type="text" id="category_id" name="category_id" required>
 
                 <label for="product_image"><b>Product Image:</b></label>
                 <input type="file" id="product_image" name="product_image" required>
