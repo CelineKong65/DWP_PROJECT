@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
+        <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
         <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
         <h1>OKAY Stationery Shop</h1>
     </header>
