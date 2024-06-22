@@ -33,6 +33,20 @@ $conn->close();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
     <style>
+    #back 
+    {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        color: #FFD4B2;
+        background-color: #fff;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border:#ffefe3 solid ;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 5px 5px;
+    }
     .rating 
     {
         display: flex;
@@ -46,19 +60,27 @@ $conn->close();
 
     .rating label {
         cursor: pointer;
-        font-size: 40px; /* Adjust the size of the label font */
+        font-size: 50px; /* Adjust the size of the label font */
         color: #ddd;
         margin-left: 5px;
-    }
-
-    .rating label:before {
-        content: '★';
-        font-size: 120px; /* Increase the size of the star */
     }
 
     .rating input:checked ~ label {
         color: gold;
     }
+
+    .rating label:before 
+    {
+    content: '★';
+    font-size: 200px; /* Initial size */
+    transition: all 0.2s ease-in-out; /* Smooth transition for size change */
+    }
+
+    .rating input:checked ~ label:before 
+    {
+        font-size: 300px; /* Larger size when checked */
+    }
+
     </style>
 </head>
 <body>
