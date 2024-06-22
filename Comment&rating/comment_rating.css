@@ -12,21 +12,25 @@ body {
     margin-right: 10px;
 }
 
-#back 
-{
+#back {
     position: absolute;
     top: 15px;
     left: 15px;
-    color: #FFD4B2; /* This sets the text color */
+    color: #FFD4B2; /* Text color */
     background-color: #fff;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: #ffefe3 solid;
+    border: 1px solid #ffefe3;
     border-radius: 10px;
-    text-decoration: none; /* This doesn't apply to non-anchor elements */
-    padding: 5px 5px;
+    padding: 5px 10px;
+    text-decoration: none; /* Removes underline */
 }
 
+/* To handle hover state if needed */
+#back:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+    color: #FFD4B2; /* Keeps text color consistent on hover */
+}
 
 .container {
     max-width: 1200px;
@@ -38,6 +42,7 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .line {
