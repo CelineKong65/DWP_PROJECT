@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="index.css">
@@ -14,23 +15,41 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="../DWP_PROJECT/About_us/aboutus.html">About</a></li>
-                <li><a href="../DWP_PROJECT/Product_list/product_list.html">Product</a></li>
-                <li><a href="../DWP_PROJECT/Contact_us/contact_us.html">Contact</a></li>
-                <li><a href="../DWP_PROJECT/Order_history/orderhistory.html">Order History</a></li>
-                <li><a href="../DWP_PROJECT/Comment&rating/comment&rating.html">Comment and Rating</a></li>
-                <li><a href="../DWP_PROJECT/Admin_login/adminlogin.html">Admin</a></li>
-                <li><a href="../DWP_PROJECT/login/login.html">Account</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Order History</a></li>
+                <li><a href="">Comment and Rating</a></li>
+                <li><a href="">Admin</a></li>
+                <li><a href="">Profile</a></li>
             </ul>
         </nav>
-    </header>
-
-    <section id="ad">
-        <div class="ad-content">
-            <h2>Your One-Stop Shop for All Stationery Needs</h2>
-            <p>Quality Okay, Price Okay, Service Okay</p>
+        </header>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="p1.png" style="width: 100%;">
+                <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="p2.png" style="width: 100%;">
+                <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="p3.png" style="width: 100%;">
+                <div class="text">Caption Text</div>
+            </div>
+    
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-    </section>
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        
+        <script src="index.js"></script>
 
     <main>
         <section id="products" class="products-section">
@@ -40,23 +59,31 @@
                     <h2>Watercolor Paint</h2>
                     <img src="watercolor_paint.png" alt="Watercolor Paint">
                     <h3>Top Product 1</h3>
-                    <a href="../DWP_PROJECT/Product_list/drawing_painting.html" class="detailButton">Buy It Now</a>
+                    <button onclick="alertLogin()">Buy It Now</button>
                 </div>
                 <div class="product-card">
                     <h2>Crayon</h2>
                     <img src="crayon.png" alt="Crayon">
                     <h3>Top Product 2</h3>
-                    <a href="../DWP_PROJECT/Product_list/pen.html" class="detailButton">Buy It Now</a>
+                    <button onclick="alertLogin()">Buy It Now</button>
                 </div>
                 <div class="product-card">
                     <h2>Pencil</h2>
                     <img src="pencil.png" alt="Pencil">
                     <h3>Top Product 3</h3>
-                    <a href="../DWP_PROJECT/Product_list/pen.html" class="detailButton">Buy It Now</a>
+                    <button onclick="alertLogin()">Buy It Now</button>
                 </div>
-            </div>
-        </section>
 
+                
+
+            </div>
+            
+            <div id="popup-overlay" class="popup-overlay"></div>
+                <div id="popup" class="popup">
+                    <p>Please login to continue.</p>
+                    <button onclick="closePopup()">Close</button>
+                </div>
+        </section>
         <section id="offer" class="offer-section">
             <h2>Special Offers</h2>
             <div class="offer-grid">
@@ -69,68 +96,34 @@
                     <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
                 </div>
             </div>
-        </section>
+
     </main>
 
     <section id="testimonials" class="testimonial-section">
         <h2>Customer Testimonials and Comments</h2>
-        <div class="testimonial-container">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <div class="testimonial-grid">
-                <div class="testimonial-card mySlides">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</p>
-                    <cite>John Doe</cite>
-                </div>
-                <div class="testimonial-card mySlides">
-                    <p>"Absolutely love the variety and quality of stationery at OKAY Stationery Shop. Always find something unique for my journaling needs!"</p>
-                    <cite>Celine</cite>
-                </div>
-                <div class="testimonial-card mySlides">
-                    <p>"As a pen enthusiast, I can't get enough of the exquisite collection at OKAY Stationery Shop. Each piece feels like a work of art!"</p>
-                    <cite>Dennis</cite>
-                </div>
-                <div class="testimonial-card mySlides">
-                    <p>"I would like to like the OKAY stationary because their quality is very okay and good."</p>
-                    <cite>Maureen</cite>
-                </div>
-                <div class="testimonial-card mySlides">
-                    <p>"There was something very comfortable in having plenty of stationery"</p>
-                    <cite>Charles</cite>
-                </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card active">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</p>
+                <cite>John Doe</cite>
             </div>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="testimonial-card">
+                <p>"Absolutely love the variety and quality of stationery at OKAY Stationery Shop. Always find something unique for my journaling needs!"</p>
+                <cite>Celine</cite>
+            </div>
+            <div class="testimonial-card">
+                <p>"As a pen enthusiast, I can't get enough of the exquisite collection at OKAY Stationery Shop. Each piece feels like a work of art!"</p>
+                <cite>Dennis</cite>
+            </div>
         </div>
     </section>
 
     <footer>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../About_us/aboutus.html">About</a></li>
-                <li><a href="../Product_list/product_list.html">Services</a></li>
-                <li><a href="../Contact_us/contact_us.html">Contact</a></li>
-                <li><a href="../login/login.html">Account</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
-    </footer>
+        <footer>
+            <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Comapany</p>
+        </footer>
 
-    <!-- Shopping cart button -->
-    <a href="../DWP_PROJECT/Shopping_cart/shopping_cart.html"><button class="shopping-cart-button">🛒</button></a>  
-
-    <!-- Wishlist button -->
-    <a href="../DWP_PROJECT/Wishlist/Wishlist.html"><button class="wishlist-button">&#10084;</button></a>
-
-    <!-- Check-in button -->
-    <a href="../DWP_PROJECT/Check-in/check-in.html"><button class="check-in-button">🌟</button></a>
-
-    <!-- Popup for login alert -->
-    <div id="popup-overlay" class="popup-overlay"></div>
-    <div id="popup" class="popup">
-        <p>Please login to continue.</p>
-        <button onclick="closePopup()">Close</button>
-    </div>
-
-    <script src="index.js"></script>
+        <script src="index.js"></script>
 </body>
 </html>
+
+    

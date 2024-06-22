@@ -1,6 +1,7 @@
-
 <?php
 require 'connection.php'; // Include database connection file
+
+$message = ""; // Initialize variable to store success or error message
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $name = $_POST['name'];
@@ -12,9 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $stmt->bind_param("sds", $name, $rating, $comment); // 's' for string, 'd' for double (decimal)
 
     if ($stmt->execute()) {
-        echo "<p>Comment and rating submitted successfully.</p>";
+        $message = "Comment and rating submitted successfully.";
     } else {
-        echo "<p>Error: " . $stmt->error . "</p>";
+        $message = "Error: " . $stmt->error;
     }
 
     $stmt->close();
@@ -32,62 +33,12 @@ $conn->close();
     <link rel="stylesheet" href="comment_rating.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-    <style>
-    #back 
-    {
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        color: #FFD4B2;
-        background-color: #fff;
-        font-size: 20px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        border:#ffefe3 solid ;
-        border-radius: 10px;
-        text-decoration: none;
-        padding: 5px 5px;
-    }
-    .rating 
-    {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .rating input {
-        display: none;
-    }
-
-    .rating label {
-        cursor: pointer;
-        font-size: 50px; /* Adjust the size of the label font */
-        color: #ddd;
-        margin-left: 5px;
-    }
-
-    .rating input:checked ~ label {
-        color: gold;
-    }
-
-    .rating label:before 
-    {
-    content: '★';
-    font-size: 200px; /* Initial size */
-    transition: all 0.2s ease-in-out; /* Smooth transition for size change */
-    }
-
-    .rating input:checked ~ label:before 
-    {
-        font-size: 300px; /* Larger size when checked */
-    }
-
-    </style>
 </head>
 <body>
     
     <header>
         <div id="back">
-            <a id="back" href="../User_homepage/user_homepage.html"><b>BACK TO HOME</b></a>
+            <a href="../User_homepage/user_homepage.html"><b>BACK TO HOME</b></a>
         </div>
         <div class="container">
             <h1>
@@ -123,24 +74,31 @@ $conn->close();
             <label for="comment"><b>Add any comment or testimonials for our product and service:</b></label>
             <textarea id="comment" name="comment" placeholder="Enter Your Comment" required></textarea>
             
-            <div>
+            <div class="rating">
                 <input type="hidden" name="rating" id="rating_input">
-                <button type="submit" name="submit">Submit</button>  
             </div>
+            
+            <button type="submit" name="submit">Submit</button>
         </form>
+
+        <!-- Display success or error message -->
+        <?php if (!empty($message)) : ?>
+            <p style="text-align: center; margin-top: 20px;"><?php echo $message; ?></p>
+        <?php endif; ?>
     </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <!-- JavaScript includes and script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 
-<script>
-    $(function () {
-        $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
-            var rating = data.rating;
-            $('#rating_input').val(rating); // Set the rating value to the hidden input field
+    <script>
+        $(function () {
+            $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+                var rating = data.rating;
+                $('#rating_input').val(rating); // Set the rating value to the hidden input field
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 </html>

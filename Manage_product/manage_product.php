@@ -17,6 +17,8 @@ if (isset($_POST["add_product"])) {
     $product_name = $_POST["product_name"];
     $product_price = $_POST["product_price"];
     $product_quantity = $_POST["product_quantity"];
+    $product_details = $_POST["product_details"];
+    $category_name = $_POST["category_name"];
 
     // Handle file upload
     $target_dir = "uploads/";
@@ -64,8 +66,8 @@ if (isset($_POST["add_product"])) {
     }
 
     // Insert into database
-    $sql = "INSERT INTO products (product_id, product_name, product_price, product_quantity, product_image)
-            VALUES ('$product_id', '$product_name', '$product_price', '$product_quantity', '" . basename($target_file) . "')";
+    $sql = "INSERT INTO products (product_id, product_name, product_price, product_quantity, product_image, product_details, category_name)
+            VALUES ('$product_id', '$product_name', '$product_price', '$product_quantity', '" . basename($target_file) . "', '$product_details', '$category_name')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<script type='text/javascript'>alert('New product added successfully');</script>";
@@ -101,13 +103,15 @@ if (isset($_POST["add_product"])) {
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Image</th>
+                <th>Details</th>
+                <th>Category</th>
                 <th>Delete</th>
                 <th>Update</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $sql = "SELECT product_id, product_name, product_price, product_quantity, product_image FROM products";
+            $sql = "SELECT product_id, product_name, product_price, product_quantity, product_image, product_details, category_name FROM products";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -118,12 +122,14 @@ if (isset($_POST["add_product"])) {
                     echo "<td>" . htmlspecialchars($row["product_price"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["product_quantity"]) . "</td>";
                     echo "<td><img src='uploads/" . htmlspecialchars($row["product_image"]) . "' alt='" . htmlspecialchars($row["product_name"]) . "'></td>";
+                    echo "<td>" . htmlspecialchars($row["product_details"]) . "</td>";
+                    echo "<td>" . htmlspecialchars($row["category_name"]) . "</td>";
                     echo "<td><a href='product_delete.php?id=" . htmlspecialchars($row["product_id"]) . "'>Delete</a></td>";
                     echo "<td><a href='update_product.php?id=" . htmlspecialchars($row["product_id"]) . "'>Update</a></td>";
                     echo "</tr>";
                 }
             } else {
-                echo "<tr><td colspan='7'>No products found</td></tr>";
+                echo "<tr><td colspan='9'>No products found</td></tr>";
             }
 
             $conn->close();
@@ -149,6 +155,12 @@ if (isset($_POST["add_product"])) {
 
                 <label for="product_quantity"><b>Quantity:</b></label>
                 <input type="number" id="product_quantity" name="product_quantity" required>
+
+                <label for="product_details"><b>Details:</b></label>
+                <textarea id="product_details" name="product_details" required></textarea>
+
+                <label for="category_name"><b>Category:</b></label>
+                <input type="text" id="category_name" name="category_name" required>
 
                 <label for="product_image"><b>Product Image:</b></label>
                 <input type="file" id="product_image" name="product_image" required>

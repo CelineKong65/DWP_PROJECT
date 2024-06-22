@@ -15,44 +15,73 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="../About_us/aboutus2.html">About</a></li>
-                <li><a href="../Contact_us/contact_us2.html">Contact</a></li>
-                <li><a href="../Product_list2/product_list2.html">Product</a></li>
-                <li><a href="../Order_history/orderhistory.html">Order History</a></li>
-                <li><a href="../Comment&rating/comment2.html">Comment and Rating</a></li>
-                <li><a href="../Admin_login/adminlogin2.html">Admin</a></li>
-                <li><a href="../User/user_profile.php">Profile</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Order History</a></li>
+                <li><a href="">Comment and Rating</a></li>
+                <li><a href="">Admin</a></li>
+                <li><a href="">Profile</a></li>
             </ul>
         </nav>
-        </header>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="numbertext">1/3</div>
-                <img src="p1.png" style="width: 100%;">
-                <div class="text">Caption Text</div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">2/3</div>
-                <img src="p2.png" style="width: 100%;">
-                <div class="text">Caption Text</div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">3/3</div>
-                <img src="p3.png" style="width: 100%;">
-                <div class="text">Caption Text</div>
-            </div>
-    
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="p1.png" alt="Slide 1" style="width:100%;">
+            <div class="text">Caption Text</div>
         </div>
-        <br>
-        <div style="text-align: center;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+       
+        <div class="mySlides fade">
+            <img src="p2.png" alt="Slide 2" style="width:100%;">
+            <div class="text">Caption Text</div>
         </div>
+
+        <div class="mySlides fade">
+            <img src="p3.png" alt="Slide 3" style="width:100%;">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
         
-        <script src="user_homepage.js"></script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
 
     <main>
         <section id="products" class="products-section">
@@ -90,7 +119,7 @@
                     <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
                 </div>
             </div>
-
+        </section>
     </main>
 
     <section id="testimonials" class="testimonial-section">
@@ -110,18 +139,12 @@
             </div>
         </div>
     </section>
-    
-
 
     <footer>
-        <footer>
-            <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Comapany</p>
-        </footer>
+        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
+    </footer>
 
-
-
-
-    <!-- shopping cart button -->
+    <!-- Shopping cart button -->
     <a href="../Shopping_cart/shopping_cart.html"><button class="shopping-cart-button">🛒</button></a>  
 
     <!-- Wishlist button -->
@@ -129,10 +152,5 @@
 
     <!-- Check-in button -->
     <a href="../Check-in/check-in.html"><button class="check-in-button">🌟</button></a>
-
-
-
-
-
 </body>
 </html>
