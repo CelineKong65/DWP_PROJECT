@@ -46,7 +46,7 @@ $conn->close();
 
 <body>
 <head>
-    <a id="back" href="../User_homepage/user_homepage.html"><b>BACK TO HOME</b></a>
+    <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
 </head>
 <div id="container">
     <div class="login-box">
