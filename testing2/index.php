@@ -9,9 +9,6 @@
 
 <form action="index.php" method="post">
 
-    <div>
-        <h3>Student Rating System</h3>
-    </div>
 
     <div>
          <label>Name</label>

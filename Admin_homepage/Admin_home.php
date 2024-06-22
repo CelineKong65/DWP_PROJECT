@@ -74,7 +74,7 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $result = $conn->query("SELECT * FROM rating_comments");
+                $result = $conn->query("SELECT * FROM comment_rating");
                 if ($result->num_rows > 0) 
                 {
                     $no = 1;
@@ -82,7 +82,7 @@
                     {
                         echo "<tr>
                                 <td>{$no}</td>
-                                <td>{$row['user_name']}</td>
+                                <td>{$row['username']}</td>
                                 <td>{$row['rating']}</td>
                                 <td>{$row['comment']}</td>
                             </tr>";
