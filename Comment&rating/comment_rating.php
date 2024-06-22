@@ -32,6 +32,34 @@ $conn->close();
     <link rel="stylesheet" href="comment_rating.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <style>
+    .rating 
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .rating input {
+        display: none;
+    }
+
+    .rating label {
+        cursor: pointer;
+        font-size: 40px; /* Adjust the size of the label font */
+        color: #ddd;
+        margin-left: 5px;
+    }
+
+    .rating label:before {
+        content: '★';
+        font-size: 120px; /* Increase the size of the star */
+    }
+
+    .rating input:checked ~ label {
+        color: gold;
+    }
+    </style>
 </head>
 <body>
     

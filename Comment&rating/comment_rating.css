@@ -6,24 +6,22 @@ body
     margin: 0;
     padding: 0;
 
-  }
+}
 
-
-  #back 
-  {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      color: #FFD4B2;
-      background-color: #fff;
-      font-size: 20px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      border:#ffefe3 solid ;
-      border-radius: 10px;
-      text-decoration: none;
-      padding: 5px 5px;
-  }
-  
+#back 
+{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #FFD4B2;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border:#ffefe3 solid ;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 5px 5px;
+}
   .logo 
   {
       width: 100px;
@@ -31,37 +29,6 @@ body
       vertical-align: middle;
       margin-right: 10px;
   }
-
-
-  .rating {
-    display: inline-block;
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    margin-left: 38%;
-  }
-  
-  .rating input {
-    display: none;
-  }
-  
-  .rating label {
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    line-height: 25px;
-    color: #ddd;
-    margin-left: 5px;
-  }
-  
-  .rating label:before {
-    content: '★';
-    font-size: 80px;
-  }
-  
-  .rating input:checked ~ label {
-    color: gold;
-  }
-  
   
   .container 
   {
