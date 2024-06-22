@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>
-            <a id="back" href="../Manage_user/Manage_user.html"><b>BACK TO MANAGE MEMBER PAGE</b></a>
+            <a id="back" href="../Manage_member/Manage_member.php"><b>BACK TO MANAGE MEMBER PAGE</b></a>
             OKAY STATIONERY SHOP
         </h1>
     </header>

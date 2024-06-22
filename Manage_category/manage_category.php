@@ -76,7 +76,7 @@
 </head>
 <body>
     <header>
-        <a id="back" href="../Admin_home.html"><b>BACK TO ADMIN PAGE</b></a>
+        <a id="back" href="../Admin_homepage/Admin_home.php"><b>BACK TO ADMIN PAGE</b></a>
         <div class="container">
             <h1>OKAY STATIONERY SHOP</h1>
         </div>
@@ -132,7 +132,7 @@
             echo "<tr>
                     <td>{$row['category_id']}</td>
                     <td>{$row['category_name']}</td>
-                    <td><a href='category_view.php?staff_id={$row['category_id']}'>View</a></td>
+                    <td><a href='category_view.php'>View</a></td>
                     <td><a href='category_delete.php?staff_id={$row['category_id']}'>Delete</a></td>
                   </tr>";
         }
