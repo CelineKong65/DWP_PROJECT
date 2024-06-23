@@ -36,7 +36,7 @@ if (isset($_POST["update_product"])) {
     $product_price = $_POST["product_price"];
     $product_quantity = $_POST["product_quantity"];
     $product_details = $_POST["product_details"];
-    $category_name = $_POST["category_name"];
+    $category_id = $_POST["category_id"];
     $target_file = $product['product_image'];
 
     // Handle file upload if a new image is provided
@@ -93,7 +93,7 @@ if (isset($_POST["update_product"])) {
             product_quantity='$product_quantity', 
             product_image='" . basename($target_file) . "',
             product_details='$product_details',
-            category_name='$category_name' 
+            category_id='$category_id' 
             WHERE product_id='$product_id'";
 
     if ($conn->query($sql) === TRUE) {
@@ -140,8 +140,8 @@ if (isset($_POST["update_product"])) {
             <label for="product_details"><b>Details:</b></label>
             <textarea id="product_details" name="product_details" required><?php echo htmlspecialchars($product['product_details']); ?></textarea>
 
-            <label for="category_name"><b>Category:</b></label>
-            <input type="text" id="category_name" name="category_name" value="<?php echo htmlspecialchars($product['category_name']); ?>" required>
+            <label for="category_id"><b>Category:</b></label>
+            <input type="text" id="category_id" name="category_id" value="<?php echo htmlspecialchars($product['category_id']); ?>" required>
 
             <label for="product_image"><b>Product Image:</b></label>
             <input type="file" id="product_image" name="product_image">
