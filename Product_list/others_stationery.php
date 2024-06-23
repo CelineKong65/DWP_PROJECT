@@ -1,30 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
+    <title>Others Stationery</title>
     <link rel="stylesheet" href="pen.css">
-    
+    <script>
+        // Function to toggle wishlist status
+        function toggleWishlist(button) {
+            button.classList.toggle('active');
+        }
+    </script>
 </head>
-
-<script>
-
-    // Function to toggle wishlist status
-    function toggleWishlist(button)  
-    {
-        button.classList.toggle('active');
-    }
-    
-    
-</script>
-    
 <body>
     <header>
         <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
-            PEN
+            OTHER STATIONERY
             <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
         </h1>
         <nav>
@@ -38,49 +32,29 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <div class="Product">
-            <img src="pen.png" alt="Pen">
-            <h2>M&G Pen</h2>
-            <p></p>
-            <p class="price">RM6.00</p>
-
-            <a href="../Product_list/pen_details.html" class="detailButton">View Details</a>
-
-        </div>
-
-        <div class="Product">
-            <img src="pencil.png" alt="Pencil">
-            <h2>Pencil 2B-12 Pcs</h2>
-            <p class="price">RM6.00</p>
- 
-            <a href="../Product_list/pencil_details.html" class="detailButton">View Details</a>
- 
-        </div>
-
-        <div class="Product">
-            <img src="painting_marker.png" alt="Painting Marker">
-            <h2>Painting Marker</h2>
-            <p class="price">RM15.00</p>
+        <?php
+        include 'db_connect.php';
         
-            <a href="../Product_list/painting_marker_details.html" class="detailButton">View Details</a>
-
-        </div>
-
-        <div class="Product">
-            <img src="crayon.png" alt="Crayon">
-            <h2>Crayon</h2>
-            <p class="price">RM30.00</p>
-       
-            <a href="../Product_list/crayon_details.html" class="detailButton">View Details</a>
-
-        </div>
-
+        // SQL query to select products with category_id = 5
+        $sql = "SELECT * FROM products WHERE category_id = 5";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo '<div class="Product">';
+                echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
+                echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
+                echo '<p class="price">RM' . htmlspecialchars($row["product_price"]) . '</p>';
+                echo '<a href="product_details.php?id=' . htmlspecialchars($row["product_id"]) . '" class="detailButton">View Details</a>';
+                echo '</div>';
+            }
+        } else {
+            echo "<p>No products found in this category.</p>";
+        }
+        $conn->close();
+        ?>
     </main>
-
-
-
     <footer>
         <nav>
             <ul>
@@ -90,7 +64,7 @@
                 <li><a href="../login/login.php">Account</a></li>
             </ul>
         </nav>
-        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Comapany</p>
+        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
     </footer>
 </body>
 </html>
