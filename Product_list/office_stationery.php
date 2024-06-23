@@ -1,24 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Office Stationary</title>
+    <title>Office Stationery</title>
     <link rel="stylesheet" href="office_stationery.css">
-    
+    <script>
+        // Function to toggle wishlist status
+        function toggleWishlist(button) {
+            button.classList.toggle('active');
+        }
+    </script>
 </head>
-
-<script>
-
-    // Function to toggle wishlist status
-    function toggleWishlist(button)  
-    {
-        button.classList.toggle('active');
-    }
-    
-    
-</script>
-    
 <body>
     <header>
         <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
@@ -38,8 +32,8 @@
             </ul>
         </nav>
     </header>
-
     <main>
+<<<<<<< HEAD:Product_list/office_stationery.html
         <div class="Product">
             <img src="binder_lever_arch_file.png" alt="Binder Lever Arch File">
             <h2>Binder Lever Arch File</h2>
@@ -48,10 +42,30 @@
             <a href="../Product_list/binder_lever_arch_file_details.html" class="detailButton">View Details</a>
 
         </div>
+=======
+        <?php
+        include 'db_connect.php';
+        
+        // SQL query to select products with category_id = 1
+        $sql = "SELECT * FROM products WHERE category_id = 1";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo '<div class="Product">';
+                echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
+                echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
+                echo '<p class="price">RM' . htmlspecialchars($row["product_price"]) . '</p>';
+                echo '<a href="product_details.php?id=' . htmlspecialchars($row["product_id"]) . '" class="detailButton">View Details</a>';
+                echo '</div>';
+            }
+        } else {
+            echo "<p>No products found in this category.</p>";
+        }
+        $conn->close();
+        ?>
+>>>>>>> 68d59ce7525761971029f1916c91c59249cfdb4b:Product_list/office_stationery.php
     </main>
-
-
-
     <footer>
         <nav>
             <ul>
@@ -61,7 +75,7 @@
                 <li><a href="../login/login.php">Account</a></li>
             </ul>
         </nav>
-        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Comapany</p>
+        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
     </footer>
 </body>
 </html>
