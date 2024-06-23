@@ -127,22 +127,20 @@
             </div>
         </section>
     </main>
-
+    
     <section id="testimonials" class="testimonial-section">
         <h2>Customer Testimonials and Comments</h2>
         <div class="testimonial-grid">
-            <div class="testimonial-card active">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</p>
-                <cite>John Doe</cite>
-            </div>
-            <div class="testimonial-card">
-                <p>"Absolutely love the variety and quality of stationery at OKAY Stationery Shop. Always find something unique for my journaling needs!"</p>
-                <cite>Celine</cite>
-            </div>
-            <div class="testimonial-card">
-                <p>"As a pen enthusiast, I can't get enough of the exquisite collection at OKAY Stationery Shop. Each piece feels like a work of art!"</p>
-                <cite>Dennis</cite>
-            </div>
+            <?php
+            include 'fetch_comments.php';
+            foreach ($comments as $comment) {
+                echo '<div class="testimonial-card">';
+                echo '<p>"' . htmlspecialchars($comment['comment']) . '"</p>';
+                echo '<cite>' . htmlspecialchars($comment['username']) . '</cite>';
+                echo '<div class="rating">Rating: ' . htmlspecialchars($comment['rating']) . '</div>';
+                echo '</div>';
+            }
+            ?>
         </div>
     </section>
 
