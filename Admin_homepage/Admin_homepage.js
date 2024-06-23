@@ -68,36 +68,32 @@ const ordersChart = new Chart(ordersCtx,
     }
 });
 
-//data for total product per year
-const salesData = [6600, 8000, 4000, 3000, 10000, 10000, 7000, 5000, 6000, 10000];
+// Data for total product sales per year
+const salesData = [6600, 7000, 4000, 3000, 10000, 8000, 9000, 5000, 6000, S5000];
 
-const productlabels = ['adhesive tape', 'binder level arch', 'crayon', 'drawing painting', 'eraser', 'pen', 'pencil', 'scissor', 'stapler and staples', 'watercolor paint'];
+// Labels for products
+const productLabels = ['adhesive tape', 'binder level arch', 'crayon', 'drawing painting', 'eraser', 'pen', 'pencil', 'scissor', 'stapler and staples', 'watercolo paint'];
 
-//bar Chart for total customers
+// Get the canvas element
 const productsCtx = document.getElementById('productsChart').getContext('2d');
-const productsChart = new Chart(productsCtx, 
-    {
+
+// Create the bar chart
+const productsChart = new Chart(productsCtx, {
     type: 'bar',
-    data: 
-    {
-        labels: productlabels,
-        datasets: 
-        [{
+    data: {
+        labels: productLabels,
+        datasets: [{
             label: 'Total Products 2019-2023',
-            data: productsData,
+            data: salesData,
             backgroundColor: 'rgba(186, 104, 200, 0.2)',
             borderColor: 'rgba(103, 58, 183, 1)',
             borderWidth: 1
         }]
     },
-    options: 
-    {
-        scales: 
-        {
-            yAxes: 
-            [{
-                ticks: 
-                {
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
                     beginAtZero: true
                 }
             }]
