@@ -39,7 +39,7 @@ function toggleWishlist(button) {
         </h1>
         <nav>
             <ul>
-                <li><a href="../Product_list/product_list.php">All></li>
+                <li><a href="../Product_list/product_list.php">All</li>
                 <li><a href="../Product_list/office_stationery.php">Office Stationery</a></li>
                 <li><a href="../Product_list/drawing_painting.php">Drawing and Painting</a></li>
                 <li><a href="../Product_list/pen.php">Pen</a></li>
