@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Check-in</title>
-  <link rel="stylesheet" href="check-in.css">
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
 
@@ -25,6 +26,6 @@
     <div id="couponMessage" style="display:none;"></div>
 </div>
 
-  <script src="check-in.js"></script>
+  <script src="test.js"></script>
 </body>
 </html>
