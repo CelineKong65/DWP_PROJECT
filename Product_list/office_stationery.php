@@ -22,18 +22,17 @@
             <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
         </h1>
         <nav>
-            <ul>
+        <ul>
                 <li><a href="../Product_list/product_list.php">All</a></li>
-                <li><a href="../Product_list/office_stationery.html">Office Stationery</a></li>
-                <li><a href="../Product_list/drawing_painting.html">Drawing and Painting</a></li>
-                <li><a href="../Product_list/pen.html">Pen</a></li>
-                <li><a href="../Product_list/adhesive_tape.html">Adhesive Tape</a></li>
-                <li><a href="../Product_list/others_stationery.html">Other Stationery</a></li>
+                <li><a href="../Product_list/office_stationery.php">Office Stationery</a></li>
+                <li><a href="../Product_list/drawing_painting.php">Drawing and Painting</a></li>
+                <li><a href="../Product_list/pen.php">Pen</a></li>
+                <li><a href="../Product_list/adhesive_tape.php">Adhesive Tape</a></li>
+                <li><a href="../Product_list/others_stationery.php">Other Stationery</a></li>
             </ul>
         </nav>
     </header>
     <main>
-<<<<<<< HEAD:Product_list/office_stationery.html
         <div class="Product">
             <img src="binder_lever_arch_file.png" alt="Binder Lever Arch File">
             <h2>Binder Lever Arch File</h2>
@@ -42,7 +41,6 @@
             <a href="../Product_list/binder_lever_arch_file_details.html" class="detailButton">View Details</a>
 
         </div>
-=======
         <?php
         include 'db_connect.php';
         
@@ -64,7 +62,6 @@
         }
         $conn->close();
         ?>
->>>>>>> 68d59ce7525761971029f1916c91c59249cfdb4b:Product_list/office_stationery.php
     </main>
     <footer>
         <nav>
