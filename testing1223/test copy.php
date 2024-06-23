@@ -23,69 +23,68 @@
                 <li><a href="../DWP_PROJECT/login/login.php">Account</a></li>
             </ul>
         </nav>
-        </header>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="p1.png" style="width: 100%;">
-                <div class="text">Caption Text</div>
-            </div>
-            <div class="mySlides fade">
-                <img src="p2.png" style="width: 100%;">
-                <div class="text">Caption Text</div>
-            </div>
-            <div class="mySlides fade">
-                <img src="p3.png" style="width: 100%;">
-                <div class="text">Caption Text</div>
-            </div>
+    </header>
     
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="p1.png" style="width: 100%;">
+            <div class="text">Caption Text</div>
         </div>
-        <br>
-        <div style="text-align: center;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+        <div class="mySlides fade">
+            <img src="p2.png" style="width: 100%;">
+            <div class="text">Caption Text</div>
         </div>
-        <script>
-        
-            var slideIndex = 1;
-            showSlides(slideIndex);
+        <div class="mySlides fade">
+            <img src="p3.png" style="width: 100%;">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
     
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-    
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
             }
-    
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-            }
-    
-            function automaticSlides() {
-                plusSlides(1);
-            }
-    
-            setInterval(automaticSlides, 3000); // Change image every 3 seconds
-    
-        </script>
-    
-        
-        
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function automaticSlides() {
+            plusSlides(1);
+        }
+
+        setInterval(automaticSlides, 3000); // Change image every 3 seconds
+
+    </script>
+
     <main>
         <section id="products" class="products-section">
             <h2>Top 3 Selling Stationery</h2>
@@ -108,10 +107,6 @@
                     <h3>Top Product 3</h3>
                     <button onclick="alertLogin()">Buy It Now</button>
                 </div>
-
-            <script src="index.js"></script>
-    
-
             </div>
             
             <div id="popup-overlay" class="popup-overlay"></div>
@@ -132,32 +127,29 @@
                     <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
                 </div>
             </div>
-
+        </section>
     </main>
 
     <section id="testimonials" class="testimonial-section">
         <h2>Customer Testimonials and Comments</h2>
         <div class="testimonial-grid">
-            <div class="testimonial-card active">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</p>
-                <cite>John Doe</cite>
-            </div>
-            <div class="testimonial-card">
-                <p>"Absolutely love the variety and quality of stationery at OKAY Stationery Shop. Always find something unique for my journaling needs!"</p>
-                <cite>Celine</cite>
-            </div>
-            <div class="testimonial-card">
-                <p>"As a pen enthusiast, I can't get enough of the exquisite collection at OKAY Stationery Shop. Each piece feels like a work of art!"</p>
-                <cite>Dennis</cite>
-            </div>
+            <?php
+            include 'fetch_comments.php';
+            foreach ($comments as $comment) {
+                echo '<div class="testimonial-card">';
+                echo '<p>"' . htmlspecialchars($comment['comment']) . '"</p>';
+                echo '<cite>' . htmlspecialchars($comment['username']) . '</cite>';
+                echo '<div class="rating">Rating: ' . htmlspecialchars($comment['rating']) . '</div>';
+                echo '</div>';
+            }
+            ?>
         </div>
     </section>
 
     <footer>
-        <footer>
-            <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Comapany</p>
-        </footer>
+        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
+    </footer>
 
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
