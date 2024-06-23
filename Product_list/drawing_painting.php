@@ -1,30 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adhesive Tape</title>
-    <link rel="stylesheet" href="adhesive_tape.css">
-    
+    <title>Drawing Painting</title>
+    <link rel="stylesheet" href="pen.css">
+    <script>
+        // Function to toggle wishlist status
+        function toggleWishlist(button) {
+            button.classList.toggle('active');
+        }
+    </script>
 </head>
-
-<script>
-
-    // Function to toggle wishlist status
-    function toggleWishlist(button)  
-    {
-        button.classList.toggle('active');
-    }
-    
-    
-</script>
-
 <body>
     <header>
         <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
-            ADHENSIVE TAP
+            DRAWING AND PAINTING
             <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
         </h1>
         <nav>
@@ -38,20 +32,29 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <div class="Product">
-            <img src="adhesive_tape.png" alt="Adhesive Tape">
-            <h2>Adhesive Tape</h2>
-            <p class="price">RM3.00</p>
- 
-            <a href="../Product_list/adhesive_tape_details.html" class="detailButton">View Details</a>
-
-        </div>
+        <?php
+        include 'db_connect.php';
+        
+        // SQL query to select products with category_id = 2
+        $sql = "SELECT * FROM products WHERE category_id = 2";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo '<div class="Product">';
+                echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
+                echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
+                echo '<p class="price">RM' . htmlspecialchars($row["product_price"]) . '</p>';
+                echo '<a href="product_details.php?id=' . htmlspecialchars($row["product_id"]) . '" class="detailButton">View Details</a>';
+                echo '</div>';
+            }
+        } else {
+            echo "<p>No products found in this category.</p>";
+        }
+        $conn->close();
+        ?>
     </main>
-
-
-
     <footer>
         <nav>
             <ul>
@@ -61,7 +64,7 @@
                 <li><a href="../login/login.php">Account</a></li>
             </ul>
         </nav>
-        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Comapany</p>
+        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
     </footer>
 </body>
 </html>

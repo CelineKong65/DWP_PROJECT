@@ -1,106 +1,69 @@
-
-body 
-{
+body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color:  #fff;
     margin: 0;
     padding: 0;
+}
 
-  }
+.logo {
+    width: 100px;
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
 
+#back {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #FFD4B2; /* Text color */
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid #ffefe3;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none; /* Removes underline */
+}
 
-  #back 
-  {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      color: #FFD4B2;
-      background-color: #fff;
-      font-size: 20px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      border:#ffefe3 solid ;
-      border-radius: 10px;
-      text-decoration: none;
-      padding: 5px 5px;
-  }
-  
-  .logo 
-  {
-      width: 100px;
-      height: 80px;
-      vertical-align: middle;
-      margin-right: 10px;
-  }
+/* To handle hover state if needed */
+#back:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+    color: #FFD4B2; /* Keeps text color consistent on hover */
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-  .rating {
-    display: inline-block;
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    margin-left: 38%;
-  }
-  
-  .rating input {
-    display: none;
-  }
-  
-  .rating label {
-    cursor: pointer;
-    display: inline-block;
+header {
+    background-color: #FFD495;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    line-height: 25px;
-    color: #ddd;
-    margin-left: 5px;
-  }
-  
-  .rating label:before {
-    content: '★';
-    font-size: 80px;
-  }
-  
-  .rating input:checked ~ label {
-    color: gold;
-  }
-  
-  
-  .container 
-  {
-      max-width: 1200px;
-      margin: 0 auto;
-  }
-  
-  header 
-  {
-      background-color: #FFD495;
-      background-color: ;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-  }
-  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-.line{
-
+.line {
     border: none;
     border-top: 2px solid #ccc; /* Change color and thickness as needed */
     width: 1200px; /* Set the width of the line */
     margin: 20px auto; /* Adjust margin to center the line horizontally */
 }
 
-  
 .add-comment {
     max-width: 600px;
     margin: 20px auto;
-    padding: 50px 100px;
-    background-color:#fff ;
+    padding: 40px;
+    background-color: #fff;
     color: #333;
     border-radius: 10px;
-    border: #333 solid;
+    border: 1px solid #ccc;
 }
 
 form {
     margin-bottom: 20px;
-    border-radius: 20%;
 }
 
 label {
@@ -109,7 +72,7 @@ label {
 }
 
 input[type="text"],
-select {
+textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -122,7 +85,7 @@ button {
     background-color: #FFD495;
     color: #333;
     padding: 10px 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -131,4 +94,35 @@ button {
 
 button:hover {
     background-color: #FAAB78;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 50px; /* Adjust the size of the label font */
+    color: #ddd;
+    margin-left: 5px;
+}
+
+.rating input:checked ~ label {
+    color: gold;
+}
+
+.rating label:before {
+    content: '★';
+    font-size: 200px; /* Initial size */
+    transition: all 0.2s ease-in-out; /* Smooth transition for size change */
+}
+
+.rating input:checked ~ label:before {
+    font-size: 300px; /* Larger size when checked */
 }

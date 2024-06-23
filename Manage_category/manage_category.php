@@ -64,10 +64,26 @@
             cursor: pointer;
             font-size: 16px;
             margin: 20px auto;
-            display: block;
+            display: inline-block; /* Changed to inline-block */
+            margin-right: 10px; /* Added margin for spacing */
         }
 
         #addCategoryBtn:hover {
+            background-color: #0056b3;
+        }
+
+        #viewCategoryBtn {
+            background-color: #98B0B9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block; /* Changed to inline-block */
+        }
+
+        #viewCategoryBtn:hover {
             background-color: #0056b3;
         }
 
@@ -89,7 +105,6 @@
             <tr>
                 <th>Category ID</th>
                 <th>Category Name</th>
-                <th>View</th>
                 <th>Delete</th>
             </tr>
         </thead>
@@ -112,7 +127,7 @@
 
         if (!empty($category_id) && !empty($category_name)) {
             $stmt = $conn->prepare("INSERT INTO category (category_id, category_name) VALUES (?, ?)");
-            $stmt->bind_param("ss", $category_id, $category_name);
+            $stmt->bind_param("is", $category_id, $category_name);
 
             if ($stmt->execute()) {
                 echo "<script>alert('Category added successfully');</script>";
@@ -125,6 +140,7 @@
             echo "<script>alert('Please fill in all fields');</script>";
         }
     }
+    
 
     $result = $conn->query("SELECT * FROM category");
     if ($result->num_rows > 0) {
@@ -132,12 +148,11 @@
             echo "<tr>
                     <td>{$row['category_id']}</td>
                     <td>{$row['category_name']}</td>
-                    <td><a href='category_view.php'>View</a></td>
-                    <td><a href='category_delete.php?staff_id={$row['category_id']}'>Delete</a></td>
+                    <td><a href='category_delete.php?category_id={$row['category_id']}'>Delete</a></td>
                   </tr>";
         }
     } else {
-        echo "<tr><td colspan='4'>No category found</td></tr>";
+        echo "<tr><td colspan='3'>No category found</td></tr>";
     }
 
     $conn->close();
@@ -145,8 +160,11 @@
         </tbody>
     </table>
 
-    <!-- Move the Add Category button here -->
-    <button id="addCategoryBtn">Add Category</button>
+    <!-- Add Category and View Details buttons in the same line -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button id="addCategoryBtn">Add Category</button>
+        <button id="viewCategoryBtn" class="modal-button">View Details</button>
+    </div>
 
     <div id="categoryModal" class="modal">
         <div class="modal-content">
@@ -154,7 +172,7 @@
             <h2>Add Category</h2>
             <form action="manage_category.php" method="post">
                 <label for="category_id"><b>Category ID:</b></label>
-                <input type="text" id="category_id" name="category_id" required>
+                <input type="number" id="category_id" name="category_id" required>
 
                 <label for="category_name"><b>Category Name:</b></label>
                 <input type="text" id="category_name" name="category_name" required>
@@ -164,22 +182,90 @@
         </div>
     </div>
 
+    <div id="viewCategoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Category Details</h2>
+            <div id="categoryDetails">
+            <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "okaydb";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Query to fetch products with category names
+$sql = "SELECT p.product_id, p.product_name, p.product_price, c.category_name 
+        FROM products p
+        INNER JOIN category c ON p.category_id = c.category_id";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table>
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>";
+
+    while ($product = $result->fetch_assoc()) {
+        echo "<tr>
+                <td>{$product['product_id']}</td>
+                <td>{$product['product_name']}</td>
+                <td>{$product['product_price']}</td>
+                <td>{$product['category_name']}</td>
+              </tr>";
+    }
+
+    echo "</tbody></table>";
+} else {
+    echo "<p>No products found</p>";
+}
+
+$conn->close();
+?>
+
+            </div>
+        </div>
+    </div>
+
     <script>
         var modal = document.getElementById("categoryModal");
+        var viewModal = document.getElementById("viewCategoryModal");
         var btn = document.getElementById("addCategoryBtn");
-        var span = document.getElementsByClassName("close")[0];
+        var viewBtn = document.getElementById("viewCategoryBtn");
+        var span = document.getElementsByClassName("close");
 
         btn.onclick = function() {
             modal.style.display = "block";
         }
 
-        span.onclick = function() {
-            modal.style.display = "none";
+        viewBtn.onclick = function() {
+            viewModal.style.display = "block";
         }
+
+        Array.prototype.forEach.call(span, function(element) {
+            element.onclick = function() {
+                modal.style.display = "none";
+                viewModal.style.display = "none";
+            }
+        });
 
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+            } else if (event.target == viewModal) {
+                viewModal.style.display = "none";
             }
         }
     </script>

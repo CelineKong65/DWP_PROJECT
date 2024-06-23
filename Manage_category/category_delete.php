@@ -12,25 +12,29 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if (isset($_GET['staff_id'])) {
-    $category_id = $_GET['staff_id'];
+// Check if category_id parameter is set
+if (isset($_GET['category_id'])) {
+    $category_id = $_GET['category_id'];
 
-    // Prepare the SQL statement to delete the category
+    // Prepare and execute SQL query to delete category
     $stmt = $conn->prepare("DELETE FROM category WHERE category_id = ?");
-    $stmt->bind_param("s", $category_id);
-
+    if (!$stmt) {
+        die("Prepare failed: " . $conn->error);
+    }
+    $stmt->bind_param("s", $category_id); // 's' because category_id is string in this example
     if ($stmt->execute()) {
-        echo "<script>alert('Category deleted successfully');</script>";
+        // Redirect back to the manage category page after successful deletion
+        header("Location: manage_category.php");
+        exit();
     } else {
-        echo "<script>alert('Error deleting category: " . $stmt->error . "');</script>";
+        die("Error deleting category: " . $stmt->error);
     }
 
+    // Close statement
     $stmt->close();
+} else {
+    die("No category_id provided");
 }
 
 $conn->close();
-
-// Redirect back to the manage categories page
-header("Location: manage_category.php");
-exit;
 ?>
