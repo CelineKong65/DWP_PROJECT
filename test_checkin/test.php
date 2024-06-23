@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Check-in</title>
-  <link rel="stylesheet" href="check-in.css">
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
 
@@ -12,7 +13,7 @@
 
 
 <header>
-    <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
+    <a id="back" href="../User_homepage/index2.html"><b>BACK TO HOME</b></a>
     <h1>Daily Check-in</h1>
     <img src="logo .png" alt="OKAY Stationery Shop Logo" class="logo">
 </header>
@@ -25,6 +26,6 @@
     <div id="couponMessage" style="display:none;"></div>
 </div>
 
-  <script src="check-in.js"></script>
+  <script src="test.js"></script>
 </body>
 </html>
