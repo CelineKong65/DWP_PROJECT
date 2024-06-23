@@ -38,7 +38,7 @@ function toggleWishlist(button) {
             <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
         </h1>
         <nav>
-            <ul>
+        <ul>
                 <li><a href="../Product_list/product_list.php">All</a></li>
                 <li><a href="../Product_list/office_stationery.html">Office Stationery</a></li>
                 <li><a href="../Product_list/drawing_painting.html">Drawing and Painting</a></li>
@@ -68,8 +68,8 @@ function toggleWishlist(button) {
         <nav>
             <ul>
                 <li><a href="../About_us/aboutus.html">About</a></li>
-                <li><a href="../Product_list/product_list.html">Services</a></li>
-                <li><a href="../Contact_us/contact_us.html">Contact</a></li>
+                <li><a href="../Product_list/product_list.php">Services</a></li>
+                <li><a href="../Contact_us/contact_us.php">Contact</a></li>
                 <li><a href="../login/login.php">Account</a></li>
             </ul>
         </nav>
