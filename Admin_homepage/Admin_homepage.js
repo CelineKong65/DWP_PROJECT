@@ -69,11 +69,10 @@ const ordersChart = new Chart(ordersCtx,
 });
 
 // Data for total product sales per year
-const salesData = [6600, 7000, 4000, 3000, 10000, 8000, 9000, 5000, 6000, S5000];
+const salesData = [6600, 8000, 4000, 3000, 10000, 5000, 5600, 4000, 5000, 3000];
 
 // Labels for products
-const productLabels = ['adhesive tape', 'binder level arch', 'crayon', 'drawing painting', 'eraser', 'pen', 'pencil', 'scissor', 'stapler and staples', 'watercolo paint'];
-
+const productLabels = ['adhesive tape', 'binder level arch', 'crayon', 'drawing painting', 'eraser', 'pen', 'pencil', 'scissor', 'stapler and staples', 'watercolor paint'];
 // Get the canvas element
 const productsCtx = document.getElementById('productsChart').getContext('2d');
 
