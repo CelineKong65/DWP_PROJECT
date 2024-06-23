@@ -200,7 +200,7 @@ if ($conn->connect_error) {
 }
 
 // Query to fetch products with category names
-$sql = "SELECT p.product_id, p.product_name, p.product_price, p.product_image, c.category_name 
+$sql = "SELECT p.product_id, p.product_name, p.product_price, c.category_name 
         FROM products p
         INNER JOIN category c ON p.category_id = c.category_id";
 
@@ -213,7 +213,6 @@ if ($result->num_rows > 0) {
                     <th>Product ID</th>
                     <th>Product Name</th>
                     <th>Product Price</th>
-                    <th>Product Image</th>
                     <th>Category</th>
                 </tr>
             </thead>
@@ -224,7 +223,6 @@ if ($result->num_rows > 0) {
                 <td>{$product['product_id']}</td>
                 <td>{$product['product_name']}</td>
                 <td>{$product['product_price']}</td>
-                <td><img src='{$product['product_image']}' alt='{$product['product_name']}' style='max-width: 100px; max-height: 100px;'></td>
                 <td>{$product['category_name']}</td>
               </tr>";
     }
