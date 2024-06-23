@@ -12,7 +12,7 @@
 
 
 <header>
-    <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
+    <a id="back" href="../User_homepage/index2.html"><b>BACK TO HOME</b></a>
     <h1>Daily Check-in</h1>
     <img src="logo .png" alt="OKAY Stationery Shop Logo" class="logo">
 </header>
