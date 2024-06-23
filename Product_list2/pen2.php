@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adhesive Tape</title>
-    <link rel="stylesheet" href="adhesive_tape2.css">
+    <title>Pen</title>
+    <link rel="stylesheet" href="pen2.css">
     <script>
         // Function to toggle wishlist status
         function toggleWishlist(button) {
@@ -18,7 +18,7 @@
         <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
-            ADHESIVE TAPE
+            PEN
             <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
         </h1>
         <nav>
@@ -36,8 +36,8 @@
         <?php
         include 'db_connect.php';
         
-        // SQL query to select products with category_id = 4
-        $sql = "SELECT * FROM products WHERE category_id = 4";
+        // SQL query to select products with category_id = 3
+        $sql = "SELECT * FROM products WHERE category_id = 3";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             // Output data of each row
@@ -47,10 +47,6 @@
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
                 echo '<p class="price">RM' . htmlspecialchars($row["product_price"]) . '</p>';
                 echo '<a href="product_details.php?id=' . htmlspecialchars($row["product_id"]) . '" class="detailButton">View Details</a>';
-            ?>           
-   
-            <?php
- 
                 echo '</div>';
             }
         } else {
@@ -58,15 +54,13 @@
         }
         $conn->close();
         ?>
-        
     </main>
 
                 <!-- shopping cart button -->
                 <a href="../Shopping_cart/shopping_cart.html"><button class="shopping-cart-button">🛒</button></a>  
 
-                <!-- Wishlist button -->
-                <a href="../Wishlist/Wishlist.html"><button class="wishlist-button">&#10084;</button></a>
-
+<!-- Wishlist button -->
+<a href="../Wishlist/Wishlist.html"><button class="wishlist-button">&#10084;</button></a>
 
     <footer>
         <nav>
