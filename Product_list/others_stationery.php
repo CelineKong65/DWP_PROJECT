@@ -23,7 +23,7 @@
         </h1>
         <nav>
         <ul>
-                <li><a href="../Product_list/product_list.php">All></li>
+                <li><a href="../Product_list/product_list.php">All</li>
                 <li><a href="../Product_list/office_stationery.php">Office Stationery</a></li>
                 <li><a href="../Product_list/drawing_painting.php">Drawing and Painting</a></li>
                 <li><a href="../Product_list/pen.php">Pen</a></li>
@@ -59,8 +59,8 @@
         <nav>
             <ul>
                 <li><a href="../About_us/aboutus.html">About</a></li>
-                <li><a href="../Product_list/product_list.html">Services</a></li>
-                <li><a href="../Contact_us/contact_us.html">Contact</a></li>
+                <li><a href="../Product_list/product_list.php">Services</a></li>
+                <li><a href="../Contact_us/contact_us.php">Contact</a></li>
                 <li><a href="../login/login.php">Account</a></li>
             </ul>
         </nav>
