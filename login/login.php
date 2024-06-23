@@ -46,7 +46,7 @@ $conn->close();
 </head>
 <body>
 <header>
-    <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
+    <a id="back" href="..index1.html"><b>BACK TO HOME</b></a>
 </header>
 <div id="container">
     <div style="border: 1px solid #DDD; border-radius: 10px; width: 400px; padding: 0px">
@@ -69,39 +69,5 @@ $conn->close();
         </div>
     </div>
 </div>
-</body>
-</html>
-
-
-<header>
-    <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
-</header>
-<div id="container">
-    <div style="border: 1px solid #DDD; border-radius: 10px; width: 400px; padding: 0px">
-
-        <div id="login-title">
-            <h3 style="margin: 0px; padding: 12px 170px; color:white; font-family: Arial;">Login</h3>
-        </div>
-
-        <div id="login-form">
-            <?php
-            if (isset($error_message)) {
-                echo "<p style='color: red; text-align: center;'>$error_message</p>";
-            }
-            ?>
-            <form name="loginfrm" method="post" action="">
-                <p><input type="email" name="email" required/></p>
-                <p><input type="password" name="userpass" required/></p>
-                <p><input type="submit" name="loginbtn" value="LOGIN" /></p>
-            </form>
-
-            <p><a href="../login/forget_password.php">Forgot your password?</a></p>
-            <p><a href="../Register/register.php">No Account? Register Now!</a></p>
-
-        </div>
-
-    </div>
-</div>
-
 </body>
 </html>
