@@ -1,6 +1,6 @@
 //data for total order and customer per month
-const customersData = [2, 5, 2, 4, 5, 3, 8, 1, 10, 5, 8, 3];
-const ordersData = [15, 16, 18, 20, 12, 8, 6, 14, 9, 12, 5, 7 ];
+const customersData = [200, 500, 200, 400, 500, 300, 800, 1000, 1000, 500, 800, 300];
+const ordersData = [250, 530, 250, 400, 550, 300, 900, 1000, 1200, 500, 850, 300 ];
 
 const monthlabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -69,9 +69,9 @@ const ordersChart = new Chart(ordersCtx,
 });
 
 //data for total product per year
-const productsData = [600, 800, 900, 1000, 1500];
+const salesData = [6600, 8000, 4000, 3000, 10000, 10000, 7000, 5000, 6000, 10000];
 
-const yearlabels = ['2019', '2020', '2021', '2022', '2023'];
+const productlabels = ['adhesive tape', 'binder level arch', 'crayon', 'drawing painting', 'eraser', 'pen', 'pencil', 'scissor', 'stapler and staples', 'watercolor paint'];
 
 //bar Chart for total customers
 const productsCtx = document.getElementById('productsChart').getContext('2d');
@@ -80,10 +80,10 @@ const productsChart = new Chart(productsCtx,
     type: 'bar',
     data: 
     {
-        labels: yearlabels,
+        labels: productlabels,
         datasets: 
         [{
-            label: 'Total Products',
+            label: 'Total Products 2019-2023',
             data: productsData,
             backgroundColor: 'rgba(186, 104, 200, 0.2)',
             borderColor: 'rgba(103, 58, 183, 1)',
