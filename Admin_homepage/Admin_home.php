@@ -43,7 +43,7 @@
 
                 <!-- Bar Chart for Total Products -->
                 <div class="chart-box">
-                    <h2>Total Products Sales Per Year</h2>
+                    <h2>Total Products Sales Per Year (2019-2023)</h2>
                     <canvas id="productsChart"></canvas>
                 </div>
             </div>
