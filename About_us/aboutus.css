@@ -135,45 +135,55 @@ h1 {
     margin-right: 5%;
 }
 
-/* Stationery sales */
-h2 {
-    margin-top: 20px;
-    color: #333;
+.chartsection
+{
+    background-size: 1530px 500px;
     text-align: center;
+    padding: 50px 0;
+    color: #333;
 }
 
-.sales-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.sales-item {
-    background-color: #f0f1be;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0.5, 0.5, 0.5);
+.chart-container 
+{
+    width: 100%;
+    max-width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
     padding: 20px;
-    margin: 0 50px;
-    width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
 }
 
-.sales-item h2 {
-    color: #564e4e;
+.chart-container:last-child
+{
+    margin-right: 0;
 }
 
-.sales-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 10px;
-    background-size: cover;
+.chart-container h2
+{
+    margin-bottom: 20px;
 }
 
-.quantity, .revenue {
-    color: #666;
-    margin: 5px 0;
+.chart-container canvas
+{
+    max-width: 100%;
+    height: auto;
 }
 
-/* Pen sale pie-chart */
+@media (max-width: 768px) 
+{
+    .chart-container 
+    {
+        max-width: 100%; /* Take full width on smaller screens */
+    }
+}
+
+p {
+    font-weight: 900;
+}
 
 /* background3 section styles */
 .background3 h2 {
