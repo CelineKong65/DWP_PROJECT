@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Office Stationery</title>
-    <link rel="stylesheet" href="pen.css">
+    <link rel="stylesheet" href="office_stationery.css">
     <script>
         // Function to toggle wishlist status
         function toggleWishlist(button) {

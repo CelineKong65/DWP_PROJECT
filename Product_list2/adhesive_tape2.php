@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adhesive Tape</title>
-    <link rel="stylesheet" href="adhesive_tape.css">
+    <link rel="stylesheet" href="adhesive_tape2.css">
     <script>
         // Function to toggle wishlist status
         function toggleWishlist(button) {
@@ -48,6 +48,8 @@
                 echo '<p class="price">RM' . htmlspecialchars($row["product_price"]) . '</p>';
                 echo '<a href="product_details.php?id=' . htmlspecialchars($row["product_id"]) . '" class="detailButton">View Details</a>';
                 echo '</div>';
+                echo '<a href="../Shopping_cart/shopping_cart.html"><button class="shopping-cart-button">🛒</button></a>  ';
+                echo '<a href="../Wishlist/Wishlist.html"><button class="wishlist-button">&#10084;</button></a>';
             }
         } else {
             echo "<p>No products found in this category.</p>";

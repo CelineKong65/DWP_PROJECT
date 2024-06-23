@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drawing Painting</title>
-    <link rel="stylesheet" href="pen.css">
+    <link rel="stylesheet" href="drawing_painting.css">
     <script>
         // Function to toggle wishlist status
         function toggleWishlist(button) {
