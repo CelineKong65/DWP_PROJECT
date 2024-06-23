@@ -43,7 +43,7 @@
 
                 <!-- Bar Chart for Total Products -->
                 <div class="chart-box">
-                    <h2>Total Products Per 5 Year</h2>
+                    <h2>Total Products Sales Per 5 Year</h2>
                     <canvas id="productsChart"></canvas>
                 </div>
             </div>
