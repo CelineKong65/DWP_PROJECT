@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
+        <a id="back" href="../User_homepage/user_homepage.html"><b>BACK TO HOME</b></a>
         <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
         <h1>OKAY Stationery Shop</h1>
     </header>
@@ -124,10 +124,10 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../User_homepage/user_homepage.php">Home</a></li>
                 <li><a href="../About_us/aboutus.html">About</a></li>
-                <li><a href="../Product_list/product_list.php">Services</a></li>
-                <li><a href="../Contact_us/contact_us.php">Contact</a></li>
+                <li><a href="../Product_list2/product_list2.php">Services</a></li>
+                <li><a href="../Contact_us/contact_us2.php">Contact</a></li>
                 <li><a href="../login/login.php">Account</a></li>
             </ul>
         </nav>

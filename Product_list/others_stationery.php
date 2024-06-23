@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Others Stationery</title>
-    <link rel="stylesheet" href="pen.css">
+    <link rel="stylesheet" href="others_stationery.css">
     <script>
         // Function to toggle wishlist status
         function toggleWishlist(button) {
@@ -22,13 +22,13 @@
             <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
         </h1>
         <nav>
-            <ul>
-                <li><a href="../Product_list/product_list.html">All</a></li>
-                <li><a href="../Product_list/office_stationery.html">Office Stationery</a></li>
-                <li><a href="../Product_list/drawing_painting.html">Drawing and Painting</a></li>
-                <li><a href="../Product_list/pen.html">Pen</a></li>
-                <li><a href="../Product_list/adhesive_tape.html">Adhesive Tape</a></li>
-                <li><a href="../Product_list/others_stationery.html">Other Stationery</a></li>
+        <ul>
+                <li><a href="../Product_list/product_list.php">All</li>
+                <li><a href="../Product_list/office_stationery.php">Office Stationery</a></li>
+                <li><a href="../Product_list/drawing_painting.php">Drawing and Painting</a></li>
+                <li><a href="../Product_list/pen.php">Pen</a></li>
+                <li><a href="../Product_list/adhesive_tape.php">Adhesive Tape</a></li>
+                <li><a href="../Product_list/others_stationery.php">Other Stationery</a></li>
             </ul>
         </nav>
     </header>
@@ -59,8 +59,8 @@
         <nav>
             <ul>
                 <li><a href="../About_us/aboutus.html">About</a></li>
-                <li><a href="../Product_list/product_list.html">Services</a></li>
-                <li><a href="../Contact_us/contact_us.html">Contact</a></li>
+                <li><a href="../Product_list/product_list.php">Services</a></li>
+                <li><a href="../Contact_us/contact_us.php">Contact</a></li>
                 <li><a href="../login/login.php">Account</a></li>
             </ul>
         </nav>

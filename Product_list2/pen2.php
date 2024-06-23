@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pen</title>
-    <link rel="stylesheet" href="pen.css">
+    <link rel="stylesheet" href="pen2.css">
     <script>
         // Function to toggle wishlist status
         function toggleWishlist(button) {
@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-        <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
+        <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             PEN
@@ -23,12 +23,12 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="../Product_list/product_list.php">All></li>
-                <li><a href="../Product_list/office_stationery.php">Office Stationery</a></li>
-                <li><a href="../Product_list/drawing_painting.php">Drawing and Painting</a></li>
-                <li><a href="../Product_list/pen.php">Pen</a></li>
-                <li><a href="../Product_list/adhesive_tape.php">Adhesive Tape</a></li>
-                <li><a href="../Product_list/others_stationery.php">Other Stationery</a></li>
+                <li><a href="../Product_list/product_list.html">All</a></li>
+                <li><a href="../Product_list/office_stationery.html">Office Stationery</a></li>
+                <li><a href="../Product_list/drawing_painting.html">Drawing and Painting</a></li>
+                <li><a href="../Product_list/pen.html">Pen</a></li>
+                <li><a href="../Product_list/adhesive_tape.html">Adhesive Tape</a></li>
+                <li><a href="../Product_list/others_stationery.html">Other Stationery</a></li>
             </ul>
         </nav>
     </header>
@@ -55,12 +55,19 @@
         $conn->close();
         ?>
     </main>
+
+                <!-- shopping cart button -->
+                <a href="../Shopping_cart/shopping_cart.html"><button class="shopping-cart-button">🛒</button></a>  
+
+<!-- Wishlist button -->
+<a href="../Wishlist/Wishlist.html"><button class="wishlist-button">&#10084;</button></a>
+
     <footer>
         <nav>
             <ul>
                 <li><a href="../About_us/aboutus.html">About</a></li>
-                <li><a href="../Product_list/product_list.php">Services</a></li>
-                <li><a href="../Contact_us/contact_us.php">Contact</a></li>
+                <li><a href="../Product_list/product_list.html">Services</a></li>
+                <li><a href="../Contact_us/contact_us.html">Contact</a></li>
                 <li><a href="../login/login.php">Account</a></li>
             </ul>
         </nav>
