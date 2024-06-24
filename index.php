@@ -48,6 +48,38 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+
+    <section id="testimonials" class="testimonial-section">
+            <h2>Customer Testimonials and Comments</h2>
+            <div class="testimonial-slider" id="commentslidershow">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio."</p>
+                        <cite>John Doe</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Absolutely love the variety and quality of stationery at OKAY Stationery Shop. Always find something unique for my journaling needs!"</p>
+                        <cite>Celine</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"As a pen enthusiast, I can't get enough of the exquisite collection at OKAY Stationery Shop. Each piece feels like a work of art!"</p>
+                        <cite>Dennis</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"The Okay Stationery have a good fast delivery and the product quality is very good!"</p>
+                        <cite>Maureen</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Okay Stationery is a best statinery"</p>
+                        <cite>Cassandra</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"I love this stationery because it make me feel organised"</p>
+                        <cite>Evan</cite>
+                    </div>
+                </div>
+        </section>
+        
     <script>
     
         var slideIndex = 1;
@@ -82,6 +114,7 @@
         }
 
         setInterval(automaticSlides, 3000); // Change image every 3 seconds
+        
 
         // For Testimonials
         var commentsToShow = 4;
