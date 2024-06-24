@@ -284,7 +284,8 @@ header {
         z-index: 999; /* Ensure it's on top of everything */
     }
 
-    .popup {
+    .popup 
+    {
         display: none;
         position: fixed;
         top: 50%;

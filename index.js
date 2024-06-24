@@ -1,15 +1,18 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n) {
+function plusSlides(n) 
+{
     showSlides(slideIndex += n);
 }
 
-function currentSlide(n) {
+function currentSlide(n) 
+{
     showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+function showSlides(n) 
+{
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
@@ -28,7 +31,8 @@ function showSlides(n) {
 var slideIndex = 0;
 autoShowSlides();
 
-function autoShowSlides() {
+function autoShowSlides() 
+{
     var i;
     var slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
@@ -45,7 +49,8 @@ var commentsToShow = 4;
 var testimonialIndex = 0;
 autoShowTestimonials();
 
-function autoShowTestimonials() {
+function autoShowTestimonials() 
+{
     var i;
     var testimonials = document.getElementsByClassName("testimonial-card");
     var totalTestimonials = testimonials.length;
@@ -68,12 +73,14 @@ function autoShowTestimonials() {
 }
 
 //pruss the button to login to buy
-function alertLogin() {
+function alertLogin() 
+{
     document.getElementById('popup-overlay').style.display = 'block';
     document.getElementById('popup').style.display = 'block';
 }
 
-function closePopup() {
+function closePopup() 
+{
     document.getElementById('popup-overlay').style.display = 'none';
     document.getElementById('popup').style.display = 'none';
 }
