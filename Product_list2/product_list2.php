@@ -8,7 +8,7 @@
 <body>
 
 <?php
-include 'db_connect.php';
+include 'db_connection.php';
 
 $sql = "SELECT product_id, product_name, product_price, product_image FROM products";
 $result = $conn->query($sql);
