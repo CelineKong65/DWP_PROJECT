@@ -119,11 +119,11 @@ if (isset($_GET['delete_all'])) {
         <nav>
             <ul>
                 <li><a href="product_list2.php">All</a></li>
-                <li><a href="office_stationery2.html">Office Stationery</a></li>
-                <li><a href="drawing_painting2.html">Drawing and Painting</a></li>
-                <li><a href="pen2.html">Pen</a></li>
-                <li><a href="adhesive_tape2.html">Adhesive Tape</a></li>
-                <li><a href="others_stationery2.html">Other Stationery</a></li>
+                <li><a href="office_stationery2.php">Office Stationery</a></li>
+                <li><a href="drawing_painting2.php">Drawing and Painting</a></li>
+                <li><a href="pen2.php">Pen</a></li>
+                <li><a href="adhesive_tape2.php">Adhesive Tape</a></li>
+                <li><a href="others_stationery2.php">Other Stationery</a></li>
             </ul>
         </nav>
     </header>
