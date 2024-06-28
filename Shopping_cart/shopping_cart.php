@@ -289,7 +289,7 @@ $total_price = 0;
             <div class="button-group">
                 <a href="shopping_cart.php?delete_all" class="checkout-btn">Delete All Items</a>
                 <a href="../Product_list2/product_list2.php" class="checkout-btn">Continue Shopping</a>
-                <a href="../Payment/payment.html" class="checkout-btn">Checkout</a>
+                <a href="../Payment/payment.php" class="checkout-btn">Checkout</a>
             </div>
         </div>
     </main>
