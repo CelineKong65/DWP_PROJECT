@@ -27,6 +27,14 @@ if (isset($_POST['add_to_wishlist'])) {
     exit;
 }
 
+// Handle remove from wishlist
+if (isset($_GET['remove_wishlist'])) {
+    $remove_id = mysqli_real_escape_string($conn, $_GET['remove_wishlist']);
+    mysqli_query($conn, "DELETE FROM wishlist WHERE id = '$remove_id' AND user_id = '$user_id'") or die(mysqli_error($conn));
+    header('location:wishlist.php');
+    exit;
+}
+
 // Handle add to cart
 if (isset($_POST['add_to_cart'])) {
     $product_name = mysqli_real_escape_string($conn, $_POST['product_name']);
@@ -43,6 +51,31 @@ if (isset($_POST['add_to_cart'])) {
         $_SESSION['message'] = 'Product added to cart!';
     }
     header('location: product_list2.php');
+    exit;
+}
+
+// Handle update cart
+if (isset($_POST['update_cart'])) {
+    $update_quantity = mysqli_real_escape_string($conn, $_POST['cart_quantity']);
+    $update_id = mysqli_real_escape_string($conn, $_POST['cart_id']);
+    mysqli_query($conn, "UPDATE cart SET quantity = '$update_quantity' WHERE id = '$update_id' AND user_id = '$user_id'") or die(mysqli_error($conn));
+    $_SESSION['message'] = 'Cart quantity updated successfully!';
+    header('location:shopping_cart.php');
+    exit;
+}
+
+// Handle remove item from cart
+if (isset($_GET['remove'])) {
+    $remove_id = mysqli_real_escape_string($conn, $_GET['remove']);
+    mysqli_query($conn, "DELETE FROM cart WHERE id = '$remove_id' AND user_id = '$user_id'") or die(mysqli_error($conn));
+    header('location:product_list2.php');
+    exit;
+}
+
+// Handle delete all items from cart
+if (isset($_GET['delete_all'])) {
+    mysqli_query($conn, "DELETE FROM cart WHERE user_id = '$user_id'") or die(mysqli_error($conn));
+    header('location:product_list2.php');
     exit;
 }
 ?>
