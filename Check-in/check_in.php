@@ -9,7 +9,8 @@ $dbname = "okaydb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -23,10 +24,13 @@ $stmt->bind_param("is", $userId, $today);
 $stmt->execute();
 $result = $stmt->get_result();
 
-if ($result->num_rows > 0) {
+if ($result->num_rows > 0) 
+{
     // User already checked in today
     echo "You have already checked in today.";
-} else {
+} 
+else 
+{
     // Insert the check-in record
     $sql = "INSERT INTO user_checkin (user_id, checkin_date) VALUES (?, ?)";
     $stmt = $conn->prepare($sql);
@@ -40,7 +44,8 @@ if ($result->num_rows > 0) {
     $stmt->execute();
     $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
+    if ($result->num_rows > 0) 
+    {
         // Update streak count if applicable
         $row = $result->fetch_assoc();
         $lastCheckinDate = $row['last_checkin_date'];
@@ -48,7 +53,8 @@ if ($result->num_rows > 0) {
 
         $daysDifference = (strtotime($today) - strtotime($lastCheckinDate)) / (60 * 60 * 24);
 
-        if ($daysDifference == 1) {
+        if ($daysDifference == 1) 
+        {
             $streakCount++;
         } else {
             $streakCount = 1;
@@ -58,7 +64,9 @@ if ($result->num_rows > 0) {
         $sql = "UPDATE checkin_streaks SET streak_count = ?, last_checkin_date = ? WHERE user_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("isi", $streakCount, $today, $userId);
-    } else {
+    } 
+    else 
+    {
         // Initialize streak count if no record found
         $streakCount = 1;
         $sql = "INSERT INTO checkin_streaks (user_id, streak_count, last_checkin_date) VALUES (?, ?, ?)";

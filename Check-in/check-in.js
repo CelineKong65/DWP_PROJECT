@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () 
+{
     const calendar = document.getElementById('calendar');
     const checkInButton = document.getElementById('checkInButton');
     const checkInMessage = document.getElementById('checkInMessage');
@@ -7,14 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeModal = document.getElementsByClassName('close')[0];
     const progressBar = document.getElementById('progress');
 
-    for (let i = 1; i <= 30; i++) {
+    for (let i = 1; i <= 30; i++) 
+    {
         const day = document.createElement('div');
         day.classList.add('day');
         day.textContent = i;
         calendar.appendChild(day);
     }
 
-    checkInButton.addEventListener('click', function() {
+    checkInButton.addEventListener('click', function()
+    {
         $.ajax({
             url: 'check_in.php',
             type: 'post',
@@ -29,17 +32,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    closeModal.onclick = function() {
+    closeModal.onclick = function() 
+    {
         modal.style.display = 'none';
     }
 
-    window.onclick = function(event) {
-        if (event.target == modal) {
+    window.onclick = function(event) 
+    {
+        if (event.target == modal) 
+        {
             modal.style.display = 'none';
         }
     }
 
-    function updateCalendar() {
+    function updateCalendar() 
+    {
         $.ajax({
             url: 'get_checkin_dates.php',
             type: 'post',
@@ -57,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function updateProgressBar(streakCount) {
+    function updateProgressBar(streakCount) 
+    {
         const progressPercentage = (streakCount / 30) * 100;
         progressBar.style.width = `${progressPercentage}%`;
     }

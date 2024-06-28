@@ -9,7 +9,8 @@ $dbname = "okaydb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -23,7 +24,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 $checkinDates = [];
-while ($row = $result->fetch_assoc()) {
+{
     $checkinDates[] = $row['checkin_date'];
 }
 

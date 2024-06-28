@@ -8,11 +8,13 @@ $dbname = "okaydb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+{
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -22,7 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
     $stmt->store_result();
 
-    if ($stmt->num_rows > 0) {
+    if ($stmt->num_rows > 0) 
+    {
         $stmt->bind_result($userId);
         $stmt->fetch();
         $_SESSION['user_id'] = $userId;
