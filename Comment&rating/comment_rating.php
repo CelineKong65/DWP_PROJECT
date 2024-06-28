@@ -40,7 +40,7 @@ $conn->close();
     
     <header>
         <div>
-        <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
+        <a id="back" href="../index.php"><b>BACK TO HOME</b></a>
         </div>
         <div class="container">
             <h1>

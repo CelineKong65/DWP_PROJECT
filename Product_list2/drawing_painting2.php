@@ -27,7 +27,7 @@ if (isset($_POST['add_to_wishlist'])) {
             error_log('Failed to add product to wishlist: ' . mysqli_error($conn));
         }
     }
-    header('Location: pen2.php');
+    header('Location: drawing_painting2.php');
     exit;
 }
 
@@ -55,7 +55,7 @@ if (isset($_POST['add_to_cart'])) {
         $_SESSION['message'] = 'Product not found!';
         error_log('Product not found: ' . mysqli_error($conn));
     }
-    header('Location: pen2.php');
+    header('Location: drawing_painting2.php');
     exit;
 }
 
@@ -67,8 +67,8 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
-    <link rel="stylesheet" href="pen2.css">
+    <title>Drawing&Paiting</title>
+    <link rel="stylesheet" href="drawing_painting2.css">
     <style>
     input[type=number] {
         width: 40px; /* Adjust width as needed */
@@ -141,8 +141,8 @@ $conn->close();
         <?php
         include 'db_connection.php';
         
-        // SQL query to select products with category_id = 3 
-        $sql = "SELECT * FROM products WHERE category_id = 3";
+        // SQL query to select products with category_id = 2 
+        $sql = "SELECT * FROM products WHERE category_id = 2";
         $result = $conn->query($sql);
         
         if ($result && $result->num_rows > 0) {

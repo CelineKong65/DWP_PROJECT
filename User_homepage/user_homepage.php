@@ -15,7 +15,7 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="../About_us/aboutus.html">About</a></li>
+                <li><a href="../About_us/aboutus2.html">About</a></li>
                 <li><a href="../Contact_us/contact_us2.php">Contact</a></li>
                 <li><a href="../Product_list2/product_list2.php">Product</a></li>
                 <li><a href="">Order History</a></li>
@@ -28,18 +28,15 @@
 
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <img src="p1.png" alt="Slide 1" style="width:100%;">
-            <div class="text">Caption Text</div>
+        <img src="picture1.png" alt="Slide 1" style="width: 100%;">
         </div>
        
         <div class="mySlides fade">
             <img src="p2.png" alt="Slide 2" style="width:100%;">
-            <div class="text">Caption Text</div>
         </div>
 
         <div class="mySlides fade">
             <img src="p3.png" alt="Slide 3" style="width:100%;">
-            <div class="text">Caption Text</div>
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -97,19 +94,19 @@
                     <h2>Watercolor Paint</h2>
                     <img src="watercolor_paint.png" alt="Watercolor Paint">
                     <h3>Top Product 1</h3>
-                    <a href="../Product_list2/drawing_painting2.html" class="detailButton">Buy It Now</a>
+                    <a href="../Product_list2/drawing_painting2.php" class="detailButton">Buy It Now</a>
                 </div>
                 <div class="product-card">
                     <h2>Crayon</h2>
                     <img src="crayon.png" alt="Crayon">
                     <h3>Top Product 2</h3>
-                    <a href="../Product_list2/pen2.html" class="detailButton">Buy It Now</a>
+                    <a href="../Product_list2/pen2.php" class="detailButton">Buy It Now</a>
                 </div>
                 <div class="product-card">
                     <h2>Pencil</h2>
                     <img src="pencil.png" alt="Pencil">
                     <h3>Top Product 3</h3>
-                    <a href="../Product_list2/pen2.html" class="detailButton">Buy It Now</a>
+                    <a href="../Product_list2/pen2.php" class="detailButton">Buy It Now</a>
                 </div>
             </div>
         </section>
@@ -117,11 +114,11 @@
             <h2>Special Offers</h2>
             <div class="offer-grid">
                 <div class="offer-card">
-                    <img src="#" alt="">
+                    <img src="a1.png" alt="Special Offer: 20% off on all M&G!" style="width:50%;max-height: 400px;">
                     <h3>Special Offer: 20% off on all M&G!</h3>
                 </div>
                 <div class="offer-card">
-                    <img src="#" alt="">
+                    <img src="a2.png" alt="Buy 2 Get 1 Free on all Binder Lever Arch File!" style="width:50%;max-height: 400px;">
                     <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
                 </div>
             </div>
@@ -149,10 +146,10 @@
     </footer>
 
     <!-- Shopping cart button -->
-    <a href="../Shopping_cart/shopping_cart.html"><button class="shopping-cart-button">🛒</button></a>  
+    <a href="../Shopping_cart/shopping_cart.php"><button class="shopping-cart-button">🛒</button></a>  
 
     <!-- Wishlist button -->
-    <a href="../Wishlist/Wishlist.html"><button class="wishlist-button">&#10084;</button></a>
+    <a href="../Wishlist/Wishlist.php"><button class="wishlist-button">&#10084;</button></a>
 
     <!-- Check-in button -->
     <a href="../Check-in/check-in.php"><button class="check-in-button">🌟</button></a>

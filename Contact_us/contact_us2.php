@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a id="back" href="../User_homepage/user_homepage.html"><b>BACK TO HOME</b></a>
+        <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
         <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
         <h1>OKAY Stationery Shop</h1>
     </header>
@@ -33,8 +33,8 @@
                 <p>123 Stationery Street 65, Ayer Keroh, </p>
                 <p>Melaka, 75350, Malaysia</p>
                 <h4><b>[ Kuala Lumpur ]</b></h4>
-                <p>465 Stationery Street 33, Kuala Lumpur,</P>
-                <P>Wilayah Persekutuan, 50000, Malaysia</p>
+                <p>465 Stationery Street 33, Kuala Lumpur,</p>
+                <p>Wilayah Persekutuan, 50000, Malaysia</p>
                 <h4><b>[ Johor ]</b></h4>
                 <p>789 Stationery Street 53, Johor Bahru,</p>
                 <p>Johor, 81300, Malaysia</p>
@@ -67,7 +67,7 @@
 
             <div style="padding: 5%;">
                 <h2>Contact Us</h2>
-                <form action="contact_us.php" method="POST" class="contact-form">
+                <form action="contact_us2.php" method="POST" class="contact-form">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -93,7 +93,7 @@
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
                     }
-
+                    
                     $name = $_POST['name'];
                     $email = $_POST['email'];
                     $message = $_POST['message'];
@@ -125,13 +125,13 @@
         <nav>
             <ul>
                 <li><a href="../User_homepage/user_homepage.php">Home</a></li>
-                <li><a href="../About_us/aboutus.html">About</a></li>
+                <li><a href="../About_us/aboutus2.html">About</a></li>
                 <li><a href="../Product_list2/product_list2.php">Services</a></li>
                 <li><a href="../Contact_us/contact_us2.php">Contact</a></li>
-                <li><a href="../login/login.php">Account</a></li>
+                <li><a href="../User/user_profile.php">Account</a></li>
             </ul>
         </nav>
-        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Comapany</p>
+        <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
     </footer>
 </body>
 </html>
