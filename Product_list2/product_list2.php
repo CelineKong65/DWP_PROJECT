@@ -95,15 +95,15 @@ if (isset($_GET['remove_wishlist'])) {
         }
         $conn->close();
         ?>
-        <a href="../Shopping_cart/shopping_cart.html"><button class="shopping-cart-button">🛒</button></a>
-        <a href="../Wishlist/Wishlist.html"><button class="wishlist-button">&#10084;</button></a>
+        <a href="../Shopping_cart/shopping_cart.php"><button class="shopping-cart-button">🛒</button></a>
+        <a href="../Wishlist/Wishlist.php"><button class="wishlist-button">&#10084;</button></a>
     </main>
     <footer>
         <nav>
             <ul>
                 <li><a href="../About_us/aboutus2.html">About</a></li>
                 <li><a href="product_list2.php">Services</a></li>
-                <li><a href="../Contact_us/contact_us2.html">Contact</a></li>
+                <li><a href="../Contact_us/contact_us2.php">Contact</a></li>
                 <li><a href="../User/user_profile.php">Account</a></li>
             </ul>
         </nav>
