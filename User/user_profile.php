@@ -64,7 +64,7 @@ $conn->close();
         OKAY STATIONERY SHOP
     </h1>
     </header>
-    <a id="back" href="../User_homepage/index2.html"><b>BACK TO HOME</b></a> 
+    <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a> 
     
     <div class="container">
         <h1>User Profile</h1>

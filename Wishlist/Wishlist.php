@@ -31,7 +31,7 @@ $wishlist_query = mysqli_query($conn, "SELECT w.id AS wishlist_id, p.product_nam
 <body>
     <header>
         <h1>
-            <a id="back" href="../Product_list2/product_list2.html"><b>BACK TO PRODUCT LIST</b></a>
+            <a id="back" href="../Product_list2/product_list2.php"><b>BACK TO PRODUCT LIST</b></a>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OKAY STATIONERY SHOP
         </h1>
