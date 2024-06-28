@@ -2,6 +2,7 @@
 include 'db_connection.php';
 session_start();
 
+// Redirect if not logged in
 if (!isset($_SESSION['user_id'])) {
     header('location:login.php');
     exit;
@@ -9,6 +10,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
+// Handle add to wishlist
 if (isset($_POST['add_to_wishlist'])) {
     $product_id = mysqli_real_escape_string($conn, $_POST['product_id']);
 
@@ -25,10 +27,22 @@ if (isset($_POST['add_to_wishlist'])) {
     exit;
 }
 
-if (isset($_GET['remove_wishlist'])) {
-    $remove_id = mysqli_real_escape_string($conn, $_GET['remove_wishlist']);
-    mysqli_query($conn, "DELETE FROM wishlist WHERE id = '$remove_id' AND user_id = '$user_id'") or die(mysqli_error($conn));
-    header('location:wishlist.php');
+// Handle add to cart
+if (isset($_POST['add_to_cart'])) {
+    $product_name = mysqli_real_escape_string($conn, $_POST['product_name']);
+    $product_price = mysqli_real_escape_string($conn, $_POST['product_price']);
+    $product_image = mysqli_real_escape_string($conn, $_POST['product_image']);
+    $product_quantity = mysqli_real_escape_string($conn, $_POST['product_quantity']);
+
+    $select_cart = mysqli_query($conn, "SELECT * FROM cart WHERE name = '$product_name' AND user_id = '$user_id'") or die(mysqli_error($conn));
+
+    if (mysqli_num_rows($select_cart) > 0) {
+        $_SESSION['message'] = 'Product already added to cart!';
+    } else {
+        mysqli_query($conn, "INSERT INTO cart (user_id, name, price, image, quantity) VALUES ('$user_id', '$product_name', '$product_price', '$product_image', '$product_quantity')") or die(mysqli_error($conn));
+        $_SESSION['message'] = 'Product added to cart!';
+    }
+    header('location: product_list2.php');
     exit;
 }
 ?>
@@ -77,7 +91,7 @@ if (isset($_GET['remove_wishlist'])) {
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
+            while ($row = $result->fetch_assoc()) {
                 echo '<div class="Product">';
                 echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
                 echo '<h2>' . $row["product_name"] . '</h2>';
@@ -87,7 +101,13 @@ if (isset($_GET['remove_wishlist'])) {
                 echo '<button type="submit" name="add_to_wishlist" class="wishlist-heart" onclick="toggleWishlist(this)"></button>';
                 echo '</form>';
                 echo '<a href="../Product_list/' . strtolower(str_replace(' ', '_', $row["product_name"])) . '_details.html" class="detailButton">View Details</a>';
-                echo '<button id="buttonOK">Add to Cart</button>';
+                echo '<form method="post" action="">
+                        <input type="hidden" name="product_name" value="' . $row["product_name"] . '">
+                        <input type="hidden" name="product_price" value="' . $row["product_price"] . '">
+                        <input type="hidden" name="product_image" value="' . $row["product_image"] . '">
+                        <input type="number" name="product_quantity" value="1" min="1">
+                        <button type="submit" name="add_to_cart" id="buttonOK">Add to Cart</button>
+                      </form>';
                 echo '</div>';
             }
         } else {
