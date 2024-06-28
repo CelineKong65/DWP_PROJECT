@@ -87,6 +87,15 @@ if (isset($_GET['delete_all'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stationery Products</title>
     <link rel="stylesheet" href="product_list2.css">
+    <style>
+    input[type=number] {
+        width: 40px; /* Adjust width as needed */
+        padding: 8px; /* Adjust padding for better appearance */
+        font-size: 14px; /* Adjust font size */
+        text-align: center; /* Center-align text */
+        margin-top:10px;
+    }
+    </style>
     <script>
         function toggleWishlist(button) {
             button.classList.toggle('active');
