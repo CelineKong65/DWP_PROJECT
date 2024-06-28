@@ -1,12 +1,11 @@
-body{
-  background-image: url(p.checkin.png);
-  background-size: 1550px 800px; 
-  background-repeat: no-repeat; 
+body {
+  background-image: url('p.checkin.png');
+  background-size: 1550px 900px;
+  background-repeat: no-repeat;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}  
+}
 
-.logo 
-{
+.logo {
   width: 100px;
   height: 80px;
   vertical-align: middle;
@@ -15,21 +14,17 @@ body{
   top: 30px;
 }
 
-#back
-{
+#back {
   position: absolute;
-  top: 10px; 
-  left: 10px; 
+  top: 10px;
+  left: 10px;
   color: #FFD4B2;
   background-color: #fff;
   font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border: #bb9b82 solid ;
+  border: #bb9b82 solid;
   border-radius: 10px;
   text-decoration: none;
   padding: 5px 5px;
-  margin-left: 10px;
-  margin-top: 10px;
 }
 
 header {
@@ -41,11 +36,10 @@ header {
   font-size: 20px;
   color: #fff;
   border-radius: 10px;
-  border :#bb9b82 solid;
+  border: #bb9b82 solid;
 }
 
-.top{
-
+.top {
   width: 1200px;
   height: 100px;
   text-align: center;
@@ -53,7 +47,6 @@ header {
   margin-left: 10%;
   border-radius: 10px;
 }
-
 
 .check-in {
   max-width: 1000px;
@@ -63,13 +56,28 @@ header {
   background-color: #fff;
   border-radius: 10px;
   position: relative;
-  left:15px ;
-  top:5%;
+  left: 15px;
+  top: 5%;
   border: #333 solid;
-
-
 }
 
+.progress-bar {
+  width: 80%;
+  height: 30px;
+  background-color: #FFD4B2;
+  border-radius: 10px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #FFA500;
+  border-radius: 10px;
+  transition: width 0.5s;
+}
 
 .calendar {
   display: grid;
@@ -80,21 +88,24 @@ header {
 .day {
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* Circular shape */
-  background-color: #ffe96c; /* Gold color */
+  border-radius: 50%;
+  background-color: #FFD4B2;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 45px;
   font-size: 20px;
   font-weight: bold;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow */
-  
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
 }
 
+.day:hover {
+  background-color: #FFA500;
+}
 
 .checked {
-  background-color: #FFA500; 
+  background-color: #FFA500;
   color: white;
 }
 
@@ -104,12 +115,61 @@ button {
   border-radius: 10px;
   cursor: pointer;
   font-size: inherit;
-  color: inherit; /* Inherit text color */
-  background-color: #FFA500;
+  color: inherit;
+  background-color: #FFD4B2;
   position: relative;
   margin-bottom: 10px;
+  transition: background-color 0.3s;
 }
 
-button:hover{
+button:hover {
   background-color: #FFA500;
+}
+
+#checkInMessage {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#couponMessage {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
