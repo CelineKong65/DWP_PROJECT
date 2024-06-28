@@ -155,6 +155,6 @@
     <a href="../Wishlist/Wishlist.html"><button class="wishlist-button">&#10084;</button></a>
 
     <!-- Check-in button -->
-    <a href="../Check-in/index.php"><button class="check-in-button">🌟</button></a>
+    <a href="../Check-in/check-in.php"><button class="check-in-button">🌟</button></a>
 </body>
 </html>
