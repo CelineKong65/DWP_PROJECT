@@ -28,15 +28,15 @@
 
     <div class="slideshow-container">
         <div class="mySlides fade">
-        <img src="picture1.png" alt="Slide 1" style="width: 100%; max-height: 500px;">
+        <img src="picture1.png" alt="Slide 1" style="width: 100%;">
         </div>
        
         <div class="mySlides fade">
-            <img src="p2.png" alt="Slide 2" style="width:100%;max-height: 500px;">
+            <img src="p2.png" alt="Slide 2" style="width:100%;">
         </div>
 
         <div class="mySlides fade">
-            <img src="p3.png" alt="Slide 3" style="width:100%;max-height: 500px;">
+            <img src="p3.png" alt="Slide 3" style="width:100%;">
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
