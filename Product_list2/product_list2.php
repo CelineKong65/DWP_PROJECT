@@ -110,7 +110,7 @@ if (isset($_GET['delete_all'])) {
 </head>
 <body onload="showMessage('<?php echo isset($_SESSION['message']) ? $_SESSION['message'] : ''; unset($_SESSION['message']); ?>')">
     <header>
-        <a id="back" href="../User_homepage/index2.html"><b>BACK</b></a>
+        <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OKAY STATIONERY PRODUCTS
