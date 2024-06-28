@@ -77,6 +77,26 @@ $conn->close();
         text-align: center; /* Center-align text */
         margin-top:10px;
     }
+    #buttonOK
+    {
+        background-color: #FFDBAA;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        margin: 20px 30px 10px 30px;
+    }
+
+    #buttonOK:hover 
+    {
+        background-color: #FAAB78;
+    }
+
     </style>
     <script>
         function toggleWishlist(button) {
@@ -108,12 +128,12 @@ $conn->close();
         </h1>
         <nav>
             <ul>
-                <li><a href="../Product_list/product_list.html">All</a></li>
-                <li><a href="../Product_list/office_stationery.html">Office Stationery</a></li>
-                <li><a href="../Product_list/drawing_painting.html">Drawing and Painting</a></li>
-                <li><a href="../Product_list/pen.html">Pen</a></li>
-                <li><a href="../Product_list/adhesive_tape.html">Adhesive Tape</a></li>
-                <li><a href="../Product_list/others_stationery.html">Other Stationery</a></li>
+                <li><a href="../Product_list2/product_list2.php">All</a></li>
+                <li><a href="../Product_list2/office_stationery2.php">Office Stationery</a></li>
+                <li><a href="../Product_list2/drawing_painting2.php">Drawing and Painting</a></li>
+                <li><a href="../Product_list2/pen2.php">Pen</a></li>
+                <li><a href="../Product_list2/adhesive_tape2.php">Adhesive Tape</a></li>
+                <li><a href="../Product_list2/others_stationery2.php">Other Stationery</a></li>
             </ul>
         </nav>
     </header>
@@ -121,7 +141,7 @@ $conn->close();
         <?php
         include 'db_connection.php';
         
-        // SQL query to select products with category_id = 4 (assuming category_id = 4 is for Adhesive Tape)
+        // SQL query to select products with category_id = 4 
         $sql = "SELECT * FROM products WHERE category_id = 4";
         $result = $conn->query($sql);
         
@@ -137,10 +157,10 @@ $conn->close();
                 echo '<button type="submit" name="add_to_wishlist" class="wishlist-heart"></button>';
                 echo '</form>';
                 echo '<form method="post" action="">
-                        <input type="hidden" name="product_id" value="' . $row["product_id"] . '">
-                        <input type="number" name="product_quantity" value="1" min="1">
-                        <button type="submit" name="add_to_cart">Add to Cart</button>
-                      </form>';
+                    <input type="hidden" name="product_id" value="' . $row["product_id"] . '">
+                    <input type="number" name="product_quantity" value="1" min="1">
+                    <button type="submit" name="add_to_cart" id="buttonOK">Add to Cart</button>
+                </form>';
                 echo '</div>';
             }
         } else {
@@ -158,9 +178,9 @@ $conn->close();
         <nav>
             <ul>
                 <li><a href="../About_us/aboutus.html">About</a></li>
-                <li><a href="../Product_list/product_list.html">Services</a></li>
-                <li><a href="../Contact_us/contact_us.html">Contact</a></li>
-                <li><a href="../login/login.php">Account</a></li>
+                <li><a href="../Product_list/product_list2.php">Services</a></li>
+                <li><a href="../Contact_us/contact_us2.php">Contact</a></li>
+                <li><a href="../User/user_profile.php">Account</a></li>
             </ul>
         </nav>
         <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
