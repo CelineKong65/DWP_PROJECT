@@ -1,3 +1,11 @@
+<?php
+include 'db_connect.php'; // Include your database connection script
+
+// SQL query to select products with category_id = 5 (Other Stationery)
+$sql = "SELECT * FROM products WHERE category_id = 5";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +13,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Others Stationery</title>
     <link rel="stylesheet" href="others_stationery.css">
+    <style>
+        .Product button {
+            display: block;
+            margin: 10px auto 0;
+            padding: 10px 20px;
+            background-color: #FAAB78;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .Product button:hover {
+            background-color: #B3A492;
+        }
+
+        .Product .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
     <script>
         // Function to toggle product details visibility
         function toggleDetails(id) {
@@ -23,7 +57,7 @@
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OTHER STATIONERY
-            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
+            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px; padding: 10px; position: absolute; top: 5%; right: 5%;">
         </h1>
         <nav>
             <ul>
@@ -38,15 +72,9 @@
     </header>
     <main>
         <?php
-        include 'db_connect.php';
-        
-        // SQL query to select products with category_id = 5 (Other Stationery)
-        $sql = "SELECT * FROM products WHERE category_id = 5";
-        $result = $conn->query($sql);
-        
         if ($result->num_rows > 0) {
             // Output data of each row
-            while($row = $result->fetch_assoc()) {
+            while ($row = $result->fetch_assoc()) {
                 echo '<div class="Product">';
                 echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
@@ -60,7 +88,7 @@
         } else {
             echo "<p>No products found in this category.</p>";
         }
-        
+
         $conn->close();
         ?>
     </main>

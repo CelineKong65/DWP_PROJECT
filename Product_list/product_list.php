@@ -1,3 +1,10 @@
+<?php
+include 'db_connect.php';
+
+// SQL query to select all products
+$sql = "SELECT * FROM products";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +12,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stationery Products</title>
     <link rel="stylesheet" href="product_list.css">
+    <style>
+        .Product button {
+            display: block;
+            margin: 10px auto 0;
+            padding: 10px 20px;
+            background-color: #FAAB78;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .Product button:hover {
+            background-color: #B3A492;
+        }
+
+        .Product .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
     <script>
         // Function to toggle product details visibility
         function toggleDetails(id) {
@@ -19,11 +52,11 @@
 </head>
 <body>
     <header>
-        <a id="back" href="../index.html"><b>BACK</b></a>
+        <a id="back" href="../index.php"><b>BACK</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OKAY STATIONERY PRODUCTS
-            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
+            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px; padding:10px; position: absolute; top: 5%; right: 5%;">
         </h1>
         <nav>
             <ul>
@@ -38,15 +71,9 @@
     </header>
     <main>
         <?php
-        include 'db_connect.php';
-        
-        // SQL query to select all products
-        $sql = "SELECT * FROM products";
-        $result = $conn->query($sql);
-        
         if ($result->num_rows > 0) {
             // Output data of each row
-            while($row = $result->fetch_assoc()) {
+            while ($row = $result->fetch_assoc()) {
                 echo '<div class="Product">';
                 echo "<img src='../Manage_product/uploads/" . htmlspecialchars($row["product_image"]) . "' alt='" . htmlspecialchars($row["product_name"]) . "'>";
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
