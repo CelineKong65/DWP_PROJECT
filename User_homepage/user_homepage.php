@@ -50,7 +50,6 @@
     </div>
 
     <script>
-        
         var slideIndex = 1;
         showSlides(slideIndex);
 
@@ -78,14 +77,61 @@
             dots[slideIndex - 1].className += " active";
         }
 
-        function automaticSlides() {
-            plusSlides(1);
+        var slideIndex = 0;
+        autoShowSlides();
+
+        function autoShowSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(autoShowSlides, 2000); // Change image every 2 seconds
         }
 
-        setInterval(automaticSlides, 3000); // Change image every 3 seconds
+        // For Testimonials
+        var commentsToShow = 4;
+        var testimonialIndex = 0;
+        autoShowTestimonials();
 
+        function autoShowTestimonials() {
+            var i;
+            var testimonials = document.getElementsByClassName("testimonial-card");
+            var totalTestimonials = testimonials.length;
+
+            // Hide all testimonials first
+            for (i = 0; i < totalTestimonials; i++) {
+                testimonials[i].style.display = "none";
+            }
+
+            // Show the next set of testimonials
+            for (i = 0; i < commentsToShow; i++) {
+                var index = (testimonialIndex + i) % totalTestimonials;
+                testimonials[index].style.display = "block";
+            }
+
+            // Update the starting index for the next set
+            testimonialIndex = (testimonialIndex + commentsToShow) % totalTestimonials;
+
+            setTimeout(autoShowTestimonials, 3000); // Change testimonials every 5 seconds
+        }
+
+        // Press the button to login to buy
+        function alertLogin() {
+            document.getElementById('popup-overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
     </script>
 
+    
     <main>
         <section id="products" class="products-section">
             <h2>Top 3 Selling Stationery</h2>
@@ -124,20 +170,24 @@
     </main>
     
     <section id="testimonials" class="testimonial-section">
-        <h2>Customer Testimonials and Comments</h2>
-        <div class="testimonial-grid">
-            <?php
-            include 'fetch_comments.php';
-            foreach ($comments as $comment) {
-                echo '<div class="testimonial-card">';
-                echo '<p>"' . htmlspecialchars($comment['comment']) . '"</p>';
-                echo '<cite>' . htmlspecialchars($comment['username']) . '</cite>';
-                echo '<div class="rating">Rating: ' . htmlspecialchars($comment['rating']) . '</div>';
-                echo '</div>';
-            }
-            ?>
-        </div>
-    </section>
+            <h2>Customer Testimonials and Comments</h2>
+            <div class="testimonial-slider" id="commentslidershow">
+                <div class="testimonial-track">
+                    <div class="testimonial-grid">
+                        <?php
+                        include 'fetch_comments.php';
+                        foreach ($comments as $comment) {
+                            echo '<div class="testimonial-card">';
+                            echo '<p>"' . htmlspecialchars($comment['comment']) . '"</p>';
+                            echo '<cite>' . htmlspecialchars($comment['username']) . '</cite>';
+                            echo '<div class="rating">Rating: ' . htmlspecialchars($comment['rating']) . '</div>';
+                            echo '</div>';
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <footer>
         <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
