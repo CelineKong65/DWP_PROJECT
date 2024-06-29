@@ -27,6 +27,14 @@ if (isset($_POST['add_to_wishlist'])) {
     exit;
 }
 
+// Handle remove from wishlist
+if (isset($_GET['remove_wishlist'])) {
+    $remove_id = mysqli_real_escape_string($conn, $_GET['remove_wishlist']);
+    mysqli_query($conn, "DELETE FROM wishlist WHERE id = '$remove_id' AND user_id = '$user_id'") or die(mysqli_error($conn));
+    header('location:wishlist.php');
+    exit;
+}
+
 // Handle add to cart
 if (isset($_POST['add_to_cart'])) {
     $product_name = mysqli_real_escape_string($conn, $_POST['product_name']);
@@ -45,6 +53,31 @@ if (isset($_POST['add_to_cart'])) {
     header('location: product_list2.php');
     exit;
 }
+
+// Handle update cart
+if (isset($_POST['update_cart'])) {
+    $update_quantity = mysqli_real_escape_string($conn, $_POST['cart_quantity']);
+    $update_id = mysqli_real_escape_string($conn, $_POST['cart_id']);
+    mysqli_query($conn, "UPDATE cart SET quantity = '$update_quantity' WHERE id = '$update_id' AND user_id = '$user_id'") or die(mysqli_error($conn));
+    $_SESSION['message'] = 'Cart quantity updated successfully!';
+    header('location:shopping_cart.php');
+    exit;
+}
+
+// Handle remove item from cart
+if (isset($_GET['remove'])) {
+    $remove_id = mysqli_real_escape_string($conn, $_GET['remove']);
+    mysqli_query($conn, "DELETE FROM cart WHERE id = '$remove_id' AND user_id = '$user_id'") or die(mysqli_error($conn));
+    header('location:product_list2.php');
+    exit;
+}
+
+// Handle delete all items from cart
+if (isset($_GET['delete_all'])) {
+    mysqli_query($conn, "DELETE FROM cart WHERE user_id = '$user_id'") or die(mysqli_error($conn));
+    header('location:product_list2.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +87,15 @@ if (isset($_POST['add_to_cart'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stationery Products</title>
     <link rel="stylesheet" href="product_list2.css">
+    <style>
+    input[type=number] {
+        width: 40px; /* Adjust width as needed */
+        padding: 8px; /* Adjust padding for better appearance */
+        font-size: 14px; /* Adjust font size */
+        text-align: center; /* Center-align text */
+        margin-top:10px;
+    }
+    </style>
     <script>
         function toggleWishlist(button) {
             button.classList.toggle('active');
@@ -68,7 +110,7 @@ if (isset($_POST['add_to_cart'])) {
 </head>
 <body onload="showMessage('<?php echo isset($_SESSION['message']) ? $_SESSION['message'] : ''; unset($_SESSION['message']); ?>')">
     <header>
-        <a id="back" href="../User_homepage/index2.html"><b>BACK</b></a>
+        <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OKAY STATIONERY PRODUCTS
@@ -77,11 +119,11 @@ if (isset($_POST['add_to_cart'])) {
         <nav>
             <ul>
                 <li><a href="product_list2.php">All</a></li>
-                <li><a href="office_stationery2.html">Office Stationery</a></li>
-                <li><a href="drawing_painting2.html">Drawing and Painting</a></li>
-                <li><a href="pen2.html">Pen</a></li>
-                <li><a href="adhesive_tape2.html">Adhesive Tape</a></li>
-                <li><a href="others_stationery2.html">Other Stationery</a></li>
+                <li><a href="office_stationery2.php">Office Stationery</a></li>
+                <li><a href="drawing_painting2.php">Drawing and Painting</a></li>
+                <li><a href="pen2.php">Pen</a></li>
+                <li><a href="adhesive_tape2.php">Adhesive Tape</a></li>
+                <li><a href="others_stationery2.php">Other Stationery</a></li>
             </ul>
         </nav>
     </header>

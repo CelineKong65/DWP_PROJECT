@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["verifybtn"])) {
 <body>
 
 <header>
-    <a id="back" href="../User_homepage/index1.html"><b>BACK TO HOME</b></a>
+    <a id="back" href="../index.php"><b>BACK TO HOME</b></a>
 </header>
 
 <div id="container">
