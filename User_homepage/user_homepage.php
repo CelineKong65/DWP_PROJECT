@@ -32,7 +32,7 @@
         </div>
        
         <div class="mySlides fade">
-            <img src="b2.png" alt="Slide 2" style="width:100%;">
+            <img src="b2.jpg" alt="Slide 2" style="width:100%;">
         </div>
 
         <div class="mySlides fade">

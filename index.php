@@ -31,7 +31,7 @@
         </div>
        
         <div class="mySlides fade">
-            <img src="b2.png" alt="Slide 2" style="width:100%;">
+            <img src="b2.jpg" alt="Slide 2" style="width:100%;">
         </div>
 
         <div class="mySlides fade">
@@ -52,6 +52,8 @@
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
     </div>
+
+
 
     <main>
         <section id="products" class="products-section">
@@ -86,13 +88,15 @@
                 </div>
         </section>
         <section id="offer" class="offer-section">
-        <h2>Special Offers</h2>
+            <h2>Special Offers</h2>
             <div class="offer-grid">
                 <div class="offer-card">
-                    <img src="a1.png" alt="Special Offer: 20% off on all M&G!" style="width:400px; hight:auto;">
+                    <img src="#" alt="">
+                    <h3>Special Offer: 20% off on all M&G!</h3>
                 </div>
                 <div class="offer-card">
-                    <img src="a2.png" alt="Buy 2 Get 1 Free on all Binder Lever Arch File!" style="width:400px; hight:auto;">
+                    <img src="#" alt="">
+                    <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
                 </div>
             </div>
         </section>
