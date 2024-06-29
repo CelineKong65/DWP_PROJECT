@@ -27,7 +27,7 @@
     </header>
 
     <div class="slideshow-container">
-        <div class="mySlides fade">
+    <div class="mySlides fade">
         <img src="b1.png" alt="Slide 1" style="width: 100%;">
         </div>
        
@@ -39,16 +39,20 @@
             <img src="b3.png" alt="Slide 3" style="width:100%;">
         </div>
 
+        <div class="mySlides fade">
+            <img src="b4.jpg" alt="Slide 4" style="width:100%;">
+        </div>
+
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br>
-    <div style="text-align:center;">
+    <div style="text-align: center;">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
     </div>
-
 
 
     <main>
