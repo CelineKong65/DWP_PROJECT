@@ -114,12 +114,10 @@
             <h2>Special Offers</h2>
             <div class="offer-grid">
                 <div class="offer-card">
-                    <img src="a1.png" alt="Special Offer: 20% off on all M&G!" style="width:50%;max-height: 300px;">
-                    <h3>Special Offer: 20% off on all M&G!</h3>
+                    <img src="a1.png" alt="Special Offer: 20% off on all M&G!" style="width:400px; hight:auto;">
                 </div>
                 <div class="offer-card">
-                    <img src="a2.png" alt="Buy 2 Get 1 Free on all Binder Lever Arch File!" style="width:50%;max-height: 300px;">
-                    <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
+                    <img src="a2.png" alt="Buy 2 Get 1 Free on all Binder Lever Arch File!" style="width:400px; hight:auto;">
                 </div>
             </div>
         </section>
