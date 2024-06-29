@@ -5,6 +5,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,3 +43,4 @@ if (!isset($_SESSION['user_id'])) {
     <script src="check-in.js"></script>
 </body>
 </html>
+

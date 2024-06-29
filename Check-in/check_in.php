@@ -68,7 +68,11 @@ if ($result->num_rows > 0) {
 
     $stmt->execute();
 
-    echo "Check-in successful. Current streak: $streakCount days.";
+    if ($streakCount >= 30) {
+        echo "Check-in successful. Current streak: $streakCount days. You have earned a 50% discount voucher!";
+    } else {
+        echo "Check-in successful. Current streak: $streakCount days.";
+    }
 }
 
 $conn->close();
