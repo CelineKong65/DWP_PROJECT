@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +6,14 @@
     <title>Others Stationery</title>
     <link rel="stylesheet" href="others_stationery.css">
     <script>
-        // Function to toggle wishlist status
-        function toggleWishlist(button) {
-            button.classList.toggle('active');
+        // Function to toggle product details visibility
+        function toggleDetails(id) {
+            const details = document.getElementById('details-' + id);
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
         }
     </script>
 </head>
@@ -22,8 +26,8 @@
             <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
         </h1>
         <nav>
-        <ul>
-                <li><a href="../Product_list/product_list.php">All</li>
+            <ul>
+                <li><a href="../Product_list/product_list.php">All</a></li>
                 <li><a href="../Product_list/office_stationery.php">Office Stationery</a></li>
                 <li><a href="../Product_list/drawing_painting.php">Drawing and Painting</a></li>
                 <li><a href="../Product_list/pen.php">Pen</a></li>
@@ -36,9 +40,10 @@
         <?php
         include 'db_connect.php';
         
-        // SQL query to select products with category_id = 5
+        // SQL query to select products with category_id = 5 (Other Stationery)
         $sql = "SELECT * FROM products WHERE category_id = 5";
         $result = $conn->query($sql);
+        
         if ($result->num_rows > 0) {
             // Output data of each row
             while($row = $result->fetch_assoc()) {
@@ -46,12 +51,16 @@
                 echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
                 echo '<p class="price">RM' . htmlspecialchars($row["product_price"]) . '</p>';
-                echo '<a href="product_details.php?id=' . htmlspecialchars($row["product_id"]) . '" class="detailButton">View Details</a>';
+                echo '<button onclick="toggleDetails(' . htmlspecialchars($row["product_id"]) . ')">View Details</button>';
+                echo '<div id="details-' . htmlspecialchars($row["product_id"]) . '" style="display:none;">';
+                echo '<p>' . htmlspecialchars($row["product_details"]) . '</p>';
+                echo '</div>';
                 echo '</div>';
             }
         } else {
             echo "<p>No products found in this category.</p>";
         }
+        
         $conn->close();
         ?>
     </main>
