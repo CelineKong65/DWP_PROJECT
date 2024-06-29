@@ -25,6 +25,10 @@ if (isset($_POST['order_btn'])) {
     $card_number = mysqli_real_escape_string($conn, $_POST['card']);
     $card_cvv = mysqli_real_escape_string($conn, $_POST['debit_cvv']);
     $card_expiry = mysqli_real_escape_string($conn, $_POST['debit_expiry']);
+    $total_price = isset($_POST['total_price']) ? floatval($_POST['total_price']) : 0.00; // Retrieve total price from POST data
+
+    // Debugging statement
+    echo "Total Price: $total_price";
 
     // Insert order details into the orders table
     $query = "INSERT INTO orders (name, email, method, address, city, state, total_price, card_number, card_cvv, card_expiry) 
@@ -46,6 +50,7 @@ if (isset($_POST['order_btn'])) {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
