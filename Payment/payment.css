@@ -9,14 +9,6 @@ body {
     background-size: 1550px 1200px;
 }
 
-/* Header styles */
-header {
-    background: #FFD495;
-    color: #fff;
-    padding: 1rem;
-    height: 120px;
-}
-
 #back {
     position: absolute;
     top: 10px; 

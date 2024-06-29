@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
     <link rel="stylesheet" href="aboutus.css">
-    <script defer src="aboutus.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="aboutus2.js"></script>
 </head>
 
 <body>
@@ -64,29 +65,17 @@
             </div>
         </div>
 
-        <h2>Stationery Sales</h2>
-        <div class="sales-container">
-            <div class="sales-item">
-                <h2><b>Pen</b></h2>
-                <div class="sales-icon pen"></div>
-                <p class="quantity">Quantity Sold: 120</p>
-                <p class="revenue">Total Revenue: RM240</p>
+        <section class="chartsection">
+            <h2>Stationery Sales</h2>
+            <div class="chart-container">
+                <canvas id="orderCustomerChart"></canvas>
             </div>
-            <div class="sales-item">
-                <h2><a>Drawing Painting</a></h2>
-                <div class="sales-icon Painting"></div>
-                <p class="quantity">Quantity Sold: 80</p>
-                <p class="revenue">Total Revenue: RM400</p>
-            </div>
-            <div class="sales-item">
-                <h2><b>Office stationery</b></h2>
-                <div class="sales-icon office"></div>
-                <p class="quantity">Quantity Sold: 100</p>
-                <p class="revenue">Total Revenue: RM50</p>
-            </div>
-        </div>
-
-        <br><br><br>
+            
+            <div class="chart-container">
+                <canvas id="productSalesChart"></canvas>
+            </div>       
+        </section>
+          
 
         <section class="background3">
             <h2>Our Vision and Mission</h2>
@@ -97,14 +86,14 @@
             </div>
         </section>
 
-        <footer>
+         <footer>
             <nav>
                 <ul>
-                    <li><a href="../User_homepage/user_homepage.php">Home</a></li>
-                    <li><a href="../About_us2/about_us2.html">About</a></li>
-                    <li><a href="../Product_list2/product_list2.php">Services</a></li>
-                    <li><a href="../Contact_us/contact_us2.php">Contact</a></li>
-                    <li><a href="../User_homepage/user_homepage.php">Account</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../About_us/aboutus.html">About</a></li>
+                    <li><a href="../Product_list/product_list.php">Services</a></li>
+                    <li><a href="../Contact_us/contact_us.php">Contact</a></li>
+                    <li><a href="../login/login.php">Account</a></li>
                 </ul>
             </nav>
             <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>

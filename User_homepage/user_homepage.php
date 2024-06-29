@@ -18,7 +18,7 @@
                 <li><a href="../About_us/aboutus2.html">About</a></li>
                 <li><a href="../Contact_us/contact_us2.php">Contact</a></li>
                 <li><a href="../Product_list2/product_list2.php">Product</a></li>
-                <li><a href="">Order History</a></li>
+                <li><a href="../Order_history/orderhistory.php">Order History</a></li>
                 <li><a href="../Comment&rating/comment2.php">Comment and Rating</a></li>
                 <li><a href="../Admin_login/adminlogin2.php">Admin</a></li>
                 <li><a href="../User/user_profile.php">Profile</a></li>
@@ -49,89 +49,8 @@
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-
-        var slideIndex = 0;
-        autoShowSlides();
-
-        function autoShowSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(autoShowSlides, 2000); // Change image every 2 seconds
-        }
-
-        // For Testimonials
-        var commentsToShow = 4;
-        var testimonialIndex = 0;
-        autoShowTestimonials();
-
-        function autoShowTestimonials() {
-            var i;
-            var testimonials = document.getElementsByClassName("testimonial-card");
-            var totalTestimonials = testimonials.length;
-
-            // Hide all testimonials first
-            for (i = 0; i < totalTestimonials; i++) {
-                testimonials[i].style.display = "none";
-            }
-
-            // Show the next set of testimonials
-            for (i = 0; i < commentsToShow; i++) {
-                var index = (testimonialIndex + i) % totalTestimonials;
-                testimonials[index].style.display = "block";
-            }
-
-            // Update the starting index for the next set
-            testimonialIndex = (testimonialIndex + commentsToShow) % totalTestimonials;
-
-            setTimeout(autoShowTestimonials, 3000); // Change testimonials every 5 seconds
-        }
-
-        // Press the button to login to buy
-        function alertLogin() {
-            document.getElementById('popup-overlay').style.display = 'block';
-            document.getElementById('popup').style.display = 'block';
-        }
-
-        function closePopup() {
-            document.getElementById('popup-overlay').style.display = 'none';
-            document.getElementById('popup').style.display = 'none';
-        }
-    </script>
-
-    
     <main>
         <section id="products" class="products-section">
             <h2>Top 3 Selling Stationery</h2>
@@ -170,24 +89,24 @@
     </main>
     
     <section id="testimonials" class="testimonial-section">
-            <h2>Customer Testimonials and Comments</h2>
-            <div class="testimonial-slider" id="commentslidershow">
-                <div class="testimonial-track">
-                    <div class="testimonial-grid">
-                        <?php
-                        include 'fetch_comments.php';
-                        foreach ($comments as $comment) {
-                            echo '<div class="testimonial-card">';
-                            echo '<p>"' . htmlspecialchars($comment['comment']) . '"</p>';
-                            echo '<cite>' . htmlspecialchars($comment['username']) . '</cite>';
-                            echo '<div class="rating">Rating: ' . htmlspecialchars($comment['rating']) . '</div>';
-                            echo '</div>';
-                        }
-                        ?>
-                    </div>
+        <h2>Customer Testimonials and Comments</h2>
+        <div class="testimonial-slider" id="commentslidershow">
+            <div class="testimonial-track">
+                <div class="testimonial-grid">
+                    <?php
+                    include 'fetch_comments.php';
+                    foreach ($comments as $comment) {
+                        echo '<div class="testimonial-card">';
+                        echo '<p>"' . htmlspecialchars($comment['comment']) . '"</p>';
+                        echo '<cite>' . htmlspecialchars($comment['username']) . '</cite>';
+                        echo '<div class="rating">Rating: ' . htmlspecialchars($comment['rating']) . '</div>';
+                        echo '</div>';
+                    }
+                    ?>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2019-2024 OKAY Stationery Shop. All rights reserved. OKAY Company</p>
@@ -201,5 +120,81 @@
 
     <!-- Check-in button -->
     <a href="../Check-in/check-in.php"><button class="check-in-button">🌟</button></a>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) 
+    {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) 
+    {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) 
+    {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    var slideIndex = 0;
+    autoShowSlides();
+
+    function autoShowSlides() 
+    {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(autoShowSlides, 2000); // Change image every 2 seconds
+    }
+
+    // For Testimonials
+    var commentsToShow = 4;
+    var testimonialIndex = 0;
+    autoShowTestimonials();
+
+    function autoShowTestimonials() 
+    {
+        var i;
+        var testimonials = document.getElementsByClassName("testimonial-card");
+        var totalTestimonials = testimonials.length;
+        
+        // Hide all testimonials first
+        for (i = 0; i < totalTestimonials; i++) {
+            testimonials[i].style.display = "none";
+        }
+        
+        // Show the next set of testimonials
+        for (i = 0; i < commentsToShow; i++) {
+            var index = (testimonialIndex + i) % totalTestimonials;
+            testimonials[index].style.display = "block";
+        }
+        
+        // Update the starting index for the next set
+        testimonialIndex = (testimonialIndex + commentsToShow) % totalTestimonials;
+        
+        setTimeout(autoShowTestimonials, 3000); // Change testimonials every 5 seconds
+    }
+    </script>
 </body>
 </html>

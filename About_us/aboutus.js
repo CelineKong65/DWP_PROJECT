@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Data for total product sales per year
-    const salesData = [6600, 8000, 4000, 3000, 10000, 5000, 5600, 4000, 5000, 3000];
+    const salesData = [6600, 5000, 8000, 3000, 5000, 5000, 7000, 4000, 5000, 9000];
 
     // Labels for products
     const productLabels = ['Adhesive Tape', 'Binder Level Arch', 'Crayon', 'Drawing Painting', 'Eraser', 'Pen', 'Pencil', 'Scissor', 'Stapler and Staples', 'Watercolor Paint'];
