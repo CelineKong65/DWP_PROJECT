@@ -1,3 +1,51 @@
+<?php
+include 'db_connection.php';
+session_start();
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$total_price = isset($_POST['total_price']) ? floatval($_POST['total_price']) : 0.00;
+$total_products = isset($_POST['total_products']) ? json_decode($_POST['total_products'], true) : [];
+
+if (isset($_POST['order_btn'])) {
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $address = mysqli_real_escape_string($conn, $_POST['address']);
+    $state = mysqli_real_escape_string($conn, $_POST['state']);
+    $city = mysqli_real_escape_string($conn, $_POST['city']);
+    $payment_method = mysqli_real_escape_string($conn, $_POST['method']);
+    $card_number = mysqli_real_escape_string($conn, $_POST['card']);
+    $card_cvv = mysqli_real_escape_string($conn, $_POST['debit_cvv']);
+    $card_expiry = mysqli_real_escape_string($conn, $_POST['debit_expiry']);
+
+    // Convert total_products array to a string
+    $total_product_string = implode(', ', array_column($total_products, 'name'));
+
+    // Insert order details into the orders table
+    $query = "INSERT INTO orders (name, email, method, address, city, state, total_products, total_price, card_number, card_cvv, card_expiry) 
+              VALUES ('$name', '$email', '$payment_method', '$address', '$city', '$state', '$total_product_string', '$total_price', '$card_number', '$card_cvv', '$card_expiry')";
+    $detail_query = mysqli_query($conn, $query);
+
+    if ($detail_query) {
+        // Success message and pop-up script
+        echo "
+        <script>
+            window.onload = function() {
+                alert('Thank you for shopping! Your order has been placed.');
+            }
+        </script>
+        ";
+
+        // Clear the shopping cart or perform any other necessary actions
+        // For example, redirecting after displaying the message:
+        // header('Location: products.php');
+    } else {
+        die('Query failed: ' . mysqli_error($conn));
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,14 +59,14 @@
 <body>
 
 <header>
-    <a id="back" href="../Shopping_cart/shopping_cart.html"><b>BACK TO CART</b></a>
+    <a id="back" href="../Shopping_cart/shopping_cart.php"><b>BACK TO CART</b></a>
     <h1 style="margin-top: 40px; text-align: center;">OKAY STATIONERY SHOP</h1>
 </header>
 
 <section>
     <div class="payment">
         <h1>Payment Form</h1>
-        <form id="paymentForm" action="#" method="post">
+        <form id="paymentForm" action="payment.php" method="post">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
 
@@ -50,64 +98,34 @@
             <input type="text" id="city" name="city" required>
 
             <label for="payment">Payment Method</label>
-            <select id="payment" name="payment" required>
+            <select id="payment" name="method" required>
                 <option value="">Select Method</option>
                 <option value="Debit_Card">Debit Card</option>
                 <option value="Credit_Card">Credit Card</option>
-                <option value="Touch_N_Go">Touch N Go</option>
             </select>
 
-            <div class="method3" id="method3">
-                <div class="method3-inner">
-                    <button type="button" class="close-btn" id="closeTNG">&times;</button>
-                    <h2>Please pay to this number : <br>018-773-0806</h2>
-                    <h2>Or scan the below QR code :</h2>
-                    <img src="TNG_QR.jpeg" alt="Touch N Go QR Code">
-                    <label for="paymentScreenshot">Screenshot of Payment:</label>
-                    <input type="file" id="paymentScreenshot" name="paymentScreenshot" accept="image/* de">
-                    <input type="submit" value="Place Order" id="place_order_tng">
-                </div>
-            </div>
+            <label for="card">Card Number</label>
+            <input type="text" id="card" name="card" required>
 
-            <div class="method-debit-card" id="method-debit-card">
-                <div class="method-debit-card-inner">
-                    <button type="button" class="close-btn" id="closeDebitCard">&times;</button>
-                    <h3>If using Debit Card, please key in:</h3>
-                    <label for="debit-card">Debit Card Number</label>
-                    <input type="text" id="debit-card" name="debit-card" required>
+            <label for="debit-expiry">Expiry Date</label>
+            <input type="text" id="debit-expiry" name="debit_expiry" placeholder="MM/YYYY" required>
 
-                    <label for="debit-expiry">Expiry Date</label>
-                    <input type="text" id="debit-expiry" name="debit-expiry" placeholder="MM/YYYY" required>
+            <label for="debit-cvv">CVV</label>
+            <input type="text" id="debit-cvv" name="debit_cvv" required>
 
-                    <label for="debit-cvv">CVV</label>
-                    <input type="text" id="debit-cvv" name="debit-cvv" required>
-
-                    <input type="submit" value="Place Order" id="place_order_debit">
-                </div>
-            </div>
-
-            <div class="method-credit-card" id="method-credit-card">
-                <div class="method-credit-card-inner">
-                    <button type="button" class="close-btn" id="closeCreditCard">&times;</button>
-                    <h3>If using Credit Card, please key in:</h3>
-                    <label for="credit-card">Credit Card Number</label>
-                    <input type="text" id="credit-card" name="credit-card" required>
-
-                    <label for="credit-expiry">Expiry Date</label>
-                    <input type="text" id="credit-expiry" name="credit-expiry" placeholder="MM/YYYY" required>
-
-                    <label for="credit-cvv">CVV</label>
-                    <input type="text" id="credit-cvv" name="credit-cvv" required>
-
-                    <input type="submit" value="Place Order" id="place_order_credit">
-                </div>
-            </div>
-
-            <input type="hidden" id="selected-payment-method" name="selected-payment-method">
-
+            <input type="hidden" name="total_price" value="<?php echo htmlspecialchars($total_price); ?>">
+            <input type="hidden" name="total_products" value="<?php echo htmlspecialchars(json_encode($total_products)); ?>">
+            <input type="submit" value="Order Now" name="order_btn" class="btn">
         </form>
     </div>
 </section>
+
+<script>
+    // JavaScript for displaying a pop-up message
+    window.onload = function() {
+        alert('Thank you for shopping! Your order has been placed.');
+    }
+</script>
 
 </body>
 </html>

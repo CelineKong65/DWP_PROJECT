@@ -28,15 +28,15 @@
 
     <div class="slideshow-container">
         <div class="mySlides fade">
-        <img src="picture1.png" alt="Slide 1" style="width: 100%;">
+        <img src="b1.png" alt="Slide 1" style="width: 100%;">
         </div>
        
         <div class="mySlides fade">
-            <img src="p2.png" alt="Slide 2" style="width:100%;">
+            <img src="b2.png" alt="Slide 2" style="width:100%;">
         </div>
 
         <div class="mySlides fade">
-            <img src="p3.png" alt="Slide 3" style="width:100%;">
+            <img src="b3.png" alt="Slide 3" style="width:100%;">
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -114,11 +114,11 @@
             <h2>Special Offers</h2>
             <div class="offer-grid">
                 <div class="offer-card">
-                    <img src="a1.png" alt="Special Offer: 20% off on all M&G!" style="width:50%;max-height: 400px;">
+                    <img src="a1.png" alt="Special Offer: 20% off on all M&G!" style="width:50%;max-height: 300px;">
                     <h3>Special Offer: 20% off on all M&G!</h3>
                 </div>
                 <div class="offer-card">
-                    <img src="a2.png" alt="Buy 2 Get 1 Free on all Binder Lever Arch File!" style="width:50%;max-height: 400px;">
+                    <img src="a2.png" alt="Buy 2 Get 1 Free on all Binder Lever Arch File!" style="width:50%;max-height: 300px;">
                     <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
                 </div>
             </div>
