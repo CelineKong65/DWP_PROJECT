@@ -76,6 +76,8 @@ $conn->close();
             <p>Phone: <?php echo htmlspecialchars($user['phone_number']); ?></p>
             <p>Address: <?php echo htmlspecialchars($user['user_address']); ?></p>
             <a href="edit_profile.php" class="button">Edit Profile</a>
+            <a href="../index.php" class="button">Log Out</a>
+
         </div>
     </div>
 </body>
