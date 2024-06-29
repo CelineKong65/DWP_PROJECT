@@ -18,7 +18,7 @@
                 <li><a href="../About_us/aboutus2.html">About</a></li>
                 <li><a href="../Contact_us/contact_us2.php">Contact</a></li>
                 <li><a href="../Product_list2/product_list2.php">Product</a></li>
-                <li><a href="">Order History</a></li>
+                <li><a href="../Order_history/orderhistory.php">Order History</a></li>
                 <li><a href="../Comment&rating/comment2.php">Comment and Rating</a></li>
                 <li><a href="../Admin_login/adminlogin2.php">Admin</a></li>
                 <li><a href="../User/user_profile.php">Profile</a></li>

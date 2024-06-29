@@ -27,12 +27,9 @@ if (isset($_POST['order_btn'])) {
     $card_expiry = mysqli_real_escape_string($conn, $_POST['debit_expiry']);
     $total_price = isset($_POST['total_price']) ? floatval($_POST['total_price']) : 0.00; // Retrieve total price from POST data
 
-    // Debugging statement
-    echo "Total Price: $total_price";
-
     // Insert order details into the orders table
-    $query = "INSERT INTO orders (name, email, method, address, city, state, total_price, card_number, card_cvv, card_expiry) 
-              VALUES ('$name', '$email', '$payment_method', '$address', '$city', '$state', '$total_price', '$card_number', '$card_cvv', '$card_expiry')";
+    $query = "INSERT INTO orders (name, email, method, address, city, state, total_price, card_number, card_cvv, card_expiry, user_id) 
+              VALUES ('$name', '$email', '$payment_method', '$address', '$city', '$state', '$total_price', '$card_number', '$card_cvv', '$card_expiry', '$user_id')";
     $detail_query = mysqli_query($conn, $query);
 
     if ($detail_query) {
@@ -51,13 +48,24 @@ if (isset($_POST['order_btn'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Stationery Shop Checkout</title>
     <link rel="stylesheet" href="payment.css">
+    <style>
+    header {
+    background: #FFD495;
+    color: #fff;
+    padding: 1rem;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    }
+</style>
 </head>
 <body>
     <header>
