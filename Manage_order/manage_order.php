@@ -23,6 +23,10 @@
                     <th>Customer Name</th>
                     <th>Order Date</th>
                     <th>Total Price</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Payment Method</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -54,12 +58,16 @@
                         echo "<td>" . $row['name'] . "</td>";
                         echo "<td>" . $row['order_date'] . "</td>";
                         echo "<td>RM" . number_format($row['total_price'], 2) . "</td>";
+                        echo "<td>" . $row['address'] . "</td>";
+                        echo "<td>" . $row['city'] . "</td>";
+                        echo "<td>" . $row['state'] . "</td>";
+                        echo "<td>" . $row['method'] . "</td>";
                         echo '<td><button class="view-button" onclick="viewOrder(' . $row['id'] . ')">View</button>';
                         echo '<button class="delete-button" onclick="deleteOrder(' . $row['id'] . ')">Delete</button></td>';
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='6'>No orders found</td></tr>";
+                    echo "<tr><td colspan='10'>No orders found</td></tr>";
                 }
 
                 $conn->close();
