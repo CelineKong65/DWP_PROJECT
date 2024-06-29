@@ -31,7 +31,7 @@ $result = $conn->query($sql);
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             ADHESIVE TAPE
-            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
+            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px; padding:10px; position: absolute; top: 5%; right: 5%;">
         </h1>
         <nav>
             <ul>
@@ -47,7 +47,7 @@ $result = $conn->query($sql);
     <main>
         <?php
         if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
+            while ($row = $result->fetch_assoc()) {
                 echo '<div class="Product">';
                 echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
@@ -55,6 +55,7 @@ $result = $conn->query($sql);
                 echo '<button onclick="toggleDetails(' . htmlspecialchars($row["product_id"]) . ')">View Details</button>';
                 echo '<div id="details-' . htmlspecialchars($row["product_id"]) . '" style="display:none;">';
                 echo '<p>' . htmlspecialchars($row["product_details"]) . '</p>';
+                echo '</div>';
                 echo '</div>';
             }
         } else {

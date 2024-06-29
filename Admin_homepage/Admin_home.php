@@ -19,7 +19,6 @@
                 <li><a href="../Manage_staff/manage_staff.php">Manage staff</a></li>
                 <li><a href="../Manage_member/manage_member.php">Manage member</a></li>
                 <li><a href="../Manage_product/manage_product.php">Manage product</a></li>
-                <li><a href="../Manage_productdetails/Manage_PD.php">Manage product detials</a></li>
                 <li><a href="../Manage_category/manage_category.php">Manage category</a></li>
                 <li><a href="../Manage_order/manage_order.html">Manage order</a></li>
             </ul>

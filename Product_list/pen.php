@@ -1,3 +1,11 @@
+<?php
+include 'db_connect.php'; // Include your database connection script
+
+// SQL query to select products with category_id = 3 (Pen)
+$sql = "SELECT * FROM products WHERE category_id = 3";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +31,7 @@
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             PEN
-            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
+            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px; padding:10px; position: absolute; top: 5%; right: 5%;">
         </h1>
         <nav>
             <ul>
@@ -38,15 +46,9 @@
     </header>
     <main>
         <?php
-        include 'db_connect.php';
-        
-        // SQL query to select products with category_id = 3 (Pen)
-        $sql = "SELECT * FROM products WHERE category_id = 3";
-        $result = $conn->query($sql);
-        
         if ($result->num_rows > 0) {
             // Output data of each row
-            while($row = $result->fetch_assoc()) {
+            while ($row = $result->fetch_assoc()) {
                 echo '<div class="Product">';
                 echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
@@ -60,7 +62,7 @@
         } else {
             echo "<p>No products found in this category.</p>";
         }
-        
+
         $conn->close();
         ?>
     </main>
