@@ -1,14 +1,17 @@
 <?php
-include 'db_connection.php';
 session_start();
+include 'db_connection.php';
 
-// Redirect if not logged in
+// Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
     header('location:login.php');
     exit;
 }
 
 $user_id = $_SESSION['user_id'];
+
+// Initialize total price variable
+$total_price = 0.00;
 
 // Handle update cart
 if (isset($_POST['update_cart'])) {
@@ -39,8 +42,6 @@ if (isset($_GET['delete_all'])) {
 // Fetch cart items for the logged-in user
 $cart_query = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die(mysqli_error($conn));
 
-// Calculate total price
-$total_price = 0;
 ?>
 
 <!DOCTYPE html>
@@ -244,10 +245,7 @@ $total_price = 0;
 <body>
     <header>
         <a id="back" href="../User_homepage/user_homepage.php"><b>BACK</b></a>
-        <h1>
-            <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
-            SHOPPING CART
-        </h1>
+        <h1>SHOPPING CART</h1>
     </header>
     <main>
         <div class="cart">
@@ -260,17 +258,21 @@ $total_price = 0;
                     ?>
                     <div class="cart-item">
                         <div class="item-image">
+                            <!-- Display item image -->
                             <img src="../Manage_product/uploads/<?php echo htmlspecialchars($fetch_cart['image']); ?>" alt="<?php echo htmlspecialchars($fetch_cart['name']); ?>">
                         </div>
                         <div class="item-details">
+                            <!-- Display item details -->
                             <h2><?php echo htmlspecialchars($fetch_cart['name']); ?></h2>
                             <p class="price">RM<?php echo htmlspecialchars($fetch_cart['price']); ?></p>
                             <p class="item-total">Total: RM<?php echo number_format($item_total, 2); ?></p>
+                            <!-- Update quantity form -->
                             <form action="" method="post" class="quantity-controls">
                                 <input type="hidden" name="cart_id" value="<?php echo htmlspecialchars($fetch_cart['id']); ?>">
                                 <button type="submit" name="update_cart" class="quantity-btn">Update</button>
                                 <input type="number" name="cart_quantity" value="<?php echo htmlspecialchars($fetch_cart['quantity']); ?>" min="1" class="quantity">
                             </form>
+                            <!-- Remove item form -->
                             <form method="GET" action="shopping_cart.php">
                                 <input type="hidden" name="remove" value="<?php echo htmlspecialchars($fetch_cart['id']); ?>">
                                 <button type="submit" class="remove-btn">Remove</button>
@@ -284,14 +286,21 @@ $total_price = 0;
             }
             ?>
         </div>
+        <!-- Cart actions -->
         <div class="cart-actions">
             <p>Total: RM <?php echo number_format($total_price, 2); ?></p>
+            <!-- Button group -->
             <div class="button-group">
+                <!-- Link to delete all items -->
                 <a href="shopping_cart.php?delete_all" class="checkout-btn">Delete All Items</a>
+                <!-- Link to continue shopping -->
                 <a href="../Product_list2/product_list2.php" class="checkout-btn">Continue Shopping</a>
-                <a href="../Payment/payment.php" class="checkout-btn">Checkout</a>
+                <!-- Link to checkout with total price passed -->
+                <a href="../Payment/payment.php?total_price=<?php echo urlencode($total_price); ?>" class="checkout-btn">Checkout</a>
             </div>
         </div>
     </main>
 </body>
 </html>
+
+    
