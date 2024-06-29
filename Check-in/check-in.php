@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 <body>
     <header>
-        <a id="back" href="../User_homepage/check-in.php"><b>BACK TO HOME</b></a>
+        <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
         <h1>Daily Check-in</h1>
         <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
     </header>

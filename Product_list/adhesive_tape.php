@@ -1,3 +1,10 @@
+<?php
+include 'db_connect.php';
+
+// SQL query to select products with category_id = 4
+$sql = "SELECT * FROM products WHERE category_id = 4";
+$result = $conn->query($sql);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,9 +14,14 @@
     <title>Adhesive Tape</title>
     <link rel="stylesheet" href="adhesive_tape.css">
     <script>
-        // Function to toggle wishlist status
-        function toggleWishlist(button) {
-            button.classList.toggle('active');
+        // Function to toggle product details visibility
+        function toggleDetails(id) {
+            const details = document.getElementById('details-' + id);
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
         }
     </script>
 </head>
@@ -22,7 +34,7 @@
             <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
         </h1>
         <nav>
-        <ul>
+            <ul>
                 <li><a href="../Product_list/product_list.php">All</a></li>
                 <li><a href="../Product_list/office_stationery.php">Office Stationery</a></li>
                 <li><a href="../Product_list/drawing_painting.php">Drawing and Painting</a></li>
@@ -34,19 +46,15 @@
     </header>
     <main>
         <?php
-        include 'db_connect.php';
-        
-        // SQL query to select products with category_id = 4
-        $sql = "SELECT * FROM products WHERE category_id = 4";
-        $result = $conn->query($sql);
         if ($result->num_rows > 0) {
-            // Output data of each row
             while($row = $result->fetch_assoc()) {
                 echo '<div class="Product">';
                 echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
                 echo '<p class="price">RM' . htmlspecialchars($row["product_price"]) . '</p>';
-                echo '<a href="product_details.php?id=' . htmlspecialchars($row["product_id"]) . '" class="detailButton">View Details</a>';
+                echo '<button onclick="toggleDetails(' . htmlspecialchars($row["product_id"]) . ')">View Details</button>';
+                echo '<div id="details-' . htmlspecialchars($row["product_id"]) . '" style="display:none;">';
+                echo '<p>' . htmlspecialchars($row["product_details"]) . '</p>';
                 echo '</div>';
             }
         } else {
