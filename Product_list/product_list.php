@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stationery Products</title>
     <link rel="stylesheet" href="product_list.css">
+    <style>
+        .Product button {
+            display: block;
+            margin: 10px auto 0;
+            padding: 10px 20px;
+            background-color: #FAAB78;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .Product button:hover {
+            background-color: #B3A492;
+        }
+
+        .Product .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
     <script>
         // Function to toggle product details visibility
         function toggleDetails(id) {
