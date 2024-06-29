@@ -170,6 +170,21 @@ nav ul li a {
     text-align: center;
 }
 
+.product-card img, .offer-card img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card h3, .offer-card h3 {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.product-card h3, .offer-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
 .product-card a{
     text-decoration: none;
