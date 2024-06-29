@@ -38,10 +38,6 @@
             <img src="b3.png" alt="Slide 3" style="width:100%;">
         </div>
 
-        <div class="mySlides fade">
-            <img src="b4.jpg" alt="Slide 4" style="width:100%;">
-        </div>
-
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
@@ -50,7 +46,6 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 
     <main>
@@ -86,13 +81,15 @@
                 </div>
         </section>
         <section id="offer" class="offer-section">
-        <h2>Special Offers</h2>
+            <h2>Special Offers</h2>
             <div class="offer-grid">
                 <div class="offer-card">
-                    <img src="a1.png" alt="Special Offer: 20% off on all M&G!" style="width:400px; hight:auto;">
+                    <img src="#" alt="">
+                    <h3>Special Offer: 20% off on all M&G!</h3>
                 </div>
                 <div class="offer-card">
-                    <img src="a2.png" alt="Buy 2 Get 1 Free on all Binder Lever Arch File!" style="width:400px; hight:auto;">
+                    <img src="#" alt="">
+                    <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
                 </div>
             </div>
         </section>

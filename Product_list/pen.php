@@ -14,30 +14,100 @@ $result = $conn->query($sql);
     <title>Pen</title>
     <link rel="stylesheet" href="pen.css">
     <style>
-        .Product button {
-            display: block;
-            margin: 10px auto 0;
-            padding: 10px 20px;
-            background-color: #FAAB78;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-        .Product button:hover {
-            background-color: #B3A492;
-        }
+    header {
+        background-color: #FFD495;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
 
-        .Product .details {
-            display: none;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+    .logo {
+        width: 100px;
+        height: 80px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Define the number of columns */
+        gap: 20px; /* Space between grid items */
+        padding: 20px;
+    }
+
+    .Card {
+        box-sizing: border-box;
+    }
+
+    .Product {
+        border: 7px solid #D6C7AE;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .Product img {
+        height: 150px;
+        width: 150px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    .Product h2 {
+        font-size: 16px;
+        margin: 10px 0;
+        color: #333;
+    }
+
+    .price {
+        color: #333;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .Product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        clear: both;
+    }
+
     </style>
     <script>
         // Function to toggle product details visibility
@@ -75,13 +145,17 @@ $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             // Output data of each row
             while ($row = $result->fetch_assoc()) {
+                echo '<div class="Card">';
                 echo '<div class="Product">';
+                echo '<div>';
                 echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
                 echo '<p class="price">RM' . htmlspecialchars($row["product_price"]) . '</p>';
                 echo '<button onclick="toggleDetails(' . htmlspecialchars($row["product_id"]) . ')">View Details</button>';
                 echo '<div id="details-' . htmlspecialchars($row["product_id"]) . '" style="display:none;">';
                 echo '<p>' . htmlspecialchars($row["product_details"]) . '</p>';
+                echo '</div>';
+                echo '</div>';
                 echo '</div>';
                 echo '</div>';
             }
