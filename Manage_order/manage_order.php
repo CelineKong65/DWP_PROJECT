@@ -84,15 +84,14 @@
 
     <script>
         function deleteOrder(id) {
-            if(confirm("Are you sure you want to delete this order?")) {
+            if (confirm("Are you sure you want to delete this order?")) {
                 window.location.href = "delete_order.php?id=" + id;
             }
         }
 
         function viewOrder(id) {
-            window.location.href = "../Print_report/print_report" + id + ".html";
+            window.location.href = "../Print_report/print_report.php?id=" + id;
         }
     </script>
-
 </body>
 </html>
