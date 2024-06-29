@@ -23,35 +23,25 @@ header h1 img
     margin-right: 10px;
 }
 
-
-nav ul
-{
+nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-nav ul li 
-{
+nav ul li {
     display: inline;
     margin-right: 15px;
 }
 
-nav ul li a 
-{
+nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 24px;
 }
 
-nav ul li a:hover 
-{
+nav ul li a:hover {
     text-decoration: underline;
 }
-
-
-
-
-
 
 /* Resetting default browser styles */
 body, h1, h2, p, ul, li {
@@ -61,7 +51,7 @@ body, h1, h2, p, ul, li {
 
 /* General styling */
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-image: url(p.index.png);
     color: #333;
 }
@@ -100,10 +90,7 @@ nav ul li a {
     color: #333;
 }
 
-
-
 /* Ad section styles */
-
 .ad-content {
     overflow: hidden;
     width: 100%;
@@ -111,15 +98,14 @@ nav ul li a {
     color: #fff;
     padding: 100px 0;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.ad-content h2{
+.ad-content h2 {
     font-size: 36px;
-
 }
 
-.ad-content p{
+.ad-content p {
     font-size: 24px;
 }
 
@@ -137,18 +123,15 @@ nav ul li a {
     margin-bottom: 30px;
 }
 
-
-
 /* Main section styles */
 .main {
     padding: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.products-section h2, .offer-section h2{
+.products-section h2, .offer-section h2 {
     text-align: center;
     margin-bottom: 30px;
-
 }
 
 .products-section, .offer-section {
@@ -164,7 +147,7 @@ nav ul li a {
 
 .product-card, .offer-card {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     padding: 70px;
     margin-bottom: 20px;
     text-align: center;
@@ -186,16 +169,15 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-.product-card a{
+.product-card a {
     text-decoration: none;
-
 }
 
 .product-card p, .offer-card p {
     font-size: 16px;
 }
 
-.detailButton{
+.detailButton {
     background-color: #FFDBAA;
     border: none;
     border-radius: 5px;
@@ -205,16 +187,15 @@ nav ul li a {
     margin-top: 50px;
     padding: 10px 20px;
     transition: background-color 0.3s;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 20px 30px 10px 30px;
     position: relative;
     top: 15px;
 }
 
-.detailButton:hover{
+.detailButton:hover {
     background-color: #FAAB78;
 }
-
 
 /* General styling for testimonial arrows */
 .testimonial-container {
@@ -249,38 +230,55 @@ nav ul li a {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Hide all slides by default */
 .mySlides {
-    display: none; /* Make sure this is not hiding your slides */
+    display: none;
 }
 
-
 /* Add additional styling for the testimonial section */
-.testimonial-section {
+.testimonial-section
+{
     background-color: #f9f9f9;
     padding: 50px 0;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.testimonial-section h2 {
+.testimonial-section h2 
+{
     font-size: 28px;
     margin-bottom: 20px;
     color: #333;
 }
 
-.testimonial-grid {
+.testimonial-slider
+{
+    overflow: hidden;
+    width: 100%;
+}
+
+.testimonial-track
+{
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-grid 
+{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
-.testimonial-card {
+.testimonial-card 
+{
+    flex: 0 0 auto;
+    width: 300px;
+    margin:0 15px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 0 15px 30px;
-    max-width: 300px;
     text-align: left;
 }
 
@@ -300,10 +298,6 @@ nav ul li a {
         margin: 0 10px 20px;
     }
 }
-
-
-
-
 
 /* Styles for the shopping cart button */
 .shopping-cart-button {
@@ -417,36 +411,4 @@ footer
     position: relative;
     bottom: 0;
     left: 0;
-}
-
-.comments-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.comments-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.comment-card {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 0 15px 30px;
-    max-width: 300px;
-    text-align: left;
-}
-
-.comment-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.comment-card p {
-    font-size: 16px;
-    margin-bottom: 15px;
 }

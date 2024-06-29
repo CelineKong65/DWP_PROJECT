@@ -1,3 +1,10 @@
+<?php
+include 'db_connect.php';
+
+// SQL query to select all products
+$sql = "SELECT * FROM products";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,11 +52,11 @@
 </head>
 <body>
     <header>
-        <a id="back" href="../index.html"><b>BACK</b></a>
+        <a id="back" href="../index.php"><b>BACK</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OKAY STATIONERY PRODUCTS
-            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
+            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px; padding:10px; position: absolute; top: 5%; right: 5%;">
         </h1>
         <nav>
             <ul>
@@ -64,15 +71,9 @@
     </header>
     <main>
         <?php
-        include 'db_connect.php';
-        
-        // SQL query to select all products
-        $sql = "SELECT * FROM products";
-        $result = $conn->query($sql);
-        
         if ($result->num_rows > 0) {
             // Output data of each row
-            while($row = $result->fetch_assoc()) {
+            while ($row = $result->fetch_assoc()) {
                 echo '<div class="Product">';
                 echo "<img src='../Manage_product/uploads/" . htmlspecialchars($row["product_image"]) . "' alt='" . htmlspecialchars($row["product_name"]) . "'>";
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';

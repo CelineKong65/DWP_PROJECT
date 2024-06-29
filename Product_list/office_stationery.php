@@ -57,7 +57,7 @@ $result = $conn->query($sql);
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OFFICE STATIONERY
-            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px;padding:10px;position: absolute;top: 5%;right: 5%;">
+            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px; padding: 10px; position: absolute; top: 5%; right: 5%;">
         </h1>
         <nav>
             <ul>
@@ -74,7 +74,7 @@ $result = $conn->query($sql);
         <?php
         if ($result->num_rows > 0) {
             // Output data of each row
-            while($row = $result->fetch_assoc()) {
+            while ($row = $result->fetch_assoc()) {
                 echo '<div class="Product">';
                 echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';

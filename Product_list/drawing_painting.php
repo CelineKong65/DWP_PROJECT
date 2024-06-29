@@ -11,7 +11,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawing Painting</title>
+    <title>Drawing and Painting</title>
     <link rel="stylesheet" href="drawing_painting.css">
     <style>
         .Product button {
