@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Members</title>
     <link rel="stylesheet" href="Manage_member.css">
+    <style>
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+        width: 550px;
+        height: 40px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    </style>
 </head>
 <body>
     <header>
