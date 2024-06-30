@@ -176,7 +176,7 @@ $conn->close();
         <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
-            ADHESIVE TAPE
+            OKAY STATIONERY PRODUCTS
         </h1>
         <nav>
             <ul>
