@@ -64,8 +64,11 @@ $conn->close();
             padding: 5px;
         }
 
+        
+
         .container {
-            max-width: 1000px;
+            max-width: 100%;
+            height: auto;
             margin: 0 auto;
             padding: 50px;
             text-align: center;
@@ -123,12 +126,18 @@ $conn->close();
             margin: 0 auto;
             padding: 10px 20px;
             background-color: #BED7DC;
-            color: #333;
+            color: #fff;
             text-align: center;
             text-decoration: none;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .print-button:hover
+        {
+            background-color: #9FBEC3;
         }
 
         .total {
@@ -162,7 +171,7 @@ $conn->close();
 </head>
 <body>
     <header>
-        <a id="back" href="../Manage_order/manage_order.php">BACK TO MANAGE ORDER</a>
+        <a id="back" href="../Manage_order/manage_order.php"><b>BACK TO MANAGE ORDER</b></a>
         <div class="container">
             <h1>View/Print Order Report</h1>
         </div>
