@@ -31,16 +31,16 @@
             <div class="chart-container">
                 <!-- Bar Chart for Total Customers -->
                 <div class="chart-box">
-                    <h2>Total Customers Per Month</h2>
+                    <h2>Total Customers Per Month (2023)</h2>
                     <canvas id="customersChart"></canvas>
                 </div>
 
                 <!-- Bar Chart for Total Orders -->
                 <div class="chart-box">
-                    <h2>Total Orders Per Month</h2>
+                    <h2>Total Orders Per Month (2023)</h2>
                     <canvas id="ordersChart"></canvas>
                 </div>
-
+s
                 <!-- Bar Chart for Total Products -->
                 <div class="chart-box">
                     <h2>Total Products Sales Per Year (2019-2023)</h2>

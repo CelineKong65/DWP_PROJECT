@@ -6,6 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.3s ease;
+        user-select: none;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hide all slides by default */
+    .mySlides {
+        display: none;
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -27,19 +59,19 @@
     
     <div class="slideshow-container">
     <div class="mySlides fade">
-        <img src="b1.png" alt="Slide 1" style="width: 100%;">
+        <img src="d1.png" alt="Slide 1" style="width: 100%;">
         </div>
        
         <div class="mySlides fade">
-            <img src="b2.jpg" alt="Slide 2" style="width:100%;">
+            <img src="d2.jpg" alt="Slide 2" style="width:100%;">
         </div>
 
         <div class="mySlides fade">
-            <img src="b3.png" alt="Slide 3" style="width:100%;">
+            <img src="d3.png" alt="Slide 3" style="width:100%;">
         </div>
 
         <div class="mySlides fade">
-            <img src="b4.jpg" alt="Slide 4" style="width:100%;">
+            <img src="d4.png" alt="Slide 4" style="width:100%;">
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -52,7 +84,6 @@
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
     </div>
-
 
 
     <main>
@@ -91,12 +122,10 @@
             <h2>Special Offers</h2>
             <div class="offer-grid">
                 <div class="offer-card">
-                    <img src="#" alt="">
-                    <h3>Special Offer: 20% off on all M&G!</h3>
+                    <img src="a1.png" alt="Special Offer: 20% off on all M&G!" style="width:400px; hight:auto;">
                 </div>
                 <div class="offer-card">
-                    <img src="#" alt="">
-                    <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
+                    <img src="a2.png" alt="Buy 2 Get 1 Free on all Binder Lever Arch File!" style="width:400px; hight:auto;">
                 </div>
             </div>
         </section>

@@ -97,6 +97,21 @@ $result = $conn->query($sql);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
+    .Product button {
+        background-color: #FFD495;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .Product button:hover {
+        background-color: #FFA726;
+    }
+
     footer {
         background: #333;
         color: #fff;
@@ -104,6 +119,21 @@ $result = $conn->query($sql);
         padding: 1rem;
         width: 100%;
         clear: both;
+    }
+
+    #back 
+    {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #FFD4B2;
+        background-color: #fff;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border:#ffefe3 solid ;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 5px 5px;
     }
 
 
