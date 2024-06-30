@@ -157,7 +157,6 @@ $result = $conn->query($sql);
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OKAY STATIONERY PRODUCTS
-            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px; padding:10px; position: absolute; top: 5%; right: 5%;">
         </h1>
         <nav>
             <ul>
