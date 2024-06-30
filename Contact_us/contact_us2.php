@@ -6,6 +6,36 @@
     <title>Contact Us - Stationery Shop</title>
     <link rel="stylesheet" href="contact_us.css">
 </head>
+
+<style>
+
+.section3{
+    background: #fff;
+    color: #FFD4B2; 
+    width: 300px; 
+    height: 300px;
+    border-radius: 100px;
+    text-align: center;
+    padding-top: 3.5%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 61.5%;
+    right: 13%; /* Adjust as needed */
+    margin-top:2%;
+}
+
+.section3 p{
+    color: #FFD4B2;
+}
+
+
+
+
+</style>
+
+
+
 <body>
     <header>
         <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
