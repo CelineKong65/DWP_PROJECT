@@ -244,7 +244,7 @@ $cart_query = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_i
 </head>
 <body>
     <header>
-        <a id="back" href="../User_homepage/user_homepage.php"><b>BACK</b></a>
+        <a id="back" href="../User_homepage/user_homepage.php"><b>BACK TO HOME</b></a>
         <h1>SHOPPING CART</h1>
     </header>
     <main>
