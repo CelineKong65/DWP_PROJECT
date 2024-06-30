@@ -156,6 +156,16 @@ $conn->close();
             content: "\2665"; /* Unicode for filled heart */
             color: #FF5151;
         }
+
+        footer 
+{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 98%;
+}
     </style>
     <script>
         function toggleDetails(id) {
