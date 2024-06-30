@@ -11,8 +11,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
-    <link rel="stylesheet" href="pen.css">
+    <title>Office Stationery</title>
     <style>
     body {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -99,6 +98,22 @@ $result = $conn->query($sql);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
+    .Product button {
+        background-color: #FFD495;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .Product button:hover {
+        background-color: #FFA726;
+    }
+
+
     footer {
         background: #333;
         color: #fff;
@@ -108,9 +123,24 @@ $result = $conn->query($sql);
         clear: both;
     }
 
+       
+    #back 
+    {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #FFD4B2;
+        background-color: #fff;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border:#ffefe3 solid ;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 5px 5px;
+    }
+
     </style>
     <script>
-        // Function to toggle product details visibility
         function toggleDetails(id) {
             const details = document.getElementById('details-' + id);
             if (details.style.display === 'none') {
@@ -123,10 +153,10 @@ $result = $conn->query($sql);
 </head>
 <body>
     <header>
-        <a id="back" href="../index.html"><b>BACK TO HOME</b></a>
+        <a id="back" href="../index.php"><b>BACK</b></a>
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
-            PEN
+            OKAY STATIONERY PRODUCTS
             <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px; padding:10px; position: absolute; top: 5%; right: 5%;">
         </h1>
         <nav>
@@ -143,12 +173,11 @@ $result = $conn->query($sql);
     <main>
         <?php
         if ($result->num_rows > 0) {
-            // Output data of each row
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="Card">';
                 echo '<div class="Product">';
                 echo '<div>';
-                echo '<img src="../Manage_product/uploads/' . htmlspecialchars($row["product_image"]) . '" alt="' . htmlspecialchars($row["product_name"]) . '">';
+                echo "<img src='../Manage_product/uploads/" . htmlspecialchars($row["product_image"]) . "' alt='" . htmlspecialchars($row["product_name"]) . "'>";
                 echo '<h2>' . htmlspecialchars($row["product_name"]) . '</h2>';
                 echo '<p class="price">RM' . htmlspecialchars($row["product_price"]) . '</p>';
                 echo '<button onclick="toggleDetails(' . htmlspecialchars($row["product_id"]) . ')">View Details</button>';
@@ -160,9 +189,8 @@ $result = $conn->query($sql);
                 echo '</div>';
             }
         } else {
-            echo "<p>No products found in this category.</p>";
+            echo "<p>No products found.</p>";
         }
-
         $conn->close();
         ?>
     </main>
