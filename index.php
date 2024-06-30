@@ -37,6 +37,76 @@
     .mySlides {
         display: none;
     }
+
+
+
+    
+    .popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+        z-index: 999; /* Ensure it's on top of everything */
+    }
+
+    .popup 
+    {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000; /* Ensure popup is above overlay */
+    }
+
+    .popup p {
+        margin-bottom: 10px;
+    }
+
+    .popup button {
+        background-color: #FFDBAA;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        display: block;
+        margin: auto;
+    }
+
+    .popup button:hover {
+        background-color: #FAAB78;
+    }
+
+    button {
+        background-color: #FFDBAA; 
+        color: #fff; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer;
+        transition: background-color 0.3s; 
+        
+    }
+
+    button:hover {
+        background-color: #FAAB78; 
+    }
+
+    button:focus {
+        outline: none; 
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+    }
     </style>
 </head>
 <body>
