@@ -20,7 +20,6 @@ body
     padding: 5px 5px;
 }
 
-
 header 
 {
     background-color: #FFD495;
@@ -72,24 +71,21 @@ main
 .Product 
 {
     border: 7px solid #D6C7AE;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     padding: 20px;
     text-align: center;
-    font-size: 14px;
-    width: 220px;
+    font-size: 12px;
+    width: 200px;
     transition: transform 0.3s, box-shadow 0.3s;
-
 }
-
 
 .Product img 
 {
-    height: 150px;
-    width: 150px;
-    object-fit: contain;
-    margin-bottom: 10px;
+    object-fit: contain; 
+    width: 150px; 
+    height: 150px; 
 }
 
 .Product h2 
@@ -100,6 +96,7 @@ main
 }
 
 
+
 .price 
 {
     color: #333;
@@ -107,58 +104,13 @@ main
     font-size: 16px;
 }
 
+
 .Product:hover 
 {
     transform: translateY(-5px); /* Slight upward movement on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
 }
 
-/* Basic styling for the heart button */
-.wishlist-heart {
-        width: 40px;
-        height: 40px;
-        background: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-}
-
-/* Styling for the heart icon */
- .wishlist-heart::before {
-        content: "\2661"; /* Unicode for heart outline */
-        font-size: 24px;
-        color: #ccc;
-}
-
-/* Styling when heart is active (filled) */
-.wishlist-heart.active::before {
-        content: "\2665"; /* Unicode for filled heart */
-        color: #FF5151 ;
-}
-
-
-
-
-
-#buttonOK
-{
-    background-color: #FFDBAA;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    margin: 20px 30px 10px 30px;
-}
-
-#buttonOK:hover 
-{
-    background-color: #FAAB78;
-}
 
 
 /* Styles for the shopping cart button */
@@ -230,6 +182,8 @@ main
 }
 
 
+
+
 footer 
 {
     background: #333;
@@ -237,5 +191,5 @@ footer
     text-align: center;
     padding: 1rem;
     bottom: 0;
-    width: 98%;
+    width: 100%;
 }

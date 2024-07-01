@@ -53,31 +53,6 @@ if (isset($_POST['add_to_cart'])) {
     header('location: product_list2.php');
     exit;
 }
-
-// Handle update cart
-if (isset($_POST['update_cart'])) {
-    $update_quantity = mysqli_real_escape_string($conn, $_POST['cart_quantity']);
-    $update_id = mysqli_real_escape_string($conn, $_POST['cart_id']);
-    mysqli_query($conn, "UPDATE cart SET quantity = '$update_quantity' WHERE id = '$update_id' AND user_id = '$user_id'") or die(mysqli_error($conn));
-    $_SESSION['message'] = 'Cart quantity updated successfully!';
-    header('location:shopping_cart.php');
-    exit;
-}
-
-// Handle remove item from cart
-if (isset($_GET['remove'])) {
-    $remove_id = mysqli_real_escape_string($conn, $_GET['remove']);
-    mysqli_query($conn, "DELETE FROM cart WHERE id = '$remove_id' AND user_id = '$user_id'") or die(mysqli_error($conn));
-    header('location:product_list2.php');
-    exit;
-}
-
-// Handle delete all items from cart
-if (isset($_GET['delete_all'])) {
-    mysqli_query($conn, "DELETE FROM cart WHERE user_id = '$user_id'") or die(mysqli_error($conn));
-    header('location:product_list2.php');
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -88,17 +63,101 @@ if (isset($_GET['delete_all'])) {
     <title>Stationery Products</title>
     <link rel="stylesheet" href="product_list2.css">
     <style>
-    input[type=number] {
-        width: 40px; /* Adjust width as needed */
-        padding: 8px; /* Adjust padding for better appearance */
-        font-size: 14px; /* Adjust font size */
-        text-align: center; /* Center-align text */
-        margin-top:10px;
-    }
+    #back
+        {
+            position:absolute;
+            top: 10px; 
+            left: 10px; 
+            color: #FFD4B2;
+            background-color: #fff;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border:#ffefe3 solid ;
+            border-radius: 10px;
+            text-decoration: none;
+            padding: 5px 5px;
+        }
+        
+        input[type=number] {
+            width: 40px;
+            padding: 8px;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #buttonOK {
+            background-color: #FFDBAA;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 20px 30px 10px 30px;
+        }
+
+        #buttonOK:hover {
+            background-color: #FAAB78;
+        }
+
+        .details {
+            display: none;
+        }
+
+        .Product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .Product button {
+            background-color: #FFD495;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .Product .wishlist-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Product .wishlist-heart {
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .Product .wishlist-heart::before {
+            content: "\2661"; /* Unicode for heart outline */
+            font-size: 24px;
+            color: #ccc;
+        }
+
+        .wishlist-heart.active::before {
+            content: "\2665"; /* Unicode for filled heart */
+            color: #FF5151;
+        }
     </style>
     <script>
         function toggleWishlist(button) {
             button.classList.toggle('active');
+        }
+
+        function toggleDetails(id) {
+            const details = document.getElementById('details-' + id);
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
         }
 
         function showMessage(message) {
@@ -114,7 +173,6 @@ if (isset($_GET['delete_all'])) {
         <h1>
             <img src="logo.png" alt="OKAY Stationery Shop Logo" class="logo">
             OKAY STATIONERY PRODUCTS
-            <input type="text" name="text" class="input" placeholder="Search" style="margin-left: 80px; padding:10px; position: absolute; top: 5%; right: 5%;">
         </h1>
         <nav>
             <ul>
@@ -129,7 +187,7 @@ if (isset($_GET['delete_all'])) {
     </header>
     <main>
         <?php
-        $sql = "SELECT product_id, product_name, product_price, product_image FROM products";
+        $sql = "SELECT product_id, product_name, product_price, product_image, product_details FROM products";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -142,7 +200,10 @@ if (isset($_GET['delete_all'])) {
                 echo '<input type="hidden" name="product_id" value="' . $row["product_id"] . '">';
                 echo '<button type="submit" name="add_to_wishlist" class="wishlist-heart" onclick="toggleWishlist(this)"></button>';
                 echo '</form>';
-                echo '<a href="../Product_list/' . strtolower(str_replace(' ', '_', $row["product_name"])) . '_details.html" class="detailButton">View Details</a>';
+                echo '<button onclick="toggleDetails(' . htmlspecialchars($row["product_id"]) . ')">View Details</button>';
+                echo '<div id="details-' . htmlspecialchars($row["product_id"]) . '" style="display:none;">';
+                echo '<p>' . htmlspecialchars($row["product_details"]) . '</p>';
+                echo '</div>';
                 echo '<form method="post" action="">
                         <input type="hidden" name="product_name" value="' . $row["product_name"] . '">
                         <input type="hidden" name="product_price" value="' . $row["product_price"] . '">

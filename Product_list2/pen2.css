@@ -5,20 +5,6 @@ body
     padding: 0;
 }
 
-#back
-{
-    position:fixed;
-    top: 10px; 
-    left: 10px; 
-    color: #FFD4B2;
-    background-color: #fff;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border:#ffefe3 solid ;
-    border-radius: 10px;
-    text-decoration: none;
-    padding: 5px 5px;
-}
 
 header 
 {
@@ -86,7 +72,6 @@ main
     object-fit: contain; 
     width: 150px; 
     height: 150px; 
-    margin-bottom: 10px;
 }
 
 .Product h2 
@@ -96,12 +81,15 @@ main
     color: #333; 
 }
 
+
+
 .price 
 {
     color: #333;
     font-weight: bold;
     font-size: 16px;
 }
+
 
 .Product:hover 
 {
@@ -110,48 +98,6 @@ main
 }
 
 
-/* Basic styling for the heart button */
-.wishlist-heart {
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-/* Styling for the heart icon */
-.wishlist-heart::before {
-    content: "\2661"; /* Unicode for heart outline */
-    font-size: 24px;
-    color: #ccc;
-}
-
-/* Styling when heart is active (filled) */
-.wishlist-heart.active::before {
-    content: "\2665"; /* Unicode for filled heart */
-    color: #FF5151 ;
-}
-
-.buttonOK
-{
-    background-color: #FFDBAA;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
-    margin: 20px 30px 10px 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.buttonOK:hover 
-{
-    background-color: #FAAB78;
-}
 
 /* Styles for the shopping cart button */
 .shopping-cart-button {
@@ -220,6 +166,9 @@ main
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
     transition: background 0.3s;
 }
+
+
+
 
 footer 
 {
