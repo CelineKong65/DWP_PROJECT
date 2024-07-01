@@ -21,6 +21,7 @@
                 <li><a href="../Manage_product/manage_product.php">Manage product</a></li>
                 <li><a href="../Manage_category/manage_category.php">Manage category</a></li>
                 <li><a href="../Manage_order/manage_order.php">Manage order</a></li>
+                <li><a href="../index.php">Log Out</a></li>
             </ul>
         </nav>
     </header>
