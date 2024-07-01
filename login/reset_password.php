@@ -98,7 +98,7 @@ $conn->close();
     }
 
     .container {
-        background-color: #fff;
+    
         padding: 50px 50px;
         border-radius: 20px;
         box-shadow: 0 5px 50px rgba(0, 0, 0, 0.1);
@@ -106,11 +106,16 @@ $conn->close();
         max-width: 600px;
     }
 
+    .resetfrm{
+        
+    }
+
     h2 {
         margin-bottom: 20px;
         color: #333;
         text-align: center;
     }
+    
 
     .form-group {
         margin-bottom: 15px;
@@ -131,21 +136,23 @@ $conn->close();
         box-sizing: border-box;
     }
 
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: #FF9B50;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+    .resetbtn 
+{
+    background-color: #FF9B50;
+    width: 300px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
 
-    button:hover {
-        background-color: rgb(255, 230, 183);
-    }
+.resetbtn:hover 
+{
+    background-color:#FFCF81;
+    cursor: pointer;
+}
+
 
     #back {
         position: absolute;
@@ -169,7 +176,7 @@ $conn->close();
 </header>
 
 <div id="container">
-    <div style="border: 1px solid #DDD; border-radius: 10px; width: 400px; padding: 20px">
+    <div >
         <div id="reset-title">
             <h3 style="margin: 0px; padding: 12px; color:white; font-family: Arial;">Reset Password</h3>
         </div>
@@ -179,9 +186,9 @@ $conn->close();
                 echo "<p style='text-align: center;'>$reset_message</p>";
             }
             ?>
-            <form name="resetfrm" method="post" action="">
+            <form name="resetfrm" method="post" action="" class="resetfrm">
                 <p><input type="email" name="email" placeholder="Enter your email" required/></p>
-                <p><input type="submit" name="resetbtn" value="RESET PASSWORD" /></p>
+                <p><input type="submit" name="resetbtn" value="RESET PASSWORD" class="resetbtn"/></p>
             </form>
             <p><a href="../login/login.php">Back to Login</a></p>
             <p><a href="../Register/register.php">No Account? Register Now!</a></p>
