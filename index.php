@@ -6,6 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.3s ease;
+        user-select: none;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hide all slides by default */
+    .mySlides {
+        display: none;
+    }
+
+
+
+    
+    .popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+        z-index: 999; /* Ensure it's on top of everything */
+    }
+
+    .popup 
+    {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000; /* Ensure popup is above overlay */
+    }
+
+    .popup p {
+        margin-bottom: 10px;
+    }
+
+    .popup button {
+        background-color: #FFDBAA;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        display: block;
+        margin: auto;
+    }
+
+    .popup button:hover {
+        background-color: #FAAB78;
+    }
+
+    button {
+        background-color: #FFDBAA; 
+        color: #fff; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer;
+        transition: background-color 0.3s; 
+        
+    }
+
+    button:hover {
+        background-color: #FAAB78; 
+    }
+
+    button:focus {
+        outline: none; 
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -26,17 +128,20 @@
     </header>
     
     <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="p1.png" style="width: 100%;">
-            <div class="text">Caption Text</div>
+    <div class="mySlides fade">
+        <img src="d1.png" alt="Slide 1" style="width: 100%;">
         </div>
+       
         <div class="mySlides fade">
-            <img src="p2.png" style="width: 100%;">
-            <div class="text">Caption Text</div>
+            <img src="d2.jpg" alt="Slide 2" style="width:100%;">
         </div>
+
         <div class="mySlides fade">
-            <img src="p3.png" style="width: 100%;">
-            <div class="text">Caption Text</div>
+            <img src="d3.png" alt="Slide 3" style="width:100%;">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="d4.png" alt="Slide 4" style="width:100%;">
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -47,7 +152,9 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
     </div>
+
 
     <main>
         <section id="products" class="products-section">
@@ -85,12 +192,10 @@
             <h2>Special Offers</h2>
             <div class="offer-grid">
                 <div class="offer-card">
-                    <img src="#" alt="">
-                    <h3>Special Offer: 20% off on all M&G!</h3>
+                    <img src="a1.png" alt="Special Offer: 20% off on all M&G!" style="width:400px; hight:auto;">
                 </div>
                 <div class="offer-card">
-                    <img src="#" alt="">
-                    <h3>Buy 2 Get 1 Free on all Binder Lever Arch File!</h3>
+                    <img src="a2.png" alt="Buy 2 Get 1 Free on all Binder Lever Arch File!" style="width:400px; hight:auto;">
                 </div>
             </div>
         </section>
@@ -160,7 +265,7 @@
             slideIndex++;
             if (slideIndex > slides.length) { slideIndex = 1 }
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(autoShowSlides, 2000); // Change image every 2 seconds
+            setTimeout(autoShowSlides, 5000); // Change image every 2 seconds
         }
 
         // For Testimonials
