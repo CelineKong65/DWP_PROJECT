@@ -104,7 +104,7 @@ $conn->close();
                 <p><input type="email" name="email" placeholder="Enter your email" required/></p>
                 <p><input type="submit" name="resetbtn" value="RESET PASSWORD" /></p>
             </form>
-            <p><a href="../login.php">Back to Login</a></p>
+            <p><a href="../login/login.php">Back to Login</a></p>
             <p><a href="../Register/register.php">No Account? Register Now!</a></p>
         </div>
     </div>

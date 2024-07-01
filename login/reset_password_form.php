@@ -87,7 +87,7 @@ $conn->close();
                 <p><input type="password" name="confirm_password" placeholder="Confirm new password" required/></p>
                 <p><input type="submit" name="submit" value="RESET PASSWORD" /></p>
             </form>
-            <p><a href="../login">Back to Login</a></p>
+            <p><a href="../login/login.php">Back to Login</a></p>
             <p><a href="../Register/register.php">No Account? Register Now!</a></p>
         </div>
     </div>
