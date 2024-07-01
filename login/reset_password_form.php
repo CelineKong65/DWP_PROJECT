@@ -65,7 +65,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset Password</title>
     <style>
-    body {
+      body {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         background-image: url(pb.resetpass.png);
         background-repeat: no-repeat; 
@@ -80,7 +80,7 @@ $conn->close();
     }
 
     .container {
-        background-color: #fff;
+    
         padding: 50px 50px;
         border-radius: 20px;
         box-shadow: 0 5px 50px rgba(0, 0, 0, 0.1);
@@ -93,6 +93,13 @@ $conn->close();
         color: #333;
         text-align: center;
     }
+    
+
+    .box{
+    width: 275px;
+    padding: 10px;
+    }
+
 
     .form-group {
         margin-bottom: 15px;
@@ -113,21 +120,23 @@ $conn->close();
         box-sizing: border-box;
     }
 
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: #FF9B50;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+    .resetbtn 
+{
+    background-color: #FF9B50;
+    width: 300px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
 
-    button:hover {
-        background-color: rgb(255, 230, 183);
-    }
+.resetbtn:hover 
+{
+    background-color:#FFCF81;
+    cursor: pointer;
+}
+
 
     #back {
         position: absolute;
@@ -150,7 +159,7 @@ $conn->close();
 </header>
 
 <div id="container">
-    <div style="border: 1px solid #DDD; border-radius: 10px; width: 400px; padding: 20px">
+    <div>
         <div id="reset-title">
             <h3 style="margin: 0px; padding: 12px; color:white; font-family: Arial;">Reset Password</h3>
         </div>
@@ -161,9 +170,9 @@ $conn->close();
             }
             ?>
             <form name="reset_password_form" method="post" action="">
-                <p><input type="password" name="new_password" placeholder="Enter new password" required/></p>
-                <p><input type="password" name="confirm_password" placeholder="Confirm new password" required/></p>
-                <p><input type="submit" name="submit" value="RESET PASSWORD" /></p>
+                <p><input type="password" name="new_password" placeholder="Enter new password" class="box" required/></p>
+                <p><input type="password" name="confirm_password" placeholder="Confirm new password" class="box" required/></p>
+                <p><input type="submit" name="submit" value="RESET PASSWORD" class="resetbtn"/></p>
             </form>
             <p><a href="../login/login.php">Back to Login</a></p>
             <p><a href="../Register/register.php">No Account? Register Now!</a></p>

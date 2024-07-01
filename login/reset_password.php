@@ -106,9 +106,6 @@ $conn->close();
         max-width: 600px;
     }
 
-    .resetfrm{
-        
-    }
 
     h2 {
         margin-bottom: 20px;
@@ -186,7 +183,7 @@ $conn->close();
                 echo "<p style='text-align: center;'>$reset_message</p>";
             }
             ?>
-            <form name="resetfrm" method="post" action="" class="resetfrm">
+            <form name="resetfrm" method="post" action="">
                 <p><input type="email" name="email" placeholder="Enter your email" required/></p>
                 <p><input type="submit" name="resetbtn" value="RESET PASSWORD" class="resetbtn"/></p>
             </form>
