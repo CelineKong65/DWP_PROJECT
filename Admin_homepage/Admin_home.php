@@ -21,6 +21,7 @@
                 <li><a href="../Manage_product/manage_product.php">Manage product</a></li>
                 <li><a href="../Manage_category/manage_category.php">Manage category</a></li>
                 <li><a href="../Manage_order/manage_order.php">Manage order</a></li>
+                <li><a href="../index.php">Log Out</a></li>
             </ul>
         </nav>
     </header>
@@ -31,16 +32,16 @@
             <div class="chart-container">
                 <!-- Bar Chart for Total Customers -->
                 <div class="chart-box">
-                    <h2>Total Customers Per Month</h2>
+                    <h2>Total Customers Per Month (2023)</h2>
                     <canvas id="customersChart"></canvas>
                 </div>
 
                 <!-- Bar Chart for Total Orders -->
                 <div class="chart-box">
-                    <h2>Total Orders Per Month</h2>
+                    <h2>Total Orders Per Month (2023)</h2>
                     <canvas id="ordersChart"></canvas>
                 </div>
-
+s
                 <!-- Bar Chart for Total Products -->
                 <div class="chart-box">
                     <h2>Total Products Sales Per Year (2019-2023)</h2>
